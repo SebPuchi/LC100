@@ -27,6 +27,17 @@
     \end{enumerate}
 \end{enumerate}
 
+\subsection{Twosum}
+\begin{enumerate}
+  \item[] \textbf{Question:} Given an array of integers nums and an integer target, return the indices i and j such that nums[i] + nums[j] == target and i != j
+    \begin{enumerate}
+      \item[-] Use a hashmap to store the index of each number in the array as the \textit{value}
+      \item[-] On each iteration, check first to see if the difference between the target val and the current num is already stored in the hashmap
+      \item[-] If it is, then return the value at that key (the index), as well as the current index i
+      \item[-] If it's not, then add the current number and index to the hashmap 
+      \item[-] \textbf{Key Idea: } Always check the existence between the target and the current number as a key in the hashmap first!
+    \end{enumerate}
+\end{enumerate}
 
 \end{document}
 
