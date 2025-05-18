@@ -1,2 +1,2 @@
 # LC100
-One-hundred days of LC
+One-hundred days of leetcode
