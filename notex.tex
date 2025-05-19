@@ -42,11 +42,15 @@
 \section{Two Pointers}
 \subsection{Valid Palindrome}
 \begin{enumerate}
-  \item[] \textbf{Question:} Given two strings s and t, return true if the two strings are anagrams of each other, otherwise return false
+  \item[] \textbf{Question:} Given a string s, return true if it is a palindrome, otherwise return false.
+
+A palindrome is a string that reads the same forward and backward. It is also case-insensitive and ignores all non-alphanumeric characters.
     \begin{enumerate}
-      \item[-] Create two separate dictionaries
-      \item[-] Loop through one of the input strings, add key letter or letter freq.
-      \item[-] If dict are the same, return true
+      \item[-] First change the string to all lowercase with .lower() function, this ensures case sensitive args are taken care of
+      \item[-] Init left and right pointers to first and last characters
+      \item[-] Do a check using \textbf{.isalnum()}. If it is \textit{not} alpha numeric, then increment or decrement the pointer and \textit{continue} through the loop
+      \item[-] While left is less than or equal two right, compare the letters, if not the same, return false
+      \item[-] increment / decrement left and right at bottom of loop
     \end{enumerate}
 \end{enumerate}
 
