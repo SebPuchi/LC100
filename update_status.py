@@ -8,3 +8,4 @@ data = np.random.randint(0, 14, len(dates))
 
 # GitHub Activity like plot (for someone with consistently random work patterns).
 july.heatmap(dates, data, title='Github Activity', cmap="github")
+plt.show()
