@@ -1,7 +1,7 @@
 contourpy==1.3.2
 cycler==0.12.1
 fonttools==4.58.0
-july==0.1.3
+july @ git+https://github.com/SebPuchi/july.git@9fcaff119170a0367ebd907101e5657083c60a04
 kiwisolver==1.4.8
 matplotlib==3.10.3
 numpy==2.2.6
