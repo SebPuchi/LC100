@@ -1,0 +1,10 @@
+name: Update Progress
+on:
+  push:
+    paths:
+      - 'questions/**'
+jobs:
+  update-heatmap:
+    runs-on: ubuntu-latest
+    steps:
+
