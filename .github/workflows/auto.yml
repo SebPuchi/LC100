@@ -1,8 +1,7 @@
 name: Update Progress
-
 on:
   schedule:
-    - cron: "0 0 * * *"  # Runs daily at midnight UTC
+    - cron: "0 4 * * *" 
   push:
     paths:
       - 'questions/**'
@@ -24,5 +23,12 @@ jobs:
 
       - name: Create graph
         run: python3 update_status.py
-
-
+      - name: Commit and push changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add .
+          git commit -m "Update heatmap and README" || echo "No changes to commit"
+          git push
+      env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
