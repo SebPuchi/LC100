@@ -57,11 +57,16 @@ A palindrome is a string that reads the same forward and backward. It is also ca
 \section{Sliding Window}
 \subsection{Best Time to Buy and Sell Stocks}
 \begin{enumerate}
-  \item[] \textbf{Question:} 
+  \item[] \textbf{Question:} You are given an integer array prices where prices[i] is the price of NeetCoin on the ith day.
+
+You may choose a single day to buy one NeetCoin and choose a different day in the future to sell it.
+
+Return the maximum profit you can achieve. You may choose to not make any transactions, in which case the profit would be 0.
     \begin{enumerate}
-      \item[-] 
-      \item[-] 
-      \item[-] 
+      \item[-] \textbf{Buy low... sell high}: To achieve this, init two pointers, left wanting to find the low value in the arr, and right wanting to find the high value. Init left to first index, and right to second index in array
+      \item[-] Begin looping through, so long as the right pointer is less than the length of the array
+      \item[-] If the right value is ever less than the left value, then you have found a new low to sell at. \textit{So assign left equal to right, and increment right by one: continue the while loop}
+      \item[-] Upon each iteration check if the difference between right and left values is greater than global profit (which is init to 0). If so, update profit 
     \end{enumerate}
 \end{enumerate}
 
