@@ -24,6 +24,7 @@ def get_commit_dates(path, since, until):
 mpl.rcParams['font.family'] = 'Hack Nerd Font Mono'
 dates = date_range("2025-05-01", "2025-8-31")
 commit_dates = get_commit_dates("./questions/", "2025-05-01", "2025-08-31")
+print("Commit dates found:", commit_dates)
 
 # maps matches to 1 to graph
 data = np.array([1 if d.strftime("%Y-%m-%d") in commit_dates else 0 for d in dates])
