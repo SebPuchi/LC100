@@ -29,8 +29,12 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add .
-          git commit -m "Update heatmap and README" || echo "No changes to commit"
+          git add ./auto_assets/plot.png   
+          git commit -m "Update heatmap" || echo "No changes to commit"
           git push
+          git add ./README.md
+          git commit -m "UpdateREADME" || echo "No changes to commit"
+          git push
+
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
