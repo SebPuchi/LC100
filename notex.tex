@@ -73,12 +73,25 @@ Return the maximum profit you can achieve. You may choose to not make any transa
 \section{Stack}
 \subsection{Valid Parentheses}
 \begin{enumerate}
-  \item[] \textbf{Question:} 
+  \item[] \textbf{Question:}You are given a string s consisting of the following characters: '(', ')', '\{', '\}', '[' and ']'.
+
+The input string s is valid if and only if:
+ -- Every open bracket is closed by the same type of close bracket.
+ -- Open brackets are closed in the correct order.
+ -- Every close bracket has a corresponding open bracket of the same type.
+
+Return true if s is a valid string, and false otherwise.
 
     \begin{enumerate}
-      \item[-] 
-      \item[-] 
-      \item[-] 
+      \item[-] \textbf{Main idea:} Use a Stack to push open brackets, and pop closed brackets
+      \item[-] Before iterating through each char of the string, create an array of valid open brackets, and an array of valid close brackets (same positioning in each) 
+      \item[-] For each char, if the char is neither in each bracket array, return false. 
+      \item[-] If the char is an open bracket, push to stack 
+      \item[-] If the char is an close bracket, \textit{first check if the stack is non empty} then check to see if the last value on the stack is the corresponding open bracket to the current close bracket
+      \item[-] Return continue looping if it is, return false if it isn't
+      \item[-] After the loop completes, ensure that the stack is empty, if it is, return true
+        
+
     \end{enumerate}
 \end{enumerate}
 
