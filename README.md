@@ -4,5 +4,5 @@ One-hundred days of leetcode
 
 | Question  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| Solve Date | Category | Difficulty |
 |:----------|:-----------|:---------|:------------|
-| [binary_search_recursive](./questions/binary_search/easy/binary_search_recursive.py) | True  | tree  | `hard`    |
+| [binary_search_recursive](./questions/binary_search/easy/binary_search_recursive.py) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| True  | tree  | `hard`    |
 | Hoodie                                                                               | False    | 42.99    | easy 
