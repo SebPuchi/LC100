@@ -9,3 +9,9 @@ One-hundred days of leetcode
 | Tee     |  False   | 19.99 | easy    |
 |  Hoodie |  False   | 42.99 | easy    |
 
+| Question                                                                 | Solve Date | Category | Difficulty |
+|:------------------------------------------------------------------------|:-----------|:---------|:------------|
+| [binary_search_recursive](./questions/binary_search/easy/binary_search_recursive.py) | True       | tree     | hard        |
+| SQL Hat                                                                 | True       | 23.99    | easy        |
+| Tee                                                                     | False      | 19.99    | easy        |
+| Hoodie                                                                  | False      | 42.99    | easy        |
