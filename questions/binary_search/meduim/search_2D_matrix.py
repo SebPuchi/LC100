@@ -11,9 +11,10 @@ class Solution:
                 return True
             elif matrix[middle_index][0] > target:
                 right = middle_index -1
-            else: 
+            elif matrix[middle_index][0] < target and target <= matrix[middle_index][-1]:
+                break
+            else:
                 left = middle_index +1
-        
         
         approx_arr = matrix[middle_index]
 
