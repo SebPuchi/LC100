@@ -2,7 +2,7 @@
 One-hundred days of leetcode
 ![sebas's progress xD)](./auto_assets/plot.png)
 
-| Question  | Solve Date | Category | Difficulty |
+| Question  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| Solve Date | Category | Difficulty |
 |:----------|:-----------|:---------|:------------|
 | [binary_search_recursive](./questions/binary_search/easy/binary_search_recursive.py) | True  | tree  | `hard`    |
 | Hoodie                                                                               | False    | 42.99    | easy 
