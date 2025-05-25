@@ -155,7 +155,26 @@ Can you write a solution that runs in O(log(m * n)) time?
     \end{enumerate}
 \end{enumerate}
 
+\section{Linked Lists}
 
+\subsection{Reverse Linked List}
+\begin{enumerate}
+  \item[] \textbf{Question:} Given the beginning of a singly linked list head, reverse the list, and return the new beginning of the list.
+
+    \begin{enumerate}
+      \item[-] \textbf{Main idea:} Set up a previous and current pointer node that will be used to reassign next pointer values
+      \item[-] First check to see if the head node exists, if so, init prev to None, and current to the head 
+      \item[-] While loop condition is while current exists: 
+      \item[-] Create a temp value that stores currents next node value
+      \item[-] Set current.next equal to prev 
+      \item[-] Set prev equal to current 
+      \item[-] Set current equal to temp
+      \item[-] Once this loop has finished, the current value will be None, and we need to return the new head, which is the last node that came before None
+      \item[-] So we return prev
+
+
+    \end{enumerate}
+\end{enumerate}
 
 
 \end{document}
