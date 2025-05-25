@@ -148,7 +148,7 @@ Can you write a solution that runs in O(log(m * n)) time?
       \item[-] \textbf{Main idea:} Need to preform binary search \textit{twice}.
       \item[-] First binary search is done on the first column, which approximates where the actual value is 
       \item[-] To preform this first search, set up \textit{iterative} binary search as usual
-      \item[-] \textbf{Edge Case:} When checking if the value is greater than the first in the row, must also check if the value is smaller than the last value in that row. This means that the value is \textit{in} that row.
+      \item[-] \textbf{Edge Case:} When checking if the value is greater than the first in the row, must also check if the value is less than or EQUAL TO the last value in that row. This means that the value is \textit{in} that row.
       \item[-] If this condition is true, then you have found the row, and you can break from the first binary search loop. Store this row as the second array you will search over 
       \item[-] Now preform Binary Search a second time on this row, and return true or false depending on if the value was found or not
 
@@ -175,6 +175,24 @@ Can you write a solution that runs in O(log(m * n)) time?
 
     \end{enumerate}
 \end{enumerate}
+
+\subsection{Cycle Detection Linked List}
+\begin{enumerate}
+  \item[] \textbf{Question:} Given the beginning of a linked list head, return true if there is a cycle in the linked list. Otherwise, return false.
+
+There is a cycle in a linked list if at least one node in the list can be visited again by following the next pointer.
+
+    \begin{enumerate}
+      \item[-] \textbf{Main idea:} Set up a two pointers, one fast pointer and one slow pointer
+      \item[-] The slow pointer will increment one each upon each iteration, the fast pointer will increment by two.
+      \item[-] The idea is that the gap between the fast and slow pointer will gradually grow smaller and smaller until they point to the same node. This can only happen if there is a loop in the linked list
+      \item[-] Set up both pointers to begin at the head node, if the head exists
+      \item[-] Looping condition: While first pointer exists: first = first.next
+      \item[-] Check if second.next and second.next.next exists, if so, second = second.next.next
+      \item[-] Check if first = second. \textit{Note:} Must specifically check that first equals second and not their values. Checking if the node struct stored in memory is the same struct, not just the values!
+    \end{enumerate}
+\end{enumerate}
+
 
 
 \end{document}
