@@ -124,7 +124,15 @@ Implement a function to search for target within nums. If it exists, then return
 Your solution must run in O(logn) time.
 
     \begin{enumerate}
-      \item[-] \textbf{Main idea:} 
+      \item[-] \textbf{Main idea:} To solve this problem iteratively, you must keep track of left and right indices and use a while loop
+      \item[-] \textit{While loop Condition:} Loop so long as right is greater than or equal to the left index 
+      \item[-] \textit{Base Case: } Within the while loop, calculate the mid index: \textbf{}
+      \item[-] If left doesn't equal right, find the mid index, and compare target value to value at middle index
+      \item[-] If it equals the middle index, return
+      \item[-] If it's greater than the middle index, recurse, left = middle index + 1
+      \item[-] If it's less than the middle index, recurse, right = middle index - 1
+      \item[-] \textbf{If parameters don't use left and right, you'll have to add them initially as none as defaults, then set them before recursing}
+
 
     \end{enumerate}
 \end{enumerate}
