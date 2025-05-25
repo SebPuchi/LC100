@@ -104,13 +104,25 @@ Implement a function to search for target within nums. If it exists, then return
 
 Your solution must run in O(logn) time.
     \begin{enumerate}
-      \item[-] \textbf{Main idea:} 
+      \item[-] \textbf{Main idea:} To solve this problem recursively, you must keep track of left and right indices upon each recursive call
+      \item[-] Initialize left to be index zero, and right to be last index (len(A) -1)
+      \item[-] \textit{Base Case: }If left index equals right index, check if the value is in only position, if it is, return index, else return -1
+      \item[-] If left doesn't equal right, find the mid index, and compare target value to value at middle index
+      \item[-] If it equals the middle index, return
+      \item[-] If it's greater than the middle index, recurse, left = middle index + 1
+      \item[-] If it's less than the middle index, recurse, right = middle index - 1
+      \item[-] \textbf{If parameters don't use left and right, you'll have to add them initially as none as defaults, then set them before recursing}
 
     \end{enumerate}
 \end{enumerate}
 \subsection{Binary Search Iterative}
 \begin{enumerate}
-  \item[] \textbf{Question:} 
+  \item[] \textbf{Question:}  You are given an array of distinct integers nums, sorted in ascending order, and an integer target.
+
+Implement a function to search for target within nums. If it exists, then return its index, otherwise, return -1.
+
+Your solution must run in O(logn) time.
+
     \begin{enumerate}
       \item[-] \textbf{Main idea:} 
 
