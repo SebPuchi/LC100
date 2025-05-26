@@ -193,6 +193,29 @@ There is a cycle in a linked list if at least one node in the list can be visite
     \end{enumerate}
 \end{enumerate}
 
+\subsection{Merge Two Sorted Lists}
+\begin{enumerate}
+  \item[] \textbf{Question:} You are given the heads of two sorted linked lists list1 and list2.
+
+Merge the two lists into one sorted list. The list should be made by splicing together the nodes of the first two lists.
+
+Return the head of the merged linked list.
+
+    \begin{enumerate}
+      \item[-] \textbf{Main idea:} Create a new head node that you will add two each list to, depending on which list has the smaller node when comparing the two
+      \item[-] Set up a current node that will be assigned to the new head node
+      \item[-] While looping condition: If list1 and list2, continue looping and comparing 
+      \item[-] At the beginning of each loop, create a new node, and assign current at list1 or list2 to the new node depending on which one is smaller (increment list1 = list1.next or list2 = list2.next, depending on which was smaller)
+      \item[-] Set the current.next to new node, and then increment current: current = current.next 
+      \item[-] After while loop is finished, check if list1 or list2 still has any nodes, if either does, assign the remaining to the current.next
+      \item[-] Return new-head.next (because new head is just a dummy node, and doesn't have any value)
+
+
+
+    \end{enumerate}
+\end{enumerate}
+
+
 
 
 \end{document}
