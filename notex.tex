@@ -216,6 +216,24 @@ Return the head of the merged linked list.
 \end{enumerate}
 
 
+\section{Trees}
+
+\subsection{Invert Binary Tree}
+\begin{enumerate}
+  \item[] \textbf{Question:} You are given the root of a binary tree root. Invert the binary tree and return its root. 
+
+    \begin{enumerate}
+      \item[-] \textbf{Main idea:} Preform a DFS on the tree, before exploring left and right children, swap the left and right 
+      \item[-] In explore function, first check if the current node is not None, if not None, add current node into list of visited nodes. If None, return
+      \item[-] Next create a temp node, and swap the left and right children. Then explore left node, and explore right node
+      \item[-] Explore function can be written as a part of the Solution Class
+      \item[-] In main function, call explore on root, then return root
+
+
+    \end{enumerate}
+\end{enumerate}
+
+
 
 
 \end{document}
