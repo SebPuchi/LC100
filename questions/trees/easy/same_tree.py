@@ -8,7 +8,7 @@ class TreeNode:
 class Solution:
     def explore(self, current, visited): 
         if current == None: 
-            visited.append(-1) 
+            visited.append(None) 
             return 
         visited.append(current.val) 
         self.explore(current.left, visited)
