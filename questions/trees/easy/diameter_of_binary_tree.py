@@ -6,18 +6,15 @@ class TreeNode:
          self.right = right
 
 class Solution:
-    max_diameter = -1
+    max_diameter = 0
     def explore(self, current):
         if current == None:
-            return 0
-
-        left = self.explore(current.left)
-        right = self.explore(current.right)
-
-        self.max_diameter = max(self.max_diameter, left + right)
-
-        return 1 + max(left, right)
-
+            return -1
+        left_path = 1 + self.explore(current.left)
+        right_path = 1 + self.explore(current.right)
+        print(current.val, left_path, right_path)
+        self.max_diameter = max(self.max_diameter, left_path + right_path)
+        return max(left_path, right_path) 
 
     def diameterOfBinaryTree(self, root: Optional[TreeNode]) -> int:
         self.explore(root)
