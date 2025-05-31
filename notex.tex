@@ -234,6 +234,25 @@ Return the head of the merged linked list.
 \end{enumerate}
 
 
+\subsection{Max Depth of Binary Tree}
+\begin{enumerate}
+  \item[] \textbf{Question:} Given the root of a binary tree, return its depth.
+
+The depth of a binary tree is defined as the number of nodes along the longest path from the root node down to the farthest leaf node.
+
+    \begin{enumerate}
+      \item[-] \textbf{Main idea:} Preform a DFS on the tree, at each sub-problem, we want to pass up the max of the left and right at the current node
+      \item[-] In explore function, first check if the current node is None, this is the base case: If it is, simply return 
+      \item[-] If not None, recurse on the left and right parts of the tree and store the depths, then return upward the max(left, right)
+      \item[-] Explore function can be written as a part of the Solution Class
+      \item[-] In main function, return the call to explore
+
+
+    \end{enumerate}
+\end{enumerate}
+
+
+
 
 
 \end{document}
