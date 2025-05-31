@@ -251,6 +251,48 @@ The depth of a binary tree is defined as the number of nodes along the longest p
     \end{enumerate}
 \end{enumerate}
 
+\subsection{Max Diameter of Binary Tree}
+\begin{enumerate}
+  \item[] \textbf{Question:} The diameter of a binary tree is defined as the length of the longest path between any two nodes within the tree. The path does not necessarily have to pass through the root.
+
+The length of a path between two nodes in a binary tree is the number of edges between the nodes.
+
+Given the root of a binary tree root, return the diameter of the tree.
+
+    \begin{enumerate}
+      \item[-] \textbf{Main idea:} Create a attribute of the Solution class (called max diameter) then preform a DFS on the tree
+      \item[-] The max diameter at each level is the longest number of edges spanning the left and right branches \textit{added together}.
+      \item[-] The base case in this sense is if the current is NONE, it it is, RETURN -1, as there are no edges between the NONE node and the parent Node. 
+      \item[-] At each sub-problem, recurse on the left and right sides (adding 1 to the return), and check if right added to left is greater than the member class var of max diameter. 
+      \item[-] If it is, set max diameter. 
+      \item[-] We want to pass up the longest span at any given node, which is the max between the left and right span
+      \item[-] Call explore function from max diameter, and return the int value that explore returns. 
+
+    \end{enumerate}
+\end{enumerate}
+
+
+\subsection{Balanced Binary Tree}
+\begin{enumerate}
+  \item[] \textbf{Question:} The depth of a binary tree is defined as the number of nodes along the longest path from the root node down to the farthest leaf node.
+
+    \begin{enumerate}
+      \item[-] \textbf{Main idea:} This question is a bit trickier, as you need to return a tuple, and not just a depth (like edge depth or node depth)
+      \item[-] To begin preform a DFS on the tree. Start be defining the base case. If the node is NONE, return (0, True), as a None node is balanced. Because we are defining balance in terms of node height, and not edge height, base case starts at 0 and not -1.
+      \item[-] Next, recurse on the left and right sub trees, and add one to the depth part of the tuple and store the True or False vale. 
+      \item[-] Check if the distance between left and right is equal to 1 or 0, if it is, set a current balanced value equal to True. 
+      \item[-] If this current balanced is True, and so are the left and right return T/F values are true, then return True upwards to the next subproblem. 
+      \item[-] In terms of return depth upwards, we want to return the max depth between the left and right sub nodes.
+      \item[-] So, return (max(left, right), (is_bal and left_bal and right_bal)) upwards
+      \item[-] 
+      \item[-] In main function, return the True or false value from the tuple as the answer
+
+
+    \end{enumerate}
+\end{enumerate}
+
+
+
 
 
 
