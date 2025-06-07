@@ -49,8 +49,8 @@ markdown_rows.append(header)
 markdown_rows.append(formatting)
 
 for (root, dirs, files) in os.walk(path):
-    row = ""
     for file in files:
+        row = ""
         if file.endswith(".py"):
             file_path = os.path.join(root, file)
             parts = root.split(os.sep)
@@ -61,7 +61,6 @@ for (root, dirs, files) in os.walk(path):
             row +="| [" +file[:-3] +"](" + file_path +") | " + parts[2] + " | `" + parts[3] + "` |\n"
 
             markdown_rows.append(row)
-
 
 
 # Writing to file
