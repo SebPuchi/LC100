@@ -39,3 +39,42 @@ class Solution:
             
     def isSubtree(self, root: Optional[TreeNode], subRoot: Optional[TreeNode]) -> bool:
         return self.explore(root, subRoot)
+
+
+### BETTER SOLUTION: 
+# Definition for a binary tree node.
+# class TreeNode(object):
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+
+class Solution:   
+    valid = False
+    def exploreList(self, current, explore_list):
+            if current == None:
+                explore_list.append(None)
+                return 
+            explore_list.append(current.val)
+
+            self.exploreList(current.left, explore_list)
+            self.exploreList(current.right, explore_list)
+
+
+    def explore(self, current, sub_list):
+        if current == None: 
+            return 
+        
+        if current.val == sub_list[0]:
+            root_list = []
+            self.exploreList(current, root_list)
+            if root_list == sub_list:
+                self.valid = True
+        left = self.explore(current.left, sub_list)
+        right = self.explore(current.right, sub_list)
+            
+    def isSubtree(self, root, subRoot):
+        sub_tree_explore_list = []
+        self.exploreList(subRoot, sub_tree_explore_list)  
+        self.explore(root, sub_tree_explore_list)
+        return self.valid

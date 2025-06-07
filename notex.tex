@@ -321,8 +321,10 @@ A subtree of a binary tree tree is a tree that consists of a node in tree and al
     \begin{enumerate}
       \item[-] \textbf{Main idea:} Use DFS to search through the main root tree. At each node, check if the current node val equals the target node val. If they do, then we can begin an is same tree check with this node as our new root. 
       \item[-] Checking if a tree is the same can be done in the two ways described in the previous question. We can use a DFS approach, and explore / check as we go, or create arrays that track the order in which the tree was traversed, and compare the arrays
-      \item[-] Once this exploration and checking has been done, if the result is true, we must return True, if it's not, we can  \textit{keep exploring} the main rooted tree. 
+      \item[-] \textit{SERIALIZE THE TWO TREES}: After banging my head against the wall, the best move it to serialize the lists.
+      \item[-] Once this exploration and checking has been done, if the result is true, we must set a global variable to True, if it's not, we can  \textit{keep exploring} the main rooted tree. 
       \item[-] If the main rooted tree gets completely traversed, return false
+      \item[-] Can create the root serizization in each stack frame: examine code for best practice in using serialization
 
     \end{enumerate}
 \end{enumerate}
