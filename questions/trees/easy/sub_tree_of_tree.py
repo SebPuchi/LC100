@@ -24,7 +24,7 @@ class Solution:
 
     def explore(self, current, target):
         if current == None: 
-            return 
+            return False
         
         is_subtree = False
         if current.val == target.val:
