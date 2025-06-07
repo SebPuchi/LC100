@@ -4,7 +4,7 @@ One-hundred days of leetcode
 
 
 ## Completed Questions
-| Question | Category | Difficulty |
+| Question &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | Category | Difficulty |
 |:----------|:---------|:------------|
 | [validpal](./questions/two_pointers/easy/validpal.py) | two_pointers | `easy` |
 | [same_tree](./questions/trees/easy/same_tree.py) | trees | `easy` |
