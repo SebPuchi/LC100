@@ -68,7 +68,7 @@ with open("./README.md", "r") as f:
     lines = f.readlines()
 
 for i, line in enumerate(lines):
-    if "# TABLE ROW START" in line:
+    if "[//]: # TABLE ROW START" in line:
         start_index = i
         break
 

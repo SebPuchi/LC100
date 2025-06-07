@@ -4,7 +4,7 @@ One-hundred days of leetcode
 | Question | Category | Difficulty |
 |:----------|:-----------|:---------|:------------|
 | [Binary Search Recursive](./questions/binary_search/easy/binary_search_recursive.py) | tree  | `hard`    |
-# TABLE ROW START
+[//]: # TABLE ROW START
 | [validpal](./questions/two_pointers/easy/validpal.py) | two_pointers | easy |
 | [same_tree](./questions/trees/easy/same_tree.py) | trees | easy |
 | [same_tree](./questions/trees/easy/same_tree.py) | trees | easy |
