@@ -42,8 +42,11 @@ fig.suptitle("Completed Days", fontsize=16)
 # Walk question dir  
 path = "./questions"
 
-
 markdown_rows = []
+header ="| Question | Category | Difficulty |"
+formatting = "|:----------|:---------|:------------|"
+markdown_rows.append(header)
+markdown_rows.append(formatting)
 
 for (root, dirs, files) in os.walk(path):
     row = ""
@@ -68,7 +71,7 @@ with open("./README.md", "r") as f:
     lines = f.readlines()
 
 for i, line in enumerate(lines):
-    if "[//]: # TABLE ROW START" in line:
+    if "## Completed Questions" in line:
         start_index = i
         break
 

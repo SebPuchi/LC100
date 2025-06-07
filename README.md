@@ -2,11 +2,9 @@
 One-hundred days of leetcode
 ![sebas's progress xD)](./auto_assets/plot.png)
 
-| Question | Category | Difficulty |
-|:----------|:---------|:------------|
-| [Binary Search Recursive](./questions/binary_search/easy/binary_search_recursive.py) | tree  | `hard`    |
-[//]: # TABLE ROW START
-| [validpal](./questions/two_pointers/easy/validpal.py) | two_pointers | easy |
+
+## Completed Questions
+| Question | Category | Difficulty ||:----------|:---------|:------------|| [validpal](./questions/two_pointers/easy/validpal.py) | two_pointers | easy |
 | [same_tree](./questions/trees/easy/same_tree.py) | trees | easy |
 | [same_tree](./questions/trees/easy/same_tree.py) | trees | easy |
 | [invert_tree](./questions/trees/easy/invert_tree.py) | trees | easy |
