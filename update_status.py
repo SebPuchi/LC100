@@ -44,7 +44,7 @@ path = "./questions"
 
 markdown_rows = []
 header ="| Question | Category | Difficulty |\n"
-formatting = "|:----------|:---------|:------------|\n"
+formatting = "|:-----------------------------|:---------|:------------|\n"
 markdown_rows.append(header)
 markdown_rows.append(formatting)
 
