@@ -43,7 +43,7 @@ plt.savefig("./auto_assets/plot.png", dpi=300, bbox_inches='tight')
 path = "./questions"
 
 markdown_rows = []
-header ="| Question | Category | Difficulty |\n"
+header ="| Question ----------------------------------------- | Category | Difficulty |\n"
 formatting = "|:-----------------------------|:---------|:------------|\n"
 markdown_rows.append(header)
 markdown_rows.append(formatting)
