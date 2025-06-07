@@ -43,8 +43,8 @@ fig.suptitle("Completed Days", fontsize=16)
 path = "./questions"
 
 markdown_rows = []
-header ="| Question | Category | Difficulty |"
-formatting = "|:----------|:---------|:------------|"
+header ="| Question | Category | Difficulty |\n"
+formatting = "|:----------|:---------|:------------|\n"
 markdown_rows.append(header)
 markdown_rows.append(formatting)
 
