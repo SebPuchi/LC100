@@ -58,7 +58,7 @@ for (root, dirs, files) in os.walk(path):
                 print("couldn't identify file")
                 continue 
             #adds link thing in markdown
-            row +="| [" +file[:-3] +"](" + file_path +") | " + parts[2] + " | " + parts[3] + " |\n"
+            row +="| [" +file[:-3] +"](" + file_path +") | " + parts[2] + " | '" + parts[3] + "' |\n"
 
             markdown_rows.append(row)
 
