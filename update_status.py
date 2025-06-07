@@ -37,7 +37,7 @@ july.month_plot(dates, data, month=7, ax=ax[2])
 july.month_plot(dates, data, month=8, ax=ax[3])
 
 fig.suptitle("Completed Days", fontsize=16)
-#plt.savefig("./auto_assets/plot.png", dpi=300, bbox_inches='tight')
+plt.savefig("./auto_assets/plot.png", dpi=300, bbox_inches='tight')
 
 # Walk question dir  
 path = "./questions"
