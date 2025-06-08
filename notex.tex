@@ -400,6 +400,27 @@ An island is formed by connecting adjacent lands horizontally or vertically and 
     \end{enumerate}
 \end{enumerate}
 
+\section{One-Dimensional Dynamic Programming}
+
+\subsection{Climbing Stairs}
+\begin{enumerate}
+  \item[] \textbf{Question:}You are given an integer n representing the number of steps to reach the top of a staircase. You can climb with either 1 or 2 steps at a time.
+
+Return the number of distinct ways to climb to the top of the staircase.
+
+    \begin{enumerate}
+      \item[-] \textbf{Main idea:} We can use \textbf{Memoization} to keep track of sub solutions to each part of the problem. 
+      \item[-] \textbf{Subproblem:} At each step, the number of distinct ways that can be reached is the sum of the number of distinct ways that can be reached at steps n-1 and n-2. memo[n-1] + memo[n-2].
+      \item[-] We can set our current memo value, to the sum of the precious two memo values. 
+      \item[-] To begin this problem, (or any DP problem), always start by populating the memo with the base cases of the problem.
+      \item[-] In this case, we populate our memo with   memo = {1:1, 2:2} 
+      \item[-] At the beginning of our recursion, we will check to see if the current value step is in the memo, if it is, then we return that memo value. 
+      \item[-] If not, we add a new entry to our memo that equals our sub problem: memo[n] = memo[n-1] + memo[n-2]. To do this, we first must check to make sure that memo[n-1] and memo[n-2] exist. If we're doing the top down approach, they won't, so we make a recursive call:  memo[n] = self.memoClimb(n-1, memo) + self.memoClimb(n-2, memo). 
+      \item[-] We then return the memo[n] upward 
+      \item[-] \textbf{Note:} This problem can also be done iteratively, and honestly probably is easier to do that way, I put both my solutions in the python file.
+    \end{enumerate}
+\end{enumerate}
+
 
 
 
