@@ -317,7 +317,6 @@ Two binary trees are considered equivalent if they share the exact same structur
 A subtree of a binary tree tree is a tree that consists of a node in tree and all of this node's descendants. The tree tree could also be considered as a subtree of itself.
 
 
-
     \begin{enumerate}
       \item[-] \textbf{Main idea:} Use DFS to search through the main root tree. At each node, check if the current node val equals the target node val. If they do, then we can begin an is same tree check with this node as our new root. 
       \item[-] Checking if a tree is the same can be done in the two ways described in the previous question. We can use a DFS approach, and explore / check as we go, or create arrays that track the order in which the tree was traversed, and compare the arrays
@@ -329,6 +328,31 @@ A subtree of a binary tree tree is a tree that consists of a node in tree and al
     \end{enumerate}
 \end{enumerate}
 
+\section{Heap and Priority Queue}
+
+\subsection{Kth Largest Element in a Stream}
+\begin{enumerate}
+  \item[] \textbf{Question:} 
+    Design a class to find the kth largest integer in a stream of values, including duplicates. E.g. the 2nd largest from [1, 2, 3, 3] is 3. The stream is not necessarily sorted.
+
+Implement the following methods:
+
+ - constructor(int k, int[] nums) Initializes the object given an integer k and the stream of integers nums.\\
+ - int add(int val) Adds the integer val to the stream and returns the kth largest integer in the stream.
+
+
+
+    \begin{enumerate}
+      \item[-] \textbf{Main idea:} Use a heap! By default, python has a built in heap library called heapq that uses min heaps
+      \item[-] In the constructor set the value k to self.k 
+      \item[-] Next, heapify the array, this is basically a free operation, as it takes liner time : O(n). \textit{NOTE:} Heapify happens in place (pass by reference), this means that we do not assign the array to a new variable. 
+      \item[-] Next set the heapifyed array to another attribute variable (say streams).
+      \item[-] In the addition function, first heappush() the value into the array. 
+      \item[-] \textbf{heappush() time complexity: } Heappush adds the new values to the last value of the tree, the bubbles up. Bubbling up involves swapping nodes upward towards the root. This swapping can occur a max number of times thats equal to the height of the tree. So worst case is O(log(n)), time.
+      \item[-] \textbf{heappop() time complexity: } Heappop is simular to heappush, as it swaps nodes. Only the root is swapped with a leaf node, the leaf node is removed and returned, and sink down swapping function is called on the root. This again can happen in O(log(n)) time. 
+      \item[-] In our add function, after we've added the node, we can now heap pop so long as the length of the stream is greater than our kth value. In other words, keep popping until you've popped k times: return the kth element. Time complexity is O(klog(n))
+    \end{enumerate}
+\end{enumerate}
 
 
 
