@@ -355,6 +355,31 @@ Implement the following methods:
 \end{enumerate}
 
 
+\subsection{Last Stone Weight}
+\begin{enumerate}
+  \item[] \textbf{Question:} 
+    You are given an array of integers stones where stones[i] represents the weight of the ith stone.
+
+We want to run a simulation on the stones as follows:
+
+At each step we choose the two heaviest stones, with weight x and y and smash them together  
+  \begin{enumerate}
+    \item[-] If x == y, both stones are destroyed
+    \item[-]  If x < y, the stone of weight x is destroyed, and the stone of weight y has new weight y - x.
+    \item[-] Continue the simulation until there is no more than one stone remaining. 
+\end{enumerate}
+Return the weight of the last remaining stone or return 0 if none remain.
+
+    \begin{enumerate}
+      \item[-] \textbf{Main idea:} Use a heap! This is a max heap problem, so the hardest part about the solution is ensuring we're translating the question correctly while using our min heap. To begin, we can multiply every value by -1 in the array, then call heapify. 
+      \item[-] In the simulation, we choose the two heaviest stones, which means the two most negative stones. So heappop twice, and set x and y equal to the return values. Loop and grab the two largest values so long as the length of the heap is greater than 1
+      \item[-] Now check to see if both of the values are the same, if they are, continue to the next iteration (continue inside while loop)
+      \item[-] If x < y, then we must be careful in translating this to logic in the question, this condition will only happen if x is actually greater than y due to the values being negative. If this is the case, then we need to add y back in with weight y-x. In this case, we will add y back in with weight x - y. To see this math work out, I suggest writing out a couple of values to see how the negative works.
+      \item[-] Once the looping expression evals to false, check to see if there are 1 or None values left in the heap
+      \item[-] If there are none, then return 0, else, return -1 * heap[0] - > remember to turn the negative back to positive!
+    \end{enumerate}
+\end{enumerate}
+
 
 
 
