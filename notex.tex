@@ -422,6 +422,28 @@ Return the number of distinct ways to climb to the top of the staircase.
 \end{enumerate}
 
 
+\subsection{Min Cost Climbing Stairs}
+\begin{enumerate}
+  \item[] \textbf{Question:}
+      You are given an array of integers cost where cost[i] is the cost of taking a step from the ith floor of a staircase. After paying the cost, you can step to either the (i + 1)th floor or the (i + 2)th floor.
+
+      You may choose to start at the index 0 or the index 1 floor.
+
+      Return the minimum cost to reach the top of the staircase, i.e. just past the last index in cost.
+
+    \begin{enumerate}
+      \item[-] \textbf{Main idea:} We can use \textbf{Memoization} to keep track of sub solutions to each part of the problem. 
+      \item[-] \textbf{Subproblem:} At each step, the minimal cost would be the cost to get to that current step, plus the min at steps n-1, n-2. : memo[step] = currentCost + min(self.memoStairs(step-1, cost, memo), self.memoStairs(step-2,cost, memo))
+      \item[-] To begin this problem, (or any DP problem), always start by populating the memo with the base cases of the problem.
+      \item[-] In this case, we populate our memo with the costs associated at steps 1 and 2
+      \item[-] At the beginning of our recursion, we will check to see if the current value step is in the memo, if it is, then we return that memo value. 
+      \item[-] If not, we add a new entry to our memo that equals our sub problem. 
+      \item[-] Because we need to get to the last stair, the stair that doesn't have a value, we need to create a current cost variable that tracks the current values current cost. If the last stair is met, then the current cost will just equal 0. 
+      \item[-] After all of the recursion has been done, we will return memo[step]
+    \end{enumerate}
+\end{enumerate}
+
+
 
 
 
