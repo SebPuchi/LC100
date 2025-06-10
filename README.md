@@ -9,6 +9,7 @@ One-hundred days of leetcode
 | [kth_largest](./questions/heaps/easy/kth_largest.py) | heaps | `easy` |
 | [last_stone_weight](./questions/heaps/easy/last_stone_weight.py) | heaps | `easy` |
 | [valid_parentheses](./questions/stack/easy/valid_parentheses.py) | stack | `easy` |
+| [group_anagrams](./questions/hashmap/medium/group_anagrams.py) | hashmap | `medium` |
 | [twosum](./questions/hashmap/easy/twosum.py) | hashmap | `easy` |
 | [anagram](./questions/hashmap/easy/anagram.py) | hashmap | `easy` |
 | [invert_tree](./questions/trees/easy/invert_tree.py) | trees | `easy` |
