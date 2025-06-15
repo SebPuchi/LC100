@@ -14,6 +14,7 @@ One-hundred days of leetcode
 | [group_anagrams](./questions/hashmap/medium/group_anagrams.py) | hashmap | `medium` |
 | [validpal](./questions/two_pointers/easy/validpal.py) | two_pointers | `easy` |
 | [valid_parentheses](./questions/stack/easy/valid_parentheses.py) | stack | `easy` |
+| [min_stack](./questions/stack/medium/min_stack.py) | stack | `medium` |
 | [stocks](./questions/sliding_window/easy/stocks.py) | sliding_window | `easy` |
 | [longest_substring_without_repeating_characters](./questions/sliding_window/medium/longest_substring_without_repeating_characters.py) | sliding_window | `medium` |
 | [linked_list_cycle_detection](./questions/linked_list/easy/linked_list_cycle_detection.py) | linked_list | `easy` |
