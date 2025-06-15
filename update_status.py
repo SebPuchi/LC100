@@ -52,9 +52,11 @@ for (root, dirs, files) in os.walk(path):
     for file in files:
         row = ""
         if file.endswith(".py"):
+            print(file)
             file_path = os.path.join(root, file)
             parts = root.split(os.sep)
             if len(parts) != 4:
+                print("***", parts)
                 print("couldn't identify file")
                 continue 
             #adds link thing in markdown
