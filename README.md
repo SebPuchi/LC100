@@ -13,6 +13,7 @@ One-hundred days of leetcode
 | [twosum](./questions/hashmap/easy/twosum.py) | hashmap | `easy` |
 | [group_anagrams](./questions/hashmap/medium/group_anagrams.py) | hashmap | `medium` |
 | [validpal](./questions/two_pointers/easy/validpal.py) | two_pointers | `easy` |
+| [two_sum_II](./questions/two_pointers/medium/two_sum_II.py) | two_pointers | `medium` |
 | [valid_parentheses](./questions/stack/easy/valid_parentheses.py) | stack | `easy` |
 | [min_stack](./questions/stack/medium/min_stack.py) | stack | `medium` |
 | [stocks](./questions/sliding_window/easy/stocks.py) | sliding_window | `easy` |
