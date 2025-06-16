@@ -29,6 +29,7 @@ One-hundred days of leetcode
 | [same_tree](./questions/trees/easy/same_tree.py) | trees | `easy` |
 | [binary_search_interative](./questions/binary_search/easy/binary_search_interative.py) | binary_search | `easy` |
 | [binary_search_recursive](./questions/binary_search/easy/binary_search_recursive.py) | binary_search | `easy` |
+| [koko_eats_bananas](./questions/binary_search/meduim/koko_eats_bananas.py) | binary_search | `meduim` |
 | [search_2D_matrix](./questions/binary_search/meduim/search_2D_matrix.py) | binary_search | `meduim` |
 | [last_stone_weight](./questions/heaps/easy/last_stone_weight.py) | heaps | `easy` |
 | [kth_largest](./questions/heaps/easy/kth_largest.py) | heaps | `easy` |
