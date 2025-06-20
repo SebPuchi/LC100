@@ -9,6 +9,7 @@ One-hundred days of leetcode
 | [min_cost_climbing_stairs](./questions/one_dimensional_dp/easy/min_cost_climbing_stairs.py) | one_dimensional_dp | `easy` |
 | [climbing_stairs](./questions/one_dimensional_dp/easy/climbing_stairs.py) | one_dimensional_dp | `easy` |
 | [number_of_islands](./questions/graphs/medium/number_of_islands.py) | graphs | `medium` |
+| [single_number](./questions/hashmap/easy/single_number.py) | hashmap | `easy` |
 | [anagram](./questions/hashmap/easy/anagram.py) | hashmap | `easy` |
 | [twosum](./questions/hashmap/easy/twosum.py) | hashmap | `easy` |
 | [group_anagrams](./questions/hashmap/medium/group_anagrams.py) | hashmap | `medium` |
