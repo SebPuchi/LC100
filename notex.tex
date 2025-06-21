@@ -39,6 +39,22 @@
     \end{enumerate}
 \end{enumerate}
 
+\subsection{Group Anagram}
+\begin{enumerate}
+  \item[] \textbf{Question:} Given an array of strings strs, group all anagrams together into sublists. You may return the output in any order.
+
+An anagram is a string that contains the exact same characters as another string, but the order of the characters can be different.
+
+    \begin{enumerate}
+      \item[-] The main idea of this question is to use a hashmap, and use arrays as keys. In this case, the array would have 26 elements, set to 0 to start. 
+      \item[-] Each of the 26 elements represents a letter a-z. The idea is that you count each letter when traversing through the string.  
+      \item[-] Once you have counted all the letters, use tupple() to change the mutable array into an immutable key that can be used to store the word.
+      \item[-] When adding it to the hash, first check to see if the key already exists. If so, add it to the array of other strs that have that mapping (add it to the values array at that key)
+      \item[-] If it's not a key, add it as a new key, and add the string as an element of an array to the value at that position. 
+      \item[-] Return the values of the hashmap. 
+    \end{enumerate}
+\end{enumerate}
+
 \section{Two Pointers}
 \subsection{Valid Palindrome}
 \begin{enumerate}
