@@ -6,10 +6,10 @@ class Solution:
             letter_count = [0]*26
             for i in range(len(word)):
                 letter_count[ord(word[i]) - ord('a')] +=1
-            itemKey = str(letter_count)
+            itemKey = tuple(letter_count)
             if itemKey in hashmap:
                 hashmap[itemKey].append(word)
             else: 
                 hashmap[itemKey] = [word]
-        return hashmap.values()      
+        return list(hashmap.values())
 
