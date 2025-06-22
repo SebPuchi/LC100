@@ -428,6 +428,24 @@ A subtree of a binary tree tree is a tree that consists of a node in tree and al
     \end{enumerate}
 \end{enumerate}
 
+\subsection{Binary Tree Level Order Traversal}
+\begin{enumerate}
+  \item[] \textbf{Question:} Given a binary tree root, return the level order traversal of it as a nested list, where each sublist contains the values of nodes at a particular level in the tree, from left to right. 
+
+    \begin{enumerate}
+      \item[-] \textbf{Main idea:} This question boils down to preforming breadth first search and assigning nodes a level number when preforming the traversal. 
+      \item[-] To begin, set up a queue, because queues are used to preform BFS. Also set up a level number and assign level=0. 
+      \item[-] Start by putting the root and level=0 in the queue as a tuple. Now preform BFS on the queue. 
+      \item[-] Inside the explore function, if the current node has a left and right, add them to the queue as you normally would, but as a tuple with level+=1. More specifically add (current.left, level+=1) and (current.right, level+=1) to the queue. 
+      \item[-] This will properly assign each node to a level. When returning back from BFS, simply group together all values that have the same level into an array. 
+
+    \end{enumerate}
+\end{enumerate}
+
+
+
+
+
 \section{Heap and Priority Queue}
 
 \subsection{Kth Largest Element in a Stream}
