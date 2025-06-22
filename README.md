@@ -30,12 +30,12 @@ The automation script that I cooked up handles most of the heavy lifting
 3. Maintains the completed questions table below
 
 ## Notes
-When I feel comfortable with a completed question, I write up solutions notes and add it it to my ongoing latex file  [notex](./notex.tex)
-
-
+Once I feel comfortable with a completed question, I write up solutions notes and add it it to my ongoing latex file
 <p align="center">
     <img src="./auto_assets/notes.png" width="500">
 </p>
+
+You can view written solutions for solved questions here:   [notex](./notex.pdf)
 
 ## Completed Questions
 | Question | Category | Difficulty |
