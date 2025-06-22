@@ -21,7 +21,7 @@ class Solution(object):
                 return [i+1, search_index+1]
 
 
-# BETTER SOLUITION: TWO POINTER
+# BETTER SOLUTION: TWO POINTER
    def twoSum(self, numbers: List[int], target: int) -> List[int]:
         left = 0
         right = len(numbers) - 1

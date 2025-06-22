@@ -70,6 +70,26 @@ A palindrome is a string that reads the same forward and backward. It is also ca
     \end{enumerate}
 \end{enumerate}
 
+
+\subsection{Two Sum II (Two Integer Sum)}
+\begin{enumerate}
+  \item[] \textbf{Question:} Given an array of integers numbers that is sorted in non-decreasing order.
+
+Return the indices (1-indexed) of two numbers, [index1, index2], such that they add up to a given target number target and index1 < index2. Note that index1 and index2 cannot be equal, therefore you may not use the same element twice.
+
+There will always be exactly one valid solution.
+
+Your solution must use O(1) additional space.
+    \begin{enumerate}
+      \item[-] \textbf{Main idea: } Use two pointers, one at the beginning of the array, and one at the end
+      \item[-] If the sum number at the two pointers added together is greater than the target, then this means that the current sum is two big, and we must \textit{decrement the right pointer}
+      \item[-] Following this same logic, if the current sum between the two pointers is less than the target, then we must \textit{increment the left pointer}. 
+      \item[-] Do this until sum == target, then return.
+    \end{enumerate}
+\end{enumerate}
+
+
+
 \section{Sliding Window}
 \subsection{Best Time to Buy and Sell Stocks}
 \begin{enumerate}
