@@ -8,7 +8,7 @@ For my last summer before I'm a senior at BC, I've set out to challenge myself w
 
 The heat map above visualizes my daily progress throughout this challenge. A day is marked successful if I post a solution to a problem - whether it's a complete solution or just an honest attempt. 
 
-#### A day gets credited when I either:
+### A day gets credited when I either:
 
 1. Submit a solution to a new problem
 2. Modify/improve an existing solution
@@ -17,6 +17,19 @@ The heatmap is made using this janky repo called july -- currently the main repo
 
 ## Integrity & Automation 
 
+To keep myself accountable, I've set up a github actions to automatically monitor my progress. Every night at midnight ET, the server examines my git commit history to detect if I've made any updates to /questions
+
+If activity is detected, I get credit for that day. No cheating allowed - the git history doesn't lie!
+
+The automation script that I cooked up handles most of the heavy lifting
+
+[update_status.py](./update_status.py) does the following every night:
+
+1. Automatically generates the progress heat map
+2. Updates this README with my current progress
+3. Maintains the completed questions table below
+
+## Notes
 
 ## Completed Questions
 | Question | Category | Difficulty |
