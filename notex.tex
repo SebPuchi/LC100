@@ -144,10 +144,32 @@ Return true if s is a valid string, and false otherwise.
       \item[-] If the char is an close bracket, \textit{first check if the stack is non empty} then check to see if the last value on the stack is the corresponding open bracket to the current close bracket
       \item[-] Continue looping if it is, return false if it isn't
       \item[-] After the loop completes, ensure that the stack is empty, if it is, return true
-        
 
     \end{enumerate}
 \end{enumerate}
+
+\subsection{Min Stack}
+\begin{enumerate}
+  \item[] \textbf{Question:} Design a stack class that supports the push, pop, top, and getMin operations.
+
+-- MinStack() initializes the stack object.
+-- void push(int val) pushes the element val onto the stack.
+-- void pop() removes the element on the top of the stack.
+-- int top() gets the top element of the stack.
+-- int getMin() retrieves the minimum element in the stack.
+
+\textbf{Each function should run in O(1) time.}
+    
+    \begin{enumerate}
+      \item[-] \textbf{Main idea:} This question is very easy except for returning the min in O(1) time. The idea here is to use another internal stack to keep track of all mins, as they are added.
+      \item[-] We can also set up another class var called current min. This is the value that we actually return when getMin() function is called. 
+      \item[-] Using internal stack to keep track of min goes as follows: if a new added value is less than the current min, then update the new current min to this value, as well as add this value to the internal min stack 
+      \item[-] If we pop the value, and it is the current min, then we need to pop the value from both the regular stack, as well as the min stack, and set the new current min to the top (last) value in the min stack. If the min stack is empty, just set the current min to NONE (current min will be init as NONE).
+
+    \end{enumerate}
+\end{enumerate}
+
+
 
 \section{Binary Search}
 \subsection{Binary Search Recursive}
