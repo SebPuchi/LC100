@@ -34,6 +34,7 @@ When I feel comfortable with a completed question, I write up solutions notes an
 
 
 ![notex image)](./auto_assets/notes.png)
+<img src="./auto_assets/notes.png" width="48">
 
 
 ## Completed Questions
