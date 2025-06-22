@@ -165,10 +165,8 @@ Return true if s is a valid string, and false otherwise.
       \item[-] We can also set up another class var called current min. This is the value that we actually return when getMin() function is called. 
       \item[-] Using internal stack to keep track of min goes as follows: if a new added value is less than the current min, then update the new current min to this value, as well as add this value to the internal min stack 
       \item[-] If we pop the value, and it is the current min, then we need to pop the value from both the regular stack, as well as the min stack, and set the new current min to the top (last) value in the min stack. If the min stack is empty, just set the current min to NONE (current min will be init as NONE).
-
     \end{enumerate}
 \end{enumerate}
-
 
 
 \section{Binary Search}
@@ -211,6 +209,9 @@ Your solution must run in O(logn) time.
 
     \end{enumerate}
 \end{enumerate}
+
+
+
 \subsection{Search 2D Matrix}
 \begin{enumerate}
   \item[] \textbf{Question:} You are given an m x n 2-D integer array matrix and an integer target.
@@ -230,6 +231,29 @@ Can you write a solution that runs in O(log(m * n)) time?
 
     \end{enumerate}
 \end{enumerate}
+
+
+\subsection{Koko eats Bananas}
+\begin{enumerate}
+  \item[] \textbf{Question:} You are given an integer array piles where piles[i] is the number of bananas in the ith pile. You are also given an integer h, which represents the number of hours you have to eat all the bananas.
+
+You may decide your bananas-per-hour eating rate of k. Each hour, you may choose a pile of bananas and eats k bananas from that pile. If the pile has less than k bananas, you may finish eating the pile but you can not eat from another pile in the same hour.
+
+Return the minimum integer k such that you can eat all the bananas within h hours.
+
+    \begin{enumerate}
+      \item[-] \textbf{Main idea:} The hardest part of this question is knowing what to preform a binary search on, as we need to find the minimum integer k such that all bananas can be eaten within h hours. In this case, the max that k can be is the largest pile.
+      \item[-] \textit{Simplified Solution:} Preform binary search from k = 1 to max pile amount in banana piles: In other words, preform binary search on [1, max(piles)].
+      \item[-] In this case, we start at the half way pile. For this k value, check to see if all the bananas can be completed with this rate.
+      \item[-] If it cannot, this k value is too small, and we need to retry with a new larger k. So preform binary search on the upper half. 
+      \item[-] If all the values can be completed in this time, this is a valid k, but it isn't necessarily the \textit{smallest} k value. So we need to preform binary search again anyway on the left side of the array. 
+      \item[-] If the smaller value doesn't work, then return the current min. If it does, repeat until the current min is the smallest working one.
+
+    \end{enumerate}
+\end{enumerate}
+
+
+
 
 \section{Linked Lists}
 
