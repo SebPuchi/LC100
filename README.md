@@ -31,9 +31,12 @@ The automation script that I cooked up handles most of the heavy lifting
 
 ## Notes
 Once I feel comfortable with a completed question, I write up solutions notes and add it it to my ongoing latex file
-<a href="./notex.pdf" align="center">
+
+<p align="center">
+  <a href="./notex.pdf">
     <img src="./auto_assets/notes.png" width="750">
-</a>
+  </a>
+</p>
 
 ## Completed Questions
 | Question | Category | Difficulty |
