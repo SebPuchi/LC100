@@ -1,11 +1,21 @@
 # LC100: 100 Days of Leetcode
 
-
-## Aw snap :/ you've discovered my summer Leetcode challenge 
 For my last summer before I'm a senior at BC, I've set out to challenge myself with practicing at least one LeetCode question every day for 100 days straight. The goal here is consistency and gradual improvement in my problem-solving skills.
 
 ## Progress Heatmap
 ![sebas's progress xD)](./auto_assets/plot.png)
+
+
+The heat map above visualizes my daily progress throughout this challenge. A day is marked successful if I post a solution to a problem - whether it's a complete solution or just an honest attempt. 
+
+#### A day gets credited when I either:
+
+1. Submit a solution to a new problem
+2. Modify/improve an existing solution
+
+The heatmap is made using this janky repo called july -- currently the main repo has a ton of bugs. I've forked and cleaned up a lot of them: you can find that here: [sebas-july](https://github.com/SebPuchi/july)
+
+## Integrity & Automation 
 
 
 ## Completed Questions
