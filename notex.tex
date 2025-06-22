@@ -55,6 +55,26 @@ An anagram is a string that contains the exact same characters as another string
     \end{enumerate}
 \end{enumerate}
 
+
+\subsection{Single Number}
+\begin{enumerate}
+  \item[] \textbf{Question:} You are given a non-empty array of integers nums. Every integer appears twice except for one.
+
+Return the integer that appears only once.
+
+You must implement a solution with O(n) runtime complexity and use only  O(1) extra space. 
+
+
+    \begin{enumerate}
+      \item[-] Use a hash to keep track of numbers
+      \item[-] If a number is not in the hash, add it in, if it is already in, then remove it.  
+      \item[-] If you repeat this process for every number, then the only value left when you've traversed through the whole array will be the single number: So return the only key left
+    \end{enumerate}
+\end{enumerate}
+
+
+
+
 \section{Two Pointers}
 \subsection{Valid Palindrome}
 \begin{enumerate}
