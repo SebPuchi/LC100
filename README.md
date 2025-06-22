@@ -17,9 +17,9 @@ The heatmap is made using this janky repo called july -- currently the main repo
 
 ## Integrity & Automation 
 
-To keep myself accountable, I've set up a github actions to automatically monitor my progress. Every night at midnight ET, the server examines my git commit history to detect if I've made any updates to /questions
+To keep myself accountable, I've set up a github actions bot to automatically monitor my progress. Every night at midnight ET, the server examines my git commit history to detect if I've made any updates to ./questions
 
-If activity is detected, I get credit for that day. No cheating allowed - the git history doesn't lie!
+If activity is detected, I get credit for that day. Git history never lies!
 
 The automation script that I cooked up handles most of the heavy lifting
 
@@ -30,6 +30,11 @@ The automation script that I cooked up handles most of the heavy lifting
 3. Maintains the completed questions table below
 
 ## Notes
+When I feel comfortable with a completed question, I write up solutions notes and add it it to my ongoing latex file  [notex](./notex.tex)
+
+
+![notex image)](./auto_assets/notes.png)
+
 
 ## Completed Questions
 | Question | Category | Difficulty |
