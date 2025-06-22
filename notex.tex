@@ -106,6 +106,24 @@ Return the maximum profit you can achieve. You may choose to not make any transa
     \end{enumerate}
 \end{enumerate}
 
+\subsection{Longest Substring Without Repeating Characters}
+\begin{enumerate}
+  \item[] \textbf{Question:} Given a string s, find the length of the longest substring without duplicate characters.
+
+A substring is a contiguous sequence of characters within a string.
+
+    \begin{enumerate}
+      \item[-] \textbf{Main Idea: } This is a sliding window question. The idea is that you will have two pointers start at the beginning of the string, and increment the right pointer, so long as the next character hasn't already occurred in the substring
+      \item[-] More formally: get a local max-len, as well as a global max-len. Begin by incrementing the right pointer and adding the char to some tracked char array, so long if it isn't in the char array already. 
+      \item[-] If it is, then we need to \textit{increment the left pointer}, and remove whatever value the left pointer is at from our tracked chars arr or hashmap. When we remove a char, be sure to decrement our local max-len.
+      \item[-] Keep incrementing left pointer and removing from array until we've removed the character that the right pointer was pointing at. Once at this point, we can now continue to increment the right pointer as above. 
+      \item[-] When incrementing right pointer, always update the local max, and check if it's greater than the global max
+      \item[-] Once the left pointer has reached the end of the string, stop and return the global max
+    \end{enumerate}
+\end{enumerate}
+
+
+
 \section{Stack}
 \subsection{Valid Parentheses}
 \begin{enumerate}
