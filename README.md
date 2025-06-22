@@ -1,10 +1,10 @@
 # LC100: 100 Days of Leetcode
 
-### Aw snap... you've stubbled across my leetcode repo
 
-## The Challenge
-I set out to challenge myself with practicing at least one LeetCode question every day for 100 days straight. Whether I solve it perfectly or just make an honest attempt, the goal is consistency and gradual improvement in my problem-solving skills.
+## Aw snap :/ you've discovered my summer Leetcode challenge 
+For my last summer before I'm a senior at BC, I've set out to challenge myself with practicing at least one LeetCode question every day for 100 days straight. The goal here is consistency and gradual improvement in my problem-solving skills.
 
+## Progress Heatmap
 ![sebas's progress xD)](./auto_assets/plot.png)
 
 
