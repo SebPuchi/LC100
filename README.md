@@ -33,8 +33,7 @@ The automation script that I cooked up handles most of the heavy lifting
 When I feel comfortable with a completed question, I write up solutions notes and add it it to my ongoing latex file  [notex](./notex.tex)
 
 
-![notex image)](./auto_assets/notes.png)
-<img src="./auto_assets/notes.png" width="48">
+<img src="./auto_assets/notes.png" width="1000">
 
 
 ## Completed Questions
