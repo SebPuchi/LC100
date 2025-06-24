@@ -6,7 +6,7 @@ For my last summer before I'm a senior at BC, I've set out to challenge myself w
 ![sebas's progress xD)](./auto_assets/plot.png)
 
 
-The heat map above tracks my daily progress. I consider a day a win so long as I post a solution -- whether I nailed the problem or was just a genuine effort.
+The heat map above tracks my daily progress. I consider a day a win so long as I push a solution -- whether I nailed the problem or just put forth a genuine effort.
 
 ### A day gets credited when I either:
 
