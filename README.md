@@ -71,3 +71,4 @@ Once I feel comfortable with a completed question, I write up solutions notes an
 | [search_2D_matrix](./questions/binary_search/meduim/search_2D_matrix.py) | binary_search | `meduim` |
 | [last_stone_weight](./questions/heaps/easy/last_stone_weight.py) | heaps | `easy` |
 | [kth_largest](./questions/heaps/easy/kth_largest.py) | heaps | `easy` |
+| [k_closest_points_to_orgin](./questions/heaps/medium/k_closest_points_to_orgin.py) | heaps | `medium` |
