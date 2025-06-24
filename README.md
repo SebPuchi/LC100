@@ -6,20 +6,20 @@ For my last summer before I'm a senior at BC, I've set out to challenge myself w
 ![sebas's progress xD)](./auto_assets/plot.png)
 
 
-The heat map above visualizes my daily progress throughout this challenge. A day is marked successful if I post a solution to a problem - whether it's a complete solution or just an honest attempt. 
+The heat map above tracks my daily progress. I consider a day a win so long as I post a solution -- whether I nailed the problem or was just a genuine effort.
 
 ### A day gets credited when I either:
 
 1. Submit a solution to a new problem
 2. Modify/improve an existing solution
 
-The heatmap is made using this janky repo called july -- currently the main repo has a ton of bugs. I've forked and cleaned up a lot of them: you can find that here: [sebas-july](https://github.com/SebPuchi/july)
+The heatmap is made using this janky seaborn wrapper called july -- currently the main repo has a ton of bugs. I've forked and cleaned up a lot of them: you can find that here: [sebas-july](https://github.com/SebPuchi/july)
 
 ## Integrity & Automation 
 
 To keep myself accountable, I've set up a github actions bot to automatically monitor my progress. Every night at midnight ET, the server examines my git commit history to detect if I've made any updates to ./questions
 
-If activity is detected, I get credit for that day. Git history never lies!
+If activity is detected, I get credit for that day. The idea here is that git history never lies and I can't go back and change things even if I wanted to. 
 
 The automation script that I cooked up handles most of the heavy lifting
 
