@@ -518,6 +518,32 @@ Return the weight of the last remaining stone or return 0 if none remain.
     \end{enumerate}
 \end{enumerate}
 
+
+\subsection{K Closest Points to Origin}
+\begin{enumerate}
+  \item[] \textbf{Question:} You are given an 2-D array points where points[i] = [xi, yi] represents the coordinates of a point on an X-Y axis plane. You are also given an integer k.
+
+Return the k closest points to the origin (0, 0).
+
+The distance between two points is defined as the Euclidean distance (sqrt((x1 - x2)^2 + (y1 - y2)^2)).
+
+You may return the answer in any order.
+
+    \begin{enumerate}
+      \item[-] \textbf{Main idea:} Use a heap to store the distance values! Start by looping through all the points, and calculating the distances of each point. 
+      \item[-] Once you've calculated the distance, store that distance in an array that you'll heapify
+      \item[-] Also store the distance as the key in a hashmap: the values will be \textit{an array of all the (x,y) coordinates that form this distance}
+      \item[-] Once you have heapifyed the distance array, begin heappopping and looking up a x,y values from the array of possible values.
+      \item[-] Add each (x,y) value as an array to an answer array. Do this k times, then return the answer array
+    \end{enumerate}
+\end{enumerate}
+
+
+
+
+
+
+
 \section{Graphs}
 
 \subsection{Number of Islands}
