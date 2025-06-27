@@ -59,6 +59,7 @@ Once I feel comfortable with a completed question, I write up solutions notes an
 | [reverse_list](./questions/linked_list/easy/reverse_list.py) | linked_list | `easy` |
 | [merge_linked_lists](./questions/linked_list/easy/merge_linked_lists.py) | linked_list | `easy` |
 | [reorder_list](./questions/linked_list/medium/reorder_list.py) | linked_list | `medium` |
+| [network_delay_time](./questions/advanced_graphs/medium/network_delay_time.py) | advanced_graphs | `medium` |
 | [balanced_binary_tree](./questions/trees/easy/balanced_binary_tree.py) | trees | `easy` |
 | [diameter_of_binary_tree](./questions/trees/easy/diameter_of_binary_tree.py) | trees | `easy` |
 | [sub_tree_of_tree](./questions/trees/easy/sub_tree_of_tree.py) | trees | `easy` |
