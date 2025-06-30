@@ -573,13 +573,10 @@ Return the maximum area of an island in grid. If no island exists, return 0.
 
     \begin{enumerate}
       \item[-] \textbf{Main idea:} Preform a DFS on the graph using a visited nodes list. Explore all neighbor nodes of a starting node, so long as the neighbor has not been visited. 
-      \item[-] We will wrap the DFS call in a for loop that loops through every node. Every time the explore call returns, we will += our island counter by the return call of explore (which will return 1 or 0). This is the value that we will eventually return.
-      \item[-] Inside our explore function, we must first check to see if the node had a value 1 or 0, if its 0, simply 0
-      \item[-] If the value is 1, then we can explore all of the nodes neighbors. 
-      \item[-] We can fist built our another function that returns all the neighbors of the given node. We can then loop through this list, for every non-visited neighbor.
-      \item[-] After we have finished the recursive calling, we can return 1 to the parent wrapper function. 
-      \item[-] Now having finished exploring the graph, we can return the island counter. 
-      \item[-] \textbf{Note:} I used a list of tuples (x,y) to store visited nodes, but there's probably a better way to do this. 
+      \item[-] We will wrap the DFS call in a for loop that loops through every node. Inside the explore call, we need to have an internal counter that adds to the area as we traverse. We then return that area back to the parent function, and test to see if its greater than whatever our current max area is. 
+      \item[-] As for the other inland question, we can fist built another function that returns all the neighbors of the given node. We can then loop through this list, for every non-visited neighbor.
+      \item[-] Once our main parent for loop has terminated, we should have counted all the island's areas, and found the largest.
+      \item[-] \textbf{Note:} Recursively internally counting can get tricky, make sure you consider what you're passing up to the parent. One way of doing this is to have a local area number set to 1, then return that area upward when you do the recursive call. 
     \end{enumerate}
 \end{enumerate}
 
