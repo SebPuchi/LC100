@@ -580,7 +580,36 @@ Return the maximum area of an island in grid. If no island exists, return 0.
     \end{enumerate}
 \end{enumerate}
 
+\section{Advanced Graphs}
 
+\subsection{Network Delay Time}
+\begin{enumerate}
+  \item[] \textbf{Question:} You are given a network of n directed nodes, labeled from 1 to n. You are also given times, a list of directed edges where times[i] = (ui, vi, ti).
+
+\begin{enumerate}
+  \item[-] ui is the source node (an integer from 1 to n)
+  \item[-] vi is the target node (an integer from 1 to n)
+  \item[-] ti is the time it takes for a signal to travel from the source to the target node (an integer greater than or equal to 0).
+
+\end{enumerate}
+You are also given an integer k, representing the node that we will send a signal from.
+
+Return the minimum time it takes for all of the n nodes to receive the signal. If it is impossible for all the nodes to receive the signal, return -1 instead.
+
+    \begin{enumerate}
+      \item[-] \textbf{Main idea:} This is a classic DIJKSTRAS ALGO approach. I'm going to walk through the best steps in order to implement DIJKSTRAS in python, because although you knew how to do this problem, implementing DIJKSTRAS correctly was actually really buggy and hard.
+      \item[-] To begin, change whatever internal data structure they give you into an adjacency list. 
+      \item[-] The adjacency list is a dictionary, where the key is a node, and the value is a tuple with the neighbor node (v) and the weight between (u,v). \textbf{NOTE:} Not every node will be in the adjacency list! This is as expected
+      \item[-] Once you have created the adjacency list, we now need to create the distances dictionary that will keep track of the currently running distances to each node. To begin, set the start node k to distance 0. (Distance from k to itself is just 0). Next, for all the remaining nodes, set the distance to INF. (Will use math.inf, which requires importing math). 
+      \item[-] Next, set up the min-heap that you will \textit{heappush and heappop from}. Put the starting tupple (0, k) in the min heap
+      \item[-] Now start the main looping. While the length of the min heap isn't 0, pop the tuple with the smallest distance. Because this is a heap, just heappop.
+      \item[-] Now that you have the current smallest, check to see if the current stored distance to this node is smaller than the current distance popped from the heap. If it is smaller, then we can continue in the loop, as there is already a shorter distance found to this node. 
+      \item[-] If it's not smaller, then for every neighbor in the adjacency list of this node, we must preform the following check: distances[v] > curr-dist + w
+      \item[-] if this is true, then we must update distance[v] to curr-dist + w, and then heappush this neighbor and weight into the min-heap
+      \item[-] After the while loop has finished, and all nodes have been explored, we can check if any nodes were unreachable, in this case, if any nodes in the distances dictionary are math.inf, then return -1
+      \item[-] If all distances are in the dictionary, then we must return the max of all the distances in the dictionary, this equal the min over all nodes that needed to be communicated to. This problem was kinda annoying to solve because I had to implement DIJKSTRAS for the first time but moving forward hopefully it's not too bad
+    \end{enumerate}
+\end{enumerate}
 
 
 
