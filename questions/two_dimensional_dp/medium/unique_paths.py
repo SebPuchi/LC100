@@ -18,4 +18,3 @@ class Solution:
                     continue 
                 grid[i][j] = grid[i+1][j] + grid[i][j+1]
         return grid[0][0]
-   
