@@ -656,6 +656,25 @@ Return the number of distinct ways to climb to the top of the staircase.
     \end{enumerate}
 \end{enumerate}
 
+\section{Two-Dimensional Dynamic Programming}
+\subsection{Unique Paths}
+\begin{enumerate}
+  \item[] \textbf{Question:}
+    There is an m x n grid where you are allowed to move either down or to the right at any point in time.
+
+Given the two integers m and n, return the number of possible unique paths that can be taken from the top-left corner of the grid (grid[0][0]) to the bottom-right corner (grid[m - 1][n - 1]).
+
+You may assume the output will fit in a 32-bit integer.
+
+    \begin{enumerate}
+      \item[-] \textbf{Main idea:} This question is not bad at all. Consider the following: At any point on the grid, you only have two options, move down, or move to the right. The total number of ways to reach the current square is the sum between the number of ways you could move at the square down, plus the number of ways from the square at the right.
+      \item[-] At each square, add the numbers of ways at grid[i+1][j] + grid[i][j+1]. This gives you the total number of ways at grid[i][j].
+      \item[-] Say you are just to the left of the final state, in this case, you cannot add whats below, because it doesn't exist. To solve this, expand the rows and columns by one, and fill in these as 0. So now when you add from this "out of bounds row", you simply add zero. 
+      \item[-] Start looping the last row, upwards toward the starting position. Make sure to mark the final node grid[m-1][n-1] equal to 1!
+      \item[-] After you've looped from the bottom row upward to the top row, making sure to add the right and bottom cells as you go, the final total amount of ways is the numbers of ways at the starting element: grid[0][0]: this is the solution.
+    \end{enumerate}
+\end{enumerate}
+
 
 \section{Backtracking}
 \subsection{Subsets ** Need to come back and study this question}
