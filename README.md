@@ -68,6 +68,7 @@ Once I feel comfortable with a completed question, I write up solutions notes an
 | [max_depth_binary_tree](./questions/trees/easy/max_depth_binary_tree.py) | trees | `easy` |
 | [same_tree](./questions/trees/easy/same_tree.py) | trees | `easy` |
 | [binary_tree_level_order_traversal](./questions/trees/medium/binary_tree_level_order_traversal.py) | trees | `medium` |
+| [unique_paths](./questions/two_dimensional_dp/medium/unique_paths.py) | two_dimensional_dp | `medium` |
 | [subsets](./questions/backtracking/medium/subsets.py) | backtracking | `medium` |
 | [binary_search_interative](./questions/binary_search/easy/binary_search_interative.py) | binary_search | `easy` |
 | [binary_search_recursive](./questions/binary_search/easy/binary_search_recursive.py) | binary_search | `easy` |
