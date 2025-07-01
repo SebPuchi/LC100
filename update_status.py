@@ -31,6 +31,7 @@ data = np.array([1 if d.strftime("%Y-%m-%d") in commit_dates else 0 for d in dat
 
 fig, ax = plt.subplots(nrows=1, ncols=4, figsize=(12, 3.5))
 
+
 july.month_plot(dates, data, month=5, ax=ax[0])
 july.month_plot(dates, data, month=6, ax=ax[1])
 july.month_plot(dates, data, month=7, ax=ax[2])
