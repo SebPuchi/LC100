@@ -22,21 +22,33 @@ def get_commit_dates(path, since, until):
 
 mpl.rcParams['font.family'] = 'Hack Nerd Font Mono'
 
-dates = date_range("2025-05-01", "2025-08-31")
+may_d = date_range("2025-05-01", "2025-06-01")
+june_d = date_range("2025-06-01", "2025-07-01")
+july_d = date_range("2025-07-01", "2025-08-01")
+august_d = date_range("2025-08-01", "2025-09-01")
 # May need to update last date in the future
-commit_dates = get_commit_dates("./questions/", "2025-05-01", "2025-08-31")
-print("Commit dates found:", commit_dates)
+may_commit_dates = get_commit_dates("./questions/", "2025-05-01", "2025-06-01")
+june_commit_dates = get_commit_dates("./questions/", "2025-06-01", "2025-07-01")
+july_commit_dates = get_commit_dates("./questions/", "2025-07-01", "2025-08-01")
+august_commit_dates = get_commit_dates("./questions/", "2025-08-01", "2025-09-01")
+print("Commit dates found:", may_commit_dates)
+print("Commit dates found:", june_commit_dates)
+print("Commit dates found:", july_commit_dates)
+print("Commit dates found:", august_commit_dates)
 
 # maps matches to 1 to graph
-data = np.array([1 if d.strftime("%Y-%m-%d") in commit_dates else 0 for d in dates])
+may_data = np.array([1 if d.strftime("%Y-%m-%d") in may_commit_dates else 0 for d in may_d])
+june_data = np.array([1 if d.strftime("%Y-%m-%d") in june_commit_dates else 0 for d in june_d])
+july_data = np.array([1 if d.strftime("%Y-%m-%d") in july_commit_dates else 0 for d in july_d])
+august_data = np.array([1 if d.strftime("%Y-%m-%d") in august_commit_dates else 0 for d in august_d])
 
 fig, ax = plt.subplots(nrows=1, ncols=4, figsize=(12, 3.5))
 
 
-july.month_plot(dates, data, month=5, ax=ax[0])
-july.month_plot(dates, data, month=6, ax=ax[1])
-july.month_plot(dates, data, month=7, ax=ax[2])
-july.month_plot(dates, data, month=8, ax=ax[3])
+july.month_plot(may_d, may_data, month=5, ax=ax[0])
+july.month_plot(june_d, june_data, month=6, ax=ax[1])
+july.month_plot(july_d, july_data, month=7, ax=ax[2])
+july.month_plot(august_d, august_data, month=8, ax=ax[3])
 
 fig.suptitle("Completed Days", fontsize=16)
 plt.savefig("./auto_assets/plot.png", dpi=300, bbox_inches='tight')
