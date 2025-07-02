@@ -21,7 +21,8 @@ def get_commit_dates(path, since, until):
     return set(dates)
 
 mpl.rcParams['font.family'] = 'Hack Nerd Font Mono'
-dates = date_range("2025-05-01", "2025-8-31")
+
+dates = date_range("2025-05-01", "2025-08-31")
 # May need to update last date in the future
 commit_dates = get_commit_dates("./questions/", "2025-05-01", "2025-08-31")
 print("Commit dates found:", commit_dates)
