@@ -1,5 +1,6 @@
 import math
 class Solution:
+
     def maxSubArray(self, nums: List[int]) -> int:
         left = 0
         right = len(nums) 
