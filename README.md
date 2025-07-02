@@ -70,6 +70,7 @@ Once I feel comfortable with a completed question, I write up solutions notes an
 | [binary_tree_level_order_traversal](./questions/trees/medium/binary_tree_level_order_traversal.py) | trees | `medium` |
 | [unique_paths](./questions/two_dimensional_dp/medium/unique_paths.py) | two_dimensional_dp | `medium` |
 | [subsets](./questions/backtracking/medium/subsets.py) | backtracking | `medium` |
+| [maximum_subarray](./questions/greedy/medium/maximum_subarray.py) | greedy | `medium` |
 | [binary_search_interative](./questions/binary_search/easy/binary_search_interative.py) | binary_search | `easy` |
 | [binary_search_recursive](./questions/binary_search/easy/binary_search_recursive.py) | binary_search | `easy` |
 | [koko_eats_bananas](./questions/binary_search/meduim/koko_eats_bananas.py) | binary_search | `meduim` |
