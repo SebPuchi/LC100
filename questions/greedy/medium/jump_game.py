@@ -1,25 +1,19 @@
 class Solution:
     def canJump(self, nums: List[int]) -> bool:
-        len_to_last = len(nums) - 1
-        last_jump = nums[0]
-        i = 0
-        while i < len(nums):
-            if i < 0:
-                break
-            if nums[i] == 0:
-                if i == len(nums) - 1:
-                    return True
-                else: 
-                    i -= last_jump
-                    nums[i] = nums[i] - 1
-                    len_to_last+=last_jump
-                    continue
-
-            if nums[i] >= len_to_last:
-                return True
+        
+        if len(nums) == 0:
+            return True
+        right = len(nums)-1
+        left = right - 1
+        dist_between = 1
+        while left >= 0:
+            if nums[left] >= dist_between:
+                right = left
+                left = right - 1
+                dist_between = 1
             else:
-                last_jump = nums[i]
-                i += last_jump
-                len_to_last -= last_jump
-        return False
+                left -=1
+                dist_between+=1
+            
+        return right == 0
 
