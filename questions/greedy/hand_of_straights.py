@@ -1,16 +1,20 @@
 class Solution:
     def isNStraightHand(self, hand: List[int], groupSize: int) -> bool:
-        hand.sort()
+        card_hash = {} 
 
-        prev_card = None 
-        groups = [[]]
-        group_count = 0
-
-        while len(hand) != 0:
-            current_card = hand.pop(0)
-            if current_card == prev_card:
-                group_count+=1
-            groups[group_count].append(current_card)
-
+        for i in range(len(hand)):
+            if hand[i] in card_hash:
+                card_hash[hand[i]] +=1
+            else:
+                card_hash[hand[i]] = 1
+        
+        while len(card_hash) != 0:
+            smallest_card = min(card_hash.keys())
+            card_hash[smallest_card] -=1
+            if card_hash[smalles_card] == 0:
+                del card_hash[smalles_card]
             
-            print(current_card)
+            for i in range(groupSize -1):
+                
+        print(card_hash)
+
