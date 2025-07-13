@@ -77,6 +77,7 @@ Once I feel comfortable with a completed question, I write up solutions notes an
 | [anagram](./questions/hashmap/easy/anagram.py) | hashmap | `easy` |
 | [single_number](./questions/hashmap/easy/single_number.py) | hashmap | `easy` |
 | [twosum](./questions/hashmap/easy/twosum.py) | hashmap | `easy` |
+| [encode_and_decode](./questions/hashmap/medium/encode_and_decode.py) | hashmap | `medium` |
 | [group_anagrams](./questions/hashmap/medium/group_anagrams.py) | hashmap | `medium` |
 | [last_stone_weight](./questions/heaps/easy/last_stone_weight.py) | heaps | `easy` |
 | [kth_largest](./questions/heaps/easy/kth_largest.py) | heaps | `easy` |
