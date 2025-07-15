@@ -687,8 +687,12 @@ You may assume the output will fit in a 32-bit integer.
 
   Return true if you can reach the last index starting from index 0, or false otherwise.
     \begin{enumerate}
-      \item[-] \textbf{Main idea:} This question is not bad at all. Consider the following: At any point on the grid, you only have two options, move down, or move to the right. The total number of ways to reach the current square is the sum between the number of ways you could move at the square down, plus the number of ways from the square at the right.
-      \item[-] 
+      \item[-] \textbf{Main idea:} This question is greedy: the trick is to \textbf{start at the end of the array and work toward the beginning of the array}. If you work backwards, and you know that the previous element can reach the next, then you set the previous to the new end. Keep repeating this until your "end point" becomes the beginning of the array. If this is the case, then return true
+      \item[-] You can use two pointers, left and right. Start right pointer at the end of the array, and the left pointer at one less than right.
+      \item[-] Keep and ongoing variable that tracks the distance between the left and right nodes. (This value starts at 1)
+      \item[-] If the value at the left pointer is ever greater than the distance between the current left and right, then set the right to the current left, and reset the distance between back to 0. 
+      \item[-] If not, then decrement the left variable, and add to the distance between.
+      \item[-] If left index becomes zero, and the current right index doesn't also equal zero, then the last element was not reachable from the first element: if it is zero, then return true
     \end{enumerate}
 \end{enumerate}
 
