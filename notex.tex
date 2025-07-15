@@ -696,6 +696,33 @@ You may assume the output will fit in a 32-bit integer.
     \end{enumerate}
 \end{enumerate}
 
+\subsection{Gas Station}
+\begin{enumerate}
+  \item[] \textbf{Question:}
+
+   There are n gas stations along a circular route. You are given two integer arrays gas and cost where:
+   \begin{enumerate}
+     \item[-] gas[i] is the amount of gas at the ith station.
+     \item[-] cost[i] is the amount of gas needed to travel from the ith station to the (i + 1)th station. (The last station is connected to the first station)
+
+\end{enumerate}
+You have a car that can store an unlimited amount of gas, but you begin the journey with an empty tank at one of the gas stations.
+
+Return the starting gas station's index such that you can travel around the circuit once in the clockwise direction. If it's impossible, then return -1.
+
+It's guaranteed that at most one solution exists.
+
+
+    \begin{enumerate}
+      \item[-] \textbf{Main idea:} Take the differences between the gas station positive amount, and the cost. Begin a tank counter variable that keeps track of the amount of gas in the tank. For each station, take the difference between the fill up amount, and the cost, and add it to the ongoing tank counter amount. Store this index that you started at as the first "potential solution index"
+      \item[-] If the tank counter amount is ever negative, reset the "potential solution index" to be the next index, and also set the tank amount back to zero
+      \item[-] Keep looping through the gas station array repeating this process: at the end of the loop, the index where the tank counter never went negative is the solution index.
+      \item[-] \textit{Another thing to check first is if the summation of the gas array is greater than or equal to the summation of the cost array: if not, then return -1 as the solution is not possible}
+    \end{enumerate}
+\end{enumerate}
+
+
+
 
 
 
