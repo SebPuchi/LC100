@@ -1,18 +1,14 @@
 class Solution:
-    def codeFound(self, s, i):
+    def codeFound(self, s, j):
         num = "" 
-        for i in range(i, len(s)):
-            print("NUM", num)
+
+        for i in range(j, len(s)):
             if s[i].isnumeric():
                 num+=s[i]
                 continue
             elif s[i] == "$":
-                print("NUM", num)
                 return (True, num)
-            return (False, num)
         return (False, num)
-
-
 
     def encode(self, strs: List[str]) -> str:
         encoded_string = '' 
@@ -24,12 +20,15 @@ class Solution:
 
     def decode(self, s: str) -> List[str]:
         output = []
-        for i in range(len(s)):
+        i = 0
+        while i < len(s):
+            print("I", i)
             (valid, offset) = self.codeFound(s, i)
             print(valid, offset)
             if valid:
-                output.append(s[i+2 : i + 2 + int(offset)])
-                i+=(1 + int(offset))
+                output.append(s[i+(len(offset) +1) : i + (len(offset)+1) + int(offset)])
+                i+=(len(offset) + 1 + int(offset))
+            
+            print(output, i)
         return output
-
 
