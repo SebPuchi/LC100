@@ -71,6 +71,7 @@ Once I feel comfortable with a completed question, I write up solutions notes an
 | [koko_eats_bananas](./questions/binary_search/meduim/koko_eats_bananas.py) | binary_search | `meduim` |
 | [validpal](./questions/two_pointers/easy/validpal.py) | two_pointers | `easy` |
 | [two_sum_II](./questions/two_pointers/medium/two_sum_II.py) | two_pointers | `medium` |
+| [3Sum](./questions/two_pointers/medium/3Sum.py) | two_pointers | `medium` |
 | [climbing_stairs](./questions/one_dimensional_dp/easy/climbing_stairs.py) | one_dimensional_dp | `easy` |
 | [min_cost_climbing_stairs](./questions/one_dimensional_dp/easy/min_cost_climbing_stairs.py) | one_dimensional_dp | `easy` |
 | [house_robber](./questions/one_dimensional_dp/medium/house_robber.py) | one_dimensional_dp | `medium` |
