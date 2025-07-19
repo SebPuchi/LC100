@@ -1,24 +1,22 @@
 class Solution:
     def threeSum(self, nums: List[int]) -> List[List[int]]:
-        negative_hash = {}
-
-        for i in range(len(nums)):
-            print("index", i)
-            negative_hash[(-1 * nums[i], i)] = nums[i]
-            print(negative_hash)
-
         answer_array = []
-
+        nums.sort() 
+        print(nums)
         for i in range(len(nums)):
-            for j in range(i+1, len(nums)):
-                print(i,j)
-            current_sum = nums[i] + nums[j]
-            if current_sum in [item[0] for item in negative_hash.keys()]:
-                print("cur sum", current_sum)
-                num, index = negative_hash[current_sum]
-
-                if i != index and j != index:
-                    answer_array.append([nums[i], nums[j], num])
-
-        print(answer_array)
+            target = -1 * nums[i]
+            left = i+1
+            right = len(nums) - 1
+            while left < right:
+                current_sum = nums[left] + nums[right]
+                if current_sum == target:
+                    if [nums[i], nums[left], nums[right]] not in answer_array:
+                        answer_array.append([nums[i], nums[left], nums[right]])
+                    else: 
+                        continue
+                elif current_sum > target:
+                    right -=1
+                else:
+                    left +=1
+            print(answer_array)
 
