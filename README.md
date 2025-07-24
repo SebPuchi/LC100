@@ -43,6 +43,7 @@ Once I feel comfortable with a completed question, I write up solutions notes an
 |:-----------------------------|:---------|:------------|
 | [subsets](./questions/backtracking/medium/subsets.py) | backtracking | `medium` |
 | [valid_parentheses](./questions/stack/easy/valid_parentheses.py) | stack | `easy` |
+| [reverse_polish_notation](./questions/stack/medium/reverse_polish_notation.py) | stack | `medium` |
 | [min_stack](./questions/stack/medium/min_stack.py) | stack | `medium` |
 | [network_delay_time](./questions/advanced_graphs/medium/network_delay_time.py) | advanced_graphs | `medium` |
 | [reverse_list](./questions/linked_list/easy/reverse_list.py) | linked_list | `easy` |
