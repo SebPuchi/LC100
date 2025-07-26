@@ -11,20 +11,10 @@ class Solution:
             print("stack", stack)
             current = stack.pop()
             print("CURRENT", current)
+            # need to reconsider if case switiching is correct here / adding to stack in reverse order
             if current not in op_chars:
                 buffer_arr.append(int(current))
                 print(buffer_arr)
-            else:
-                match current:
-                    case "+":
-                        stack.append(sum(buffer_arr))
-                    case "-":
-                         stack.append(buffer_arr[0] - buffer_arr[1])
-                    case "*":
-                         stack.append(buffer_arr[0] * buffer_arr[1])
-                    case "/":
-                         stack.append(buffer_arr[0] / buffer_arr[1])
-                buffer_arr = []
                 if len(stack) ==1:
                     break
                         
