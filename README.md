@@ -50,6 +50,7 @@ Once I feel comfortable with a completed question, I write up solutions notes an
 | [merge_linked_lists](./questions/linked_list/easy/merge_linked_lists.py) | linked_list | `easy` |
 | [linked_list_cycle_detection](./questions/linked_list/easy/linked_list_cycle_detection.py) | linked_list | `easy` |
 | [reorder_list](./questions/linked_list/medium/reorder_list.py) | linked_list | `medium` |
+| [remove_nth_node_from_end](./questions/linked_list/medium/remove_nth_node_from_end.py) | linked_list | `medium` |
 | [jump_game](./questions/greedy/medium/jump_game.py) | greedy | `medium` |
 | [hand_of_straights](./questions/greedy/medium/hand_of_straights.py) | greedy | `medium` |
 | [maximum_subarray](./questions/greedy/medium/maximum_subarray.py) | greedy | `medium` |
