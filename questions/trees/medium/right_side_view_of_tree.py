@@ -7,17 +7,31 @@
 
 class Solution:
 
-    def solution(self, current):
-        if current == None:
-            return 0
-        
-        print(current.val)
-        left = 1 + self.solution(current.left)
-        right = 1 + self.solution(current.right)
-        if right >= left:
-            return right
-        else:
-            return left - right 
-    
     def rightSideView(self, root: Optional[TreeNode]) -> List[int]:
-        print(self.solution(root)
+ 
+        ordering = []
+        queue = []
+        if root:
+            queue.append((root,0))
+        
+        while len(queue) !=0:
+            current = queue.pop(0)
+            node, count = current 
+            ordering.append((node.val, count))
+            count+=1
+            if node.left:
+                queue.append((node.left, count))
+            if node.right:
+                queue.append((node.right, count))
+        answer = []
+        for i in range(len(ordering)):
+            val, count = ordering[i]
+            if i+1 == len(ordering):
+                answer.append(val)
+            else:
+                val_next, count_next = ordering[i+1]
+                if count_next != count:
+                    answer.append(val)
+        return(answer)
+
+        
