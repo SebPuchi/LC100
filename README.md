@@ -87,3 +87,4 @@ Once I feel comfortable with a completed question, I write up solutions notes an
 | [last_stone_weight](./questions/heaps/easy/last_stone_weight.py) | heaps | `easy` |
 | [kth_largest](./questions/heaps/easy/kth_largest.py) | heaps | `easy` |
 | [k_closest_points_to_orgin](./questions/heaps/medium/k_closest_points_to_orgin.py) | heaps | `medium` |
+| [kth_largest_element_in_array](./questions/heaps/medium/kth_largest_element_in_array.py) | heaps | `medium` |
