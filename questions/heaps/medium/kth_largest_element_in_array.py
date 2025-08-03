@@ -16,9 +16,6 @@ class Solution:
             print(int_max, nums)
         return nums[len(nums)-k]
 
-
-
-        
     def findKthLargest(self, nums: List[int], k: int) -> int:
         no_dup = []
         for i in range(len(nums)):
@@ -26,4 +23,9 @@ class Solution:
                 no_dup.append(nums[i])
  
         return(self.sort(no_dup, k))
+
+# Heap solution:
+class Solution:
+    def findKthLargest(self, nums: List[int], k: int) -> int:
+        return heapq.nlargest(k, nums)[-1
 
