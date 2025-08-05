@@ -79,6 +79,7 @@ Once I feel comfortable with a completed question, I write up solutions notes an
 | [3Sum](./questions/two_pointers/medium/3Sum.py) | two_pointers | `medium` |
 | [climbing_stairs](./questions/one_dimensional_dp/easy/climbing_stairs.py) | one_dimensional_dp | `easy` |
 | [min_cost_climbing_stairs](./questions/one_dimensional_dp/easy/min_cost_climbing_stairs.py) | one_dimensional_dp | `easy` |
+| [house_robber_II](./questions/one_dimensional_dp/medium/house_robber_II.py) | one_dimensional_dp | `medium` |
 | [house_robber](./questions/one_dimensional_dp/medium/house_robber.py) | one_dimensional_dp | `medium` |
 | [anagram](./questions/hashmap/easy/anagram.py) | hashmap | `easy` |
 | [single_number](./questions/hashmap/easy/single_number.py) | hashmap | `easy` |
