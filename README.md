@@ -56,6 +56,7 @@ Once I feel comfortable with a completed question, I write up solutions notes an
 | [maximum_subarray](./questions/greedy/medium/maximum_subarray.py) | greedy | `medium` |
 | [gas_station](./questions/greedy/medium/gas_station.py) | greedy | `medium` |
 | [unique_paths](./questions/two_dimensional_dp/medium/unique_paths.py) | two_dimensional_dp | `medium` |
+| [longest_common_subsequence](./questions/two_dimensional_dp/medium/longest_common_subsequence.py) | two_dimensional_dp | `medium` |
 | [stocks](./questions/sliding_window/easy/stocks.py) | sliding_window | `easy` |
 | [longest_repeating_character_replacement](./questions/sliding_window/medium/longest_repeating_character_replacement.py) | sliding_window | `medium` |
 | [longest_substring_without_repeating_characters](./questions/sliding_window/medium/longest_substring_without_repeating_characters.py) | sliding_window | `medium` |
