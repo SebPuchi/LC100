@@ -123,6 +123,22 @@ Your solution must use O(1) additional space.
     \end{enumerate}
 \end{enumerate}
 
+\subsection{3 Sum}
+\begin{enumerate}
+  \item[] \textbf{Question:} Given an integer array nums, return all the triplets [nums[i], nums[j], nums[k]] where nums[i] + nums[j] + nums[k] == 0, and the indices i, j and k are all distinct.
+
+The output should not contain any duplicate triplets. You may return the output and the triplets in any order.
+
+    \begin{enumerate}
+      \item[-] \textbf{Main idea: } This question is very similar to Two Sum II: Main idea is to have two pointers, one at the beginning of the input array and one at the end of the input array. First step is to SORT the input array
+      \item[-] We need the sum of these to equal another value in the array multiplied by negative 1. 
+      \item[-] Start by attempting to find what two other numbers can sum to equal the value at index 0. 
+      \item[-] As before, we increment the left pointer if the sum value needs to be greater, and decrement the right pointer if it needs to be smaller. Repeat until something is found
+      \item[-] Repeat this process for every value in the original array: This takes $O(n^2)$ time.
+    \end{enumerate}
+\end{enumerate}
+
+
 
 
 \section{Sliding Window}
