@@ -752,6 +752,51 @@ Return the number of distinct ways to climb to the top of the staircase.
     \end{enumerate}
 \end{enumerate}
 
+
+\subsection{House Robber}
+\begin{enumerate}
+  \item[] \textbf{Question:}
+
+You are given an integer array nums where nums[i] represents the amount of money the ith house has. The houses are arranged in a straight line, i.e. the ith house is the neighbor of the (i-1)th and (i+1)th house.
+
+You are planning to rob money from the houses, but you cannot rob two adjacent houses because the security system will automatically alert the police if two adjacent houses were both broken into.
+
+Return the maximum amount of money you can rob without alerting the police.
+
+    \begin{enumerate}
+      \item[-] \textbf{Main idea:} We can use \textbf{Memoization} to keep track of sub solution: We can solve this one with bottom up approach.
+      \item[-] \textbf{Subproblem:} At each step, to maximize profit, we need to consider the following:
+      \item[-] SUB-PROBLEM max(house[i] + memo[i-2], memo[i-1])
+      \item[-] Start our memo with the max at house 1, which is just house 1, and the max at house 2, which is equal to max(house[0], house[1])
+      \item[-] After you have init the memo with the first two houses, preform the sub-problem check on values i=2 through n.
+      \item[-] The result last element of the memo
+    \end{enumerate}
+\end{enumerate}
+
+\subsection{House Robber II}
+\begin{enumerate}
+  \item[] \textbf{Question:} You are given an integer array nums where nums[i] represents the amount of money the ith house has. The houses are arranged in a circle, i.e. the first house and the last house are neighbors.
+
+You are planning to rob money from the houses, but you cannot rob two adjacent houses because the security system will automatically alert the police if two adjacent houses were both broken into.
+
+Return the maximum amount of money you can rob without alerting the police.
+
+
+    \begin{enumerate}
+      \item[-] \textbf{Main idea:} We can use \textbf{Memoization} to keep track of sub solution: We can solve this one with bottom up approach.
+      \item[-] \textbf{Subproblem:} The sub-problem is the same as house robber I, but we need to run the memo on two instances, since the input array is "circular".
+      \item[-] SUB-PROBLEM max(house[i] + memo[i-2], memo[i-1])
+      \item[-] Run the bottom up iteration on the input array from index i=1, to i= len(input-arr): *IGNORE THE FIRST HOUSE
+      \item[-] Run the bottom up iteration on the input array from index i=0, to i=len(input-arr) -1: *IGNORE THE LAST HOUSE
+      \item[-] After you have solved both instances, the solution to this problem is the max of both of these.
+    \end{enumerate}
+\end{enumerate}
+
+
+
+
+
+
 \section{Two-Dimensional Dynamic Programming}
 \subsection{Unique Paths}
 \begin{enumerate}
