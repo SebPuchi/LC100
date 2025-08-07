@@ -794,9 +794,6 @@ Return the maximum amount of money you can rob without alerting the police.
 
 
 
-
-
-
 \section{Two-Dimensional Dynamic Programming}
 \subsection{Unique Paths}
 \begin{enumerate}
@@ -815,6 +812,29 @@ You may assume the output will fit in a 32-bit integer.
       \item[-] After you've looped from the bottom row upward to the top row, making sure to add the right and bottom cells as you go, the final total amount of ways is the numbers of ways at the starting element: grid[0][0]: this is the solution.
     \end{enumerate}
 \end{enumerate}
+
+
+\subsection{Longest Common Subsequence}
+\begin{enumerate}
+  \item[] \textbf{Question:} Given two strings text1 and text2, return the length of the longest common subsequence between the two strings if one exists, otherwise return 0.
+
+A subsequence is a sequence that can be derived from the given sequence by deleting some or no elements without changing the relative order of the remaining characters.
+
+For example, "cat" is a subsequence of "crabt".
+A common subsequence of two strings is a subsequence that exists in both strings.
+
+
+    \begin{enumerate}
+      \item[-] \textbf{Main idea:} Use a grid to keep track of the summation of sub-problems: begin by Initializing a grid with a length one greater than the width and height of the input text: text1 and text2. Fill the full 2d array with zeros
+      \item[-] Next, start at the postion [len(text1)-1][len(text2)-1] in the grid (bottom right corner, one row / col up)
+      \item[-] at each position in the grid, check the following:
+      \item[-] if text1[i] == text2[j] -> grid[i][j] = 1 + grid[i+1][j+1] 
+      \item[-] else: grid[i][j] = max(grid[i+1][j], grid[i][j+1])
+      \item[-] Loop through the grid backwards by row and column, repeating this, until you have iterated through the full thing
+      \item[i] Once done, return the number (summation of all sub-problems) at grid[0][0] this is the answer
+    \end{enumerate}
+\end{enumerate}
+
 
 
 \section{Backtracking}
