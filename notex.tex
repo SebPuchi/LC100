@@ -527,8 +527,6 @@ A subtree of a binary tree tree is a tree that consists of a node in tree and al
 
 
 
-
-
 \section{Heap and Priority Queue}
 
 \subsection{Kth Largest Element in a Stream}
@@ -600,6 +598,25 @@ You may return the answer in any order.
       \item[-] Add each (x,y) value as an array to an answer array. Do this k times, then return the answer array
     \end{enumerate}
 \end{enumerate}
+
+\subsection{Kth Largest Element}
+\begin{enumerate}
+  \item[] \textbf{Question:} Given an unsorted array of integers nums and an integer k, return the kth largest element in the array.
+
+By kth largest element, we mean the kth largest element in the sorted order, not the kth distinct element.
+
+Follow-up: Can you solve it without sorting?
+
+    \begin{enumerate}
+      \item[-] \textbf{Main idea:} Use a heap, heapify it, then loop k times and return the kth largest element
+      \item[-] This requires multiplying every element in the array by -1 to start, because we implement heapq which is a min heap
+      \item[-] This problem can also be solved traditionally with sorting
+    \end{enumerate}
+\end{enumerate}
+
+
+
+
 
 
 \section{Graphs}
