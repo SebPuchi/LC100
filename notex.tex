@@ -660,6 +660,25 @@ Return the maximum area of an island in grid. If no island exists, return 0.
     \end{enumerate}
 \end{enumerate}
 
+
+\subsection{Deep Clone a Graph}
+\begin{enumerate}
+  \item[] \textbf{Question:} Given a node in a connected undirected graph, return a deep copy of the graph.
+
+Each node in the graph contains an integer value and a list of its neighbors.
+
+    \begin{enumerate}j
+      \item[-] \textbf{Main idea:} Start by creating a hashmap of new nodes, where the node val is the new, and a new initialized node is the value 
+      \item[-] Next, preform a DFS or BFS on the original graph: this uses a stack or queue per usual, only now, make sure to set the value / neighbor nodes of the new nodes in your hashmap as you traverse. 
+      \item[-] Make sure you add each neighbor to the new node * But make sure you don't have duplicate neighbors!
+    \end{enumerate}
+\end{enumerate}
+
+
+
+
+
+
 \section{Advanced Graphs}
 
 \subsection{Network Delay Time}
