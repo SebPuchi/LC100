@@ -667,15 +667,12 @@ Return the maximum area of an island in grid. If no island exists, return 0.
 
 Each node in the graph contains an integer value and a list of its neighbors.
 
-    \begin{enumerate}j
-      \item[-] \textbf{Main idea:} Start by creating a hashmap of new nodes, where the node val is the new, and a new initialized node is the value 
-      \item[-] Next, preform a DFS or BFS on the original graph: this uses a stack or queue per usual, only now, make sure to set the value / neighbor nodes of the new nodes in your hashmap as you traverse. 
+    \begin{enumerate}
+      \item[-] \textbf{Main idea:} Start by creating a hashmap of new nodes, where the node val is the new, and a new initialized node is the value
+      \item[-] Next, preform a DFS or BFS on the original graph: this uses a stack or queue per usual, only now, make sure to set the value + neighbor nodes of the new nodes in your hashmap as you traverse. 
       \item[-] Make sure you add each neighbor to the new node * But make sure you don't have duplicate neighbors!
     \end{enumerate}
 \end{enumerate}
-
-
-
 
 
 
