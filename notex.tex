@@ -239,8 +239,6 @@ Assume that division between integers always truncates toward zero.
 
 
 
-
-
 \section{Binary Search}
 \subsection{Binary Search Recursive}
 \begin{enumerate}
@@ -261,6 +259,7 @@ Your solution must run in O(logn) time.
 
     \end{enumerate}
 \end{enumerate}
+
 \subsection{Binary Search Iterative}
 \begin{enumerate}
   \item[] \textbf{Question:}  You are given an array of distinct integers nums, sorted in ascending order, and an integer target.
@@ -513,6 +512,18 @@ A subtree of a binary tree tree is a tree that consists of a node in tree and al
 
     \end{enumerate}
 \end{enumerate}
+
+\subsection{Right side view of binary Tree}
+\begin{enumerate}
+  \item[] \textbf{Question:} You are given the root of a binary tree. Return only the values of the nodes that are visible from the right side of the tree, ordered from top to bottom. 
+
+    \begin{enumerate}
+      \item[-] \textbf{Main idea:} Traverse the tree with Breadth first search, as you go, index values based on depth (pair value with it's current depth)
+      \item[-] After you have finished the traversal, loop through all elements. For any given element, if the next element in the array has a level thats one greater than the current, then you know that the current node is on right side view (add it to an array that tracks these nodes -> return array as answer)
+
+    \end{enumerate}
+\end{enumerate}
+
 
 
 
