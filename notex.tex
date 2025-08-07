@@ -73,6 +73,21 @@ You must implement a solution with O(n) runtime complexity and use only  O(1) ex
 \end{enumerate}
 
 
+\subsection{Encode / Decode}
+\begin{enumerate}
+  \item[] \textbf{Question:} Design an algorithm to encode a list of strings to a single string. The encoded string is then decoded back to the original list of strings. 
+
+    \begin{enumerate}
+      \item[-] The main idea here is to use two special characters that indicate the beginning and end of any given word  
+      \item[-] Use the length of the string (an int) and some character like a \$ sign, to indicate the start of the part of the string to begin decoding. 
+      \item[-] Loop through the encoded string, checking for these conditions, then building back out the original string
+    \end{enumerate}
+\end{enumerate}
+
+
+
+
+
 
 
 \section{Two Pointers}
