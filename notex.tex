@@ -219,6 +219,27 @@ Return true if s is a valid string, and false otherwise.
     \end{enumerate}
 \end{enumerate}
 
+\subsection{Reverse Polish Notation}
+\begin{enumerate}
+  \item[] \textbf{Question:} You are given an array of strings tokens that represents a valid arithmetic expression in Reverse Polish Notation.
+
+Return the integer that represents the evaluation of the expression.
+
+The operands may be integers or the results of other operations.
+The operators include '+', '-', '*', and '/'.
+Assume that division between integers always truncates toward zero.
+
+    \begin{enumerate}
+      \item[-] \textbf{Main idea:} This question implements a stack: Loop through the array and add the numbers to the stack: if once you hit an operation over a number, then pop the last two elements of the stack, and preform that operation on them
+      \item[-] Make sure you preform the operation in the correct order!
+      \item[-] Once you have preformed the operation, push the result back into the stack and continue 
+      \item[-] Repeat until the stack is of length 1: the last element left in the stack is the answer
+    \end{enumerate}
+\end{enumerate}
+
+
+
+
 
 \section{Binary Search}
 \subsection{Binary Search Recursive}
