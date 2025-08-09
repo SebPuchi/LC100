@@ -92,3 +92,4 @@ Once I feel comfortable with a completed question, I write up solutions notes an
 | [encode_and_decode](./questions/hashmap/medium/encode_and_decode.py) | hashmap | `medium` |
 | [product_of_array_except_self](./questions/hashmap/medium/product_of_array_except_self.py) | hashmap | `medium` |
 | [group_anagrams](./questions/hashmap/medium/group_anagrams.py) | hashmap | `medium` |
+| [valid_sudoku](./questions/hashmap/medium/valid_sudoku.py) | hashmap | `medium` |
