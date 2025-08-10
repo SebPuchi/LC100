@@ -84,9 +84,36 @@ You must implement a solution with O(n) runtime complexity and use only  O(1) ex
     \end{enumerate}
 \end{enumerate}
 
+\subsection{Product of Array Except Itself}
+\begin{enumerate}
+  \item[] \textbf{Question:} Given an integer array nums, return an array output where output[i] is the product of all the elements of nums except nums[i]. Each product is guaranteed to fit in a 32-bit integer.
+
+Follow-up: Could you solve it in O(n) time without using the division operation?
+
+    \begin{enumerate}
+      \item[-] \textbf{Main Idea: } Create two hashmaps one that keeps the current product of all numbers up until a current index and another that keeps a current product of all the numbers after a current index until the end of the input array
+      \item[-] This is like a memoization of all products before and after any given index. This will take 2 separate for loops
+      \item[-] After you have done that, loop a final time and multiply the prefix and suffix product for each index. Store this in the answer array
+    \end{enumerate}
+\end{enumerate}
 
 
+\subsection{Valid Sudoku}
+\begin{enumerate}
+  \item[] \textbf{Question:} You are given a 9 x 9 Sudoku board board. A Sudoku board is valid if the following rules are followed:
 
+Each row must contain the digits 1-9 without duplicates.
+Each column must contain the digits 1-9 without duplicates.
+Each of the nine 3 x 3 sub-boxes of the grid must contain the digits 1-9 without duplicates.
+Return true if the Sudoku board is valid, otherwise return false
+
+    \begin{enumerate}
+      \item[-] \textbf{Main Idea: } Create three separate hashmaps, one to track values in each row, each column and each segment of the Sudoku board. The segment hashmap relates to the 9 larger squared in the full board.
+      \item[-] Loop through each cell and check if the value already exists in each hashmap or not. 
+      \item[-] The keys of the segment hashmap will be (i//3) and (j//3). Floor divide each index by three to get the region of the segment.
+      \item[-] Hard code all possible segment tuples into the starting hashmap before beginning the looping
+    \end{enumerate}
+\end{enumerate}
 
 
 
