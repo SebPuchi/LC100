@@ -166,6 +166,28 @@ The output should not contain any duplicate triplets. You may return the output 
 \end{enumerate}
 
 
+\subsection{Longest Consecutive Sequence}
+\begin{enumerate}
+  \item[] \textbf{Question:} Given an array of integers nums, return the length of the longest consecutive sequence of elements that can be formed.
+
+A consecutive sequence is a sequence of elements in which each element is exactly 1 greater than the previous element. The elements do not have to be consecutive in the original array.
+
+You must write an algorithm that runs in O(n) time.
+
+
+    \begin{enumerate}
+      \item[-] \textbf{Main idea: } Begin by sorting the Array: Start two pointers left and right at the beginning of the sorted array: left at 0, right at 1
+      \item[-] Keep a local max, and a global max: begin looping through the array, at any point, if the number in the right position is greater than the left by one, update the local max
+      \item[-] If the local max is ever greater than the global, set the greater to the local value.
+      \item[-] If the numbers at the left and right value equal each other, add one to both, and continue looping
+
+      \item[-] If the right pointer value is not greater than left by 1, reset local max, and set left = right
+      \item[-] After looping has completed, return the global max
+
+    \end{enumerate}
+\end{enumerate}
+
+
 
 
 \section{Sliding Window}
