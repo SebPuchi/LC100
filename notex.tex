@@ -223,6 +223,23 @@ A substring is a contiguous sequence of characters within a string.
 \end{enumerate}
 
 
+\subsection{Container With Most Water}
+\begin{enumerate}
+  \item[] \textbf{Question:} You are given an integer array heights where heights[i] represents the height of the ith bar.
+
+You may choose any two bars to form a container. Return the maximum amount of water a container can store.
+
+    \begin{enumerate}
+      \item[-] \textbf{Main Idea: } Sliding window question, start a pointer at the beginning and at the end.
+      \item[-] Calculate the area using the smaller of the two. Update global max if needed.
+      \item[-] Move either the left or right pointer towards the center of the array: Always move the smaller of the two length pointers forward.
+      \item[-] If the lengths are the same, it doesn't matter which one you increment or decrement. 
+      \item[-] After the pointer indexes equal each other, return the max area created.
+    \end{enumerate}
+\end{enumerate}
+
+
+
 
 \section{Stack}
 \subsection{Valid Parentheses}
