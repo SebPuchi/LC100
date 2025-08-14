@@ -71,6 +71,7 @@ Once I feel comfortable with a completed question, I write up solutions notes an
 | [linked_list_cycle_detection](./questions/linked_list/easy/linked_list_cycle_detection.py) | linked_list | `easy` |
 | [reorder_list](./questions/linked_list/medium/reorder_list.py) | linked_list | `medium` |
 | [remove_nth_node_from_end](./questions/linked_list/medium/remove_nth_node_from_end.py) | linked_list | `medium` |
+| [find_min_in_rotated_sorted_array](./questions/binary_search/meduim/find_min_in_rotated_sorted_array.py) | binary_search | `meduim` |
 | [koko_eats_bananas](./questions/binary_search/meduim/koko_eats_bananas.py) | binary_search | `meduim` |
 | [search_2D_matrix](./questions/binary_search/meduim/search_2D_matrix.py) | binary_search | `meduim` |
 | [binary_search_interative](./questions/binary_search/easy/binary_search_interative.py) | binary_search | `easy` |
