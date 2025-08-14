@@ -60,6 +60,7 @@ Once I feel comfortable with a completed question, I write up solutions notes an
 | [number_of_islands](./questions/graphs/medium/number_of_islands.py) | graphs | `medium` |
 | [valid_parentheses](./questions/stack/easy/valid_parentheses.py) | stack | `easy` |
 | [min_stack](./questions/stack/medium/min_stack.py) | stack | `medium` |
+| [daily_temperatures](./questions/stack/medium/daily_temperatures.py) | stack | `medium` |
 | [reverse_polish_notation](./questions/stack/medium/reverse_polish_notation.py) | stack | `medium` |
 | [hand_of_straights](./questions/greedy/medium/hand_of_straights.py) | greedy | `medium` |
 | [gas_station](./questions/greedy/medium/gas_station.py) | greedy | `medium` |
