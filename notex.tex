@@ -238,6 +238,19 @@ You may choose any two bars to form a container. Return the maximum amount of wa
     \end{enumerate}
 \end{enumerate}
 
+\subsection{Longest Repeating Character Replacement}
+\begin{enumerate}
+  \item[] \textbf{Question:} You are given a string s consisting of only uppercase english characters and an integer k. You can choose up to k characters of the string and replace them with any other uppercase English character.
+
+After performing at most k replacements, return the length of the longest substring which contains only one distinct character.
+
+    \begin{enumerate}
+      \item[-] \textbf{Main Idea: } Sliding window question with a hashmap: Start two pointers at the beginning of the array. Begin incrementing the right pointer and updating the frequency of that character in the hashmap
+      \item[-] Core idea: Find the most frequent value in that window range: see if you can make all k replacements to the character: if you can set the result / max to the length of the range of the window.
+      \item[-] To find the max, simply take the max of all the values in the hashmap.  
+      \item[-] If the you cannot make k replacements, update both the left and right pointer. Slide the full window over. Do this until the right pointer is less than the length of the array
+    \end{enumerate}
+\end{enumerate}
 
 
 
