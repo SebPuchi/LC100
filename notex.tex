@@ -317,6 +317,26 @@ Assume that division between integers always truncates toward zero.
 \end{enumerate}
 
 
+\subsection{Daily Temperatures}
+\begin{enumerate}
+  \item[] \textbf{Question:} You are given an array of integers temperatures where temperatures[i] represents the daily temperatures on the ith day.
+
+Return an array result where result[i] is the number of days after the ith day before a warmer temperature appears on a future day. If there is no day in the future where a warmer temperature will appear for the ith day, set result[i] to 0 instead.
+
+    \begin{enumerate}
+      \item[-] \textbf{Main idea:} This uses the idea of a monotonic stack: this means that the elements will be ordered in strictly increasing or decreasing order
+      \item[-] Keep a stack that stores both the temperature and index for all days in the array.
+      \item[-] While the length of the stack is greater than zero, and the last day is cooler than the current day, pop the last element out of the stack. Store the answer as the result of subtracting the index of the element just popped and the index i
+      \item[-] If the current element while looping through the array is smaller than the previous, add it to the stack
+      \item[-] Essentially: Loop through all items once: if the item is smaller than the last element on the stack, then just add it to the stack. If it's larger, then pop the last value, and the answer at the last value is the difference between the indices.
+
+    \end{enumerate}
+\end{enumerate}
+
+
+
+
+
 
 \section{Binary Search}
 \subsection{Binary Search Recursive}
