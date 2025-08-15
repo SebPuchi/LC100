@@ -623,6 +623,21 @@ A subtree of a binary tree tree is a tree that consists of a node in tree and al
     \end{enumerate}
 \end{enumerate}
 
+\subsection{Count Good Nodes in Binary Tree}
+\begin{enumerate}
+  \item[] \textbf{Question:} Within a binary tree, a node x is considered good if the path from the root of the tree to the node x contains no nodes with a value greater than the value of node x
+
+Given the root of a binary tree root, return the number of good nodes within the tree.
+
+    \begin{enumerate}
+      \item[-] \textbf{Main idea:} Traverse the tree with DFS, add a global attribute count to the class
+      \item[-] Start traversing but pass along a max value node: start the max value at negative infinity
+      \item[-] As you traverse, if the current value is greater than or equal to the max value, add 1 to count, and pass the current value down up the recursion stack as the new max value: don't return anything recursively 
+
+    \end{enumerate}
+\end{enumerate}
+
+
 
 
 
