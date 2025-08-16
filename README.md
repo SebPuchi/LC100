@@ -55,6 +55,7 @@ Once I feel comfortable with a completed question, I write up solutions notes an
 | [invert_tree](./questions/trees/easy/invert_tree.py) | trees | `easy` |
 | [right_side_view_of_tree](./questions/trees/medium/right_side_view_of_tree.py) | trees | `medium` |
 | [count_good_nodes_in_tree](./questions/trees/medium/count_good_nodes_in_tree.py) | trees | `medium` |
+| [validate_binary_search_tree](./questions/trees/medium/validate_binary_search_tree.py) | trees | `medium` |
 | [binary_tree_level_order_traversal](./questions/trees/medium/binary_tree_level_order_traversal.py) | trees | `medium` |
 | [clone_graph](./questions/graphs/medium/clone_graph.py) | graphs | `medium` |
 | [max_area_of_island](./questions/graphs/medium/max_area_of_island.py) | graphs | `medium` |
