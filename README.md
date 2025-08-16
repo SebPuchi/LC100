@@ -81,6 +81,7 @@ Once I feel comfortable with a completed question, I write up solutions notes an
 | [stocks](./questions/sliding_window/easy/stocks.py) | sliding_window | `easy` |
 | [longest_repeating_character_replacement](./questions/sliding_window/medium/longest_repeating_character_replacement.py) | sliding_window | `medium` |
 | [longest_substring_without_repeating_characters](./questions/sliding_window/medium/longest_substring_without_repeating_characters.py) | sliding_window | `medium` |
+| [permutation_in_string](./questions/sliding_window/medium/permutation_in_string.py) | sliding_window | `medium` |
 | [kth_largest](./questions/heaps/easy/kth_largest.py) | heaps | `easy` |
 | [last_stone_weight](./questions/heaps/easy/last_stone_weight.py) | heaps | `easy` |
 | [kth_largest_element_in_array](./questions/heaps/medium/kth_largest_element_in_array.py) | heaps | `medium` |
