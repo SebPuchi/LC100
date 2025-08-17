@@ -253,6 +253,28 @@ After performing at most k replacements, return the length of the longest substr
 \end{enumerate}
 
 
+\subsection{Permutations in String}
+\begin{enumerate}
+  \item[] \textbf{Question:} You are given two strings s1 and s2.
+
+Return true if s2 contains a permutation of s1, or false otherwise. That means if a permutation of s1 exists as a substring of s2, then return true.
+
+Both strings only contain lowercase letters.
+
+    \begin{enumerate}
+      \item[-] \textbf{Main Idea: } Sliding window question that involves using a hashmap and re-assigning left and right pointers. 
+      \item[-] Begin by storing all chars / frequencies of s1 into a hashmap
+      \item[-] Now init two pointers left and right at index zero of s1: the idea is that we well slide these pointers through the string and check if the window has the same hash count as the s1 hash
+      \item[-] Begin by checking if the current character at the right pointer is in the keys of the first hash, if it is, then add one to this hash, and increment the right pointer. 
+      \item[-] If at any point while looping through, the hash maps equal each other, return true
+      \item[-] If the current right value is not in the hash map, then increment the left pointer once, and set the right pointer equal to the left pointer. Also reset the s2 hashmap
+      \item[-] If the count of the right pointer is greater than the count at that value in s1, then slide and remove values at the left pointer, until the frequencies are the same.
+      \item[-] If the right pointer reaches the end and there are no matches, return False
+    \end{enumerate}
+\end{enumerate}
+
+
+
 
 \section{Stack}
 \subsection{Valid Parentheses}
@@ -657,6 +679,25 @@ Both the left and right subtrees are also binary search trees.
       \item[-] If they are both true, then check if the current value is greater than max-left and less than the min-right, if so, then the current tree is valid
       \item[-] *****Always pass upward the largest value on the left side of the tree, and the smallest value on the right side of the Tree. This ensures that parent trees remain valid****
       \item[-]
+    \end{enumerate}
+\end{enumerate}
+
+
+\subsection{Lowest Common Ancestor in Binary Tree}
+\begin{enumerate}
+  \item[] \textbf{Question:} Given a binary search tree (BST) where all node values are unique, and two nodes from the tree p and q, return the lowest common ancestor (LCA) of the two nodes.
+
+The lowest common ancestor between two nodes p and q is the lowest node in a tree T such that both p and q as descendants. The ancestor is allowed to be a descendant of itself. 
+
+
+    \begin{enumerate}
+      \item[-] \textbf{Main idea:} This question is kinda tricky! The main idea is to find and return upwards through the tree nodes p and q when you find them. While doing this, check the ancestor condition
+      \item[-] There are three different ancestor conditions: if the left and right nodes are p and q, then the current node is the LCA
+      \item[-] If the current Node is p and the left or right is q, then LCQ is the p node
+      \item[-] If the current Node is q and the left or right is p, then LCQ is the q node
+      \item[-] Once you have found the LCA node, store it as a global variable, then begin returning None upwards
+      \item[-] At the end, return the global LCA Node
+
     \end{enumerate}
 \end{enumerate}
 
