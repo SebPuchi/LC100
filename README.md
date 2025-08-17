@@ -53,6 +53,7 @@ Once I feel comfortable with a completed question, I write up solutions notes an
 | [max_depth_binary_tree](./questions/trees/easy/max_depth_binary_tree.py) | trees | `easy` |
 | [same_tree](./questions/trees/easy/same_tree.py) | trees | `easy` |
 | [invert_tree](./questions/trees/easy/invert_tree.py) | trees | `easy` |
+| [longest_common_ancestor_in_binary_search_tree](./questions/trees/medium/longest_common_ancestor_in_binary_search_tree.py) | trees | `medium` |
 | [right_side_view_of_tree](./questions/trees/medium/right_side_view_of_tree.py) | trees | `medium` |
 | [count_good_nodes_in_tree](./questions/trees/medium/count_good_nodes_in_tree.py) | trees | `medium` |
 | [validate_binary_search_tree](./questions/trees/medium/validate_binary_search_tree.py) | trees | `medium` |
