@@ -637,6 +637,31 @@ Given the root of a binary tree root, return the number of good nodes within the
     \end{enumerate}
 \end{enumerate}
 
+\subsection{Validate Binary Search Tree}
+\begin{enumerate}
+  \item[] \textbf{Question:} Given the root of a binary tree, return true if it is a valid binary search tree, otherwise return false.
+
+A valid binary search tree satisfies the following constraints:
+
+The left subtree of every node contains only nodes with keys less than the node's key.
+The right subtree of every node contains only nodes with keys greater than the node's key.
+Both the left and right subtrees are also binary search trees.
+
+
+    \begin{enumerate}
+      \item[-] \textbf{Main idea:} Recall that a valid binary search tree is where at each sub tree, the left node's value is always less than the parent's value, and the right node's value is always greater than the parents
+      \item[-] Recursively, we must check if all subtrees that came before are valid, and if the current left, right, and parent are valid.
+      \item[-] Let's start with the base case, if the current Node is None, return the minimum and maximum value at this subtree (which are both None), and also if it's a valid BTS or not: In this case, it is! so return (NONE, NONE, True)
+      \item[-] Recursively call of both left and right, and store left-min, left-max, and left-valid as values returned from the recursive call: do the same with the right values
+      \item[-] Check first to see if either left-valid and right-valid are False, if so, return false upward.
+      \item[-] If they are both true, then check if the current value is greater than max-left and less than the min-right, if so, then the current tree is valid
+      \item[-] *****Always pass upward the largest value on the left side of the tree, and the smallest value on the right side of the Tree. This ensures that parent trees remain valid****
+      \item[-]
+    \end{enumerate}
+\end{enumerate}
+
+
+
 
 
 

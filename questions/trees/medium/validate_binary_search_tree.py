@@ -14,13 +14,22 @@ class Solution:
         left_min, left_max, valid_left = self.recurse(current.left)
         right_min, right_max, valid_right = self.recurse(current.right)
 
+        # Assume valid unless proven otherwise
         is_valid = valid_left and valid_right
 
-        if left_min != None and left_min >= current.val:
+        # Check left subtree's max value
+        if left_max is not None and left_max >= current.val:
             is_valid = False
 
-        if left_min != None and left_min >= current.val:
+        # Check right subtree's min value
+        if right_min is not None and right_min <= current.val:
             is_valid = False
+
+        # Calculate the min value for this subtree
+        subtree_min = left_min if left_min is not None else current.val
+
+        # Calculate the max value for this subtree
+        subtree_max = right_max if right_max is not None else current.val
 
         return (subtree_min, subtree_max, is_valid)
 
@@ -28,4 +37,4 @@ class Solution:
 
     def isValidBST(self, root: Optional[TreeNode]) -> bool:
         answer = self.recurse(root)
-        return(answer[2]
+        return(answer[2])
