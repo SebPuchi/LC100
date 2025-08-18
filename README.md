@@ -86,6 +86,7 @@ Once I feel comfortable with a completed question, I write up solutions notes an
 | [permutation_in_string](./questions/sliding_window/medium/permutation_in_string.py) | sliding_window | `medium` |
 | [kth_largest](./questions/heaps/easy/kth_largest.py) | heaps | `easy` |
 | [last_stone_weight](./questions/heaps/easy/last_stone_weight.py) | heaps | `easy` |
+| [task_schedular](./questions/heaps/medium/task_schedular.py) | heaps | `medium` |
 | [kth_largest_element_in_array](./questions/heaps/medium/kth_largest_element_in_array.py) | heaps | `medium` |
 | [k_closest_points_to_orgin](./questions/heaps/medium/k_closest_points_to_orgin.py) | heaps | `medium` |
 | [network_delay_time](./questions/advanced_graphs/medium/network_delay_time.py) | advanced_graphs | `medium` |
