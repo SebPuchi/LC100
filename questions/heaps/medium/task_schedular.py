@@ -8,24 +8,20 @@ class Solution:
             hash_map[tasks[i]] = 1 + hash_map.get(tasks[i], 0)
 
         for key in hash_map:
-            heap.append((0,(hash_map[key], key)))
+            heap.append((-1 * hash_map[key], key))
         heapq.heapify(heap) 
 
+        queue = []
         count = 0
-        while len(heap) !=0:
-            print(heap)
-            if heap[0][0] == 0:
-                current = heapq.heappop(heap)
-                cooldown, val = current
-                letter_count, letter = val
-                letter_count-=1
-                if letter_count != 0:
-                    heapq.heappush(heap, (n+1,(letter_count, letter)))
-            for i in range(len(heap)):
-                current = heap[i]
-                cooldown, val = current
-                if cooldown != 0:
-                    heap[i] = (cooldown-1, val)
-            heapq.heapify(heap) 
+        while len(heap) != 0 or len(queue) != 0:
+            if len(heap) > 0:
+                num, val = heapq.heappop(heap)
+                if num+1 != 0:
+                    queue.append((n+count, num+1, val))
+            if len(queue) != 0:
+                if queue[0][0] == count:
+                    cooldown, num, val = queue.pop(0)
+                    heapq.heappush(heap, (num, val))
             count+=1
-        print(count)
+        return(count)
+
