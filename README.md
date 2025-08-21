@@ -73,6 +73,7 @@ Once I feel comfortable with a completed question, I write up solutions notes an
 | [reverse_list](./questions/linked_list/easy/reverse_list.py) | linked_list | `easy` |
 | [merge_linked_lists](./questions/linked_list/easy/merge_linked_lists.py) | linked_list | `easy` |
 | [linked_list_cycle_detection](./questions/linked_list/easy/linked_list_cycle_detection.py) | linked_list | `easy` |
+| [add_two_numbers](./questions/linked_list/medium/add_two_numbers.py) | linked_list | `medium` |
 | [reorder_list](./questions/linked_list/medium/reorder_list.py) | linked_list | `medium` |
 | [copy_linked_list_with_random_pointer](./questions/linked_list/medium/copy_linked_list_with_random_pointer.py) | linked_list | `medium` |
 | [remove_nth_node_from_end](./questions/linked_list/medium/remove_nth_node_from_end.py) | linked_list | `medium` |
