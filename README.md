@@ -94,6 +94,7 @@ Once I feel comfortable with a completed question, I write up solutions notes an
 | [network_delay_time](./questions/advanced_graphs/medium/network_delay_time.py) | advanced_graphs | `medium` |
 | [subsets](./questions/backtracking/medium/subsets.py) | backtracking | `medium` |
 | [plus_one](./questions/math_geometry/easy/plus_one.py) | math_geometry | `easy` |
+| [insert_interval](./questions/intervals/medium/insert_interval.py) | intervals | `medium` |
 | [validpal](./questions/two_pointers/easy/validpal.py) | two_pointers | `easy` |
 | [container_with_most_water](./questions/two_pointers/medium/container_with_most_water.py) | two_pointers | `medium` |
 | [longest_consecutive_sequence](./questions/two_pointers/medium/longest_consecutive_sequence.py) | two_pointers | `medium` |
