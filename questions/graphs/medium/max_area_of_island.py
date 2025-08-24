@@ -50,3 +50,51 @@ class Solution:
                     if area > current_max:
                         current_max = area
         return current_ma
+
+# iterative attempt
+class Solution:
+    def getNeighbors(self, grid, current, n, m):
+        neighbors = []
+        i, j = current
+
+        if i - 1 >= 0 and grid[i-1][j] == 1:
+            neighbors.append((i-1, j))
+
+        if j - 1 >= 0 and grid[i][j-1] == 1:
+            neighbors.append((i, j-1))
+
+        if i + 1 < n and grid[i+1][j] == 1:
+            neighbors.append((i+1, j))
+
+        if j + 1 < m and grid[i][j+1] == 1:
+            neighbors.append((i, j+1))
+        return neighbors
+
+    def maxAreaOfIsland(self, grid: List[List[int]]) -> int:
+        visited = []
+        areas = []
+
+        stack = []
+        n = len(grid)
+        m = len(grid[0])
+        for i in range(n):
+            for j in range(m):
+                current = (i,j)
+                if current not in visited and grid[i][j] ==1:
+                    area = 1
+                    #Explore
+                    stack.append(current)
+                    while len(stack) != 0:
+                        node = stack.pop()
+                        if node not in visited:
+                            visited.append(node)
+                            neighbors = self.getNeighbors(grid, node, n, m)
+
+                            for neighbor in neighbors:
+                                if neighbor not in visited:
+                                    stack.append(neighbor)
+                                    area+=1
+                    areas.append(area)
+        
+        return max(areas) if areas else 
+
