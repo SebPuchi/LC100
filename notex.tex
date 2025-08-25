@@ -1124,6 +1124,27 @@ Return true if it's possible to rearrange the cards in this way, otherwise, retu
     \end{enumerate}
 \end{enumerate}
 
+\section{Math {\&} Geometry}
+\subsection{Plus One}
+\begin{enumerate}
+  \item[] \textbf{Question:} You are given an integer array digits, where each digits[i] is the ith digit of a large integer. It is ordered from most significant to least significant digit, and it will not contain any leading zero.
+
+Return the digits of the given integer after incrementing it by one.
+  
+
+    \begin{enumerate}
+      \item[-] \textbf{Main idea:} Keep a carry bit that will be either 0 or 1 throughout the question. 
+      \item[-] Begin by setting the carry bit to 1
+      \item[-] Loop through the input array backwards. If carry is ever 1, then add the current value at i and 1 together. 
+      \item[-] If the sum is greater than 9, then make the current position 0, and set the carry to 1, continue looping through
+      \item[-] If the sum is less than or equal to 9, then simply make the result the current digit, and set the carry to 0.
+      \item[-] After looping through all the values, if the carry bit == 1, then add [1] to the left side of the array (beginning)
+    \end{enumerate}
+\end{enumerate}
+
+
+
+
 
 \end{document}
 
