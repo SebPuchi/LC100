@@ -794,8 +794,27 @@ Follow-up: Can you solve it without sorting?
     \end{enumerate}
 \end{enumerate}
 
+\subsection{Task Scheduler}
+\begin{enumerate}
+  \item[] \textbf{Question:} You are given an array of CPU tasks tasks, where tasks[i] is an uppercase english character from A to Z. You are also given an integer n.
+
+Each CPU cycle allows the completion of a single task, and tasks may be completed in any order.
+
+The only constraint is that identical tasks must be separated by at least n CPU cycles, to cooldown the CPU.
+
+Return the minimum number of CPU cycles required to complete all tasks.
 
 
+    \begin{enumerate}
+      \item[-] \textbf{Main idea:} This question involves using both a heap and a queue to schedule tasks. The intuition is to use a max heap that always pops the task with the most elements. 
+      \item[-] Begin by creating a hashmap with all the tasks as the keys, and the value being their frequencies (the number of times they will need to get scheduled). 
+      \item[-] Begin by popping the first task, and adding that task, along with its expiring time, to the queue. 
+      \item[-] When adding a to the queue, always add the time to live, along side the CURRENT TIME. 
+      \item[-] After each iteration, always check if the front of the queue has an expiring time, if so, add it back to the stack.
+      \item[-] When adding back to the stack, make sure to decrement the overall frequency.
+      \item[-] Repeat until the stack and queue are empty. Return the global counter.
+    \end{enumerate}
+\end{enumerate}
 
 
 
@@ -1107,11 +1126,6 @@ Return true if it's possible to rearrange the cards in this way, otherwise, retu
       \item[-] You can also do a preliminary check to see if the number of cards is divisible the group size. If it's not, go ahead and return false
     \end{enumerate}
 \end{enumerate}
-
-
-
-
-
 
 
 \end{document}
