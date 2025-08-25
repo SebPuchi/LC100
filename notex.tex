@@ -502,10 +502,25 @@ Return the head of the merged linked list.
       \item[-] After while loop is finished, check if list1 or list2 still has any nodes, if either does, assign the remaining to the current.next
       \item[-] Return new-head.next (because new head is just a dummy node, and doesn't have any value)
 
+    \end{enumerate}
+\end{enumerate}
 
+\subsection{Remove Nth Node From End of List}
+\begin{enumerate}
+  \item[] \textbf{Question:} You are given the beginning of a linked list head, and an integer n.
+
+Remove the nth node from the end of the list and return the beginning of the list.
+
+    \begin{enumerate}
+      \item[-] \textbf{Main idea:} Use a dummy node, and count all nodes in the list. After you have counted all the nodes, reset the current node to the beginning of the linked list (dummy node).
+      \item[-] Now, knowing how many nodes there are total, we can loop to the NODECOUNT - nth node. Once we have arrived at this node, we can delete the Nth node by setting the current to current.next.next
 
     \end{enumerate}
 \end{enumerate}
+
+
+
+
 
 
 \section{Trees}
@@ -1139,6 +1154,7 @@ Return the digits of the given integer after incrementing it by one.
       \item[-] If the sum is greater than 9, then make the current position 0, and set the carry to 1, continue looping through
       \item[-] If the sum is less than or equal to 9, then simply make the result the current digit, and set the carry to 0.
       \item[-] After looping through all the values, if the carry bit == 1, then add [1] to the left side of the array (beginning)
+
     \end{enumerate}
 \end{enumerate}
 
