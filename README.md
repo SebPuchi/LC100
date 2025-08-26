@@ -76,6 +76,7 @@ Once I feel comfortable with a completed question, I write up solutions notes an
 | [add_two_numbers](./questions/linked_list/medium/add_two_numbers.py) | linked_list | `medium` |
 | [reorder_list](./questions/linked_list/medium/reorder_list.py) | linked_list | `medium` |
 | [copy_linked_list_with_random_pointer](./questions/linked_list/medium/copy_linked_list_with_random_pointer.py) | linked_list | `medium` |
+| [find_duplicate_number](./questions/linked_list/medium/find_duplicate_number.py) | linked_list | `medium` |
 | [remove_nth_node_from_end](./questions/linked_list/medium/remove_nth_node_from_end.py) | linked_list | `medium` |
 | [find_min_in_rotated_sorted_array](./questions/binary_search/meduim/find_min_in_rotated_sorted_array.py) | binary_search | `meduim` |
 | [search_rotated_sorted_array](./questions/binary_search/meduim/search_rotated_sorted_array.py) | binary_search | `meduim` |
