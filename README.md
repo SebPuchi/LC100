@@ -62,6 +62,7 @@ Once I feel comfortable with a completed question, I write up solutions notes an
 | [max_area_of_island](./questions/graphs/medium/max_area_of_island.py) | graphs | `medium` |
 | [Islands_and_treasures](./questions/graphs/medium/Islands_and_treasures.py) | graphs | `medium` |
 | [number_of_islands](./questions/graphs/medium/number_of_islands.py) | graphs | `medium` |
+| [remove_all_adjacent_duplicates_in_string](./questions/stack/easy/remove_all_adjacent_duplicates_in_string.py) | stack | `easy` |
 | [valid_parentheses](./questions/stack/easy/valid_parentheses.py) | stack | `easy` |
 | [min_stack](./questions/stack/medium/min_stack.py) | stack | `medium` |
 | [daily_temperatures](./questions/stack/medium/daily_temperatures.py) | stack | `medium` |
