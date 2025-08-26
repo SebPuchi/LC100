@@ -535,13 +535,36 @@ The deep copy should consist of exactly n new nodes, each including:
 
 Return the head of the copied linked list.
 
-
     \begin{enumerate}
-      \item[-] \textbf{Main idea:} 
-      \item[-] 
+      \item[-] \textbf{Main idea:} Begin by creating a hashmap, where the key is the original node (pointer), and the value is a new node.
+      \item[-] Begin by looping through the original list, creating new nodes (and adding the value to each node)
+      \item[-] Now that you have all of the new nodes in the hashmap, loop through the original list again, and use the keys to determine where the random pointer should point to.  
+      \item[-] Remember, the random pointer assignment should always point to a new copied node!
+      \item[-] Edge cases: There is a chance that the random pointer points to None, or the current.next is none. Before assigning a node, check to see if the value in the original linked list is None or not. If it's node, simply assign it to None, if not, assign it following the structure of the Algorithm.
 
     \end{enumerate}
 \end{enumerate}
+
+\subsection{Add Two Numbers In Linked List}
+\begin{enumerate}
+  \item[] \textbf{Question:} You are given two non-empty linked lists, l1 and l2, where each represents a non-negative integer.
+
+The digits are stored in reverse order, e.g. the number 123 is represented as 3 -> 2 -> 1 -> in the linked list.
+
+Each of the nodes contains a single digit. You may assume the two numbers do not contain any leading zero, except the number 0 itself.
+
+Return the sum of the two numbers as a linked list.
+
+
+    \begin{enumerate}
+      \item[-] \textbf{Main idea:} Use a carry bit: loop through both linked lists so long as current in each exist, and the carry is not 1
+      \item[-] In each iteration, if the first list exists, add its value to a current sum, if the second exists, add its value to a current sum, if the carry is 1, add the carry as well.
+      \item[-] If the current sum is over 9, subtract 10, and add 1 to the carry. Repeat until all nodes from original list have been added.
+      \item[-] Make sure to create nodes (and a dummy node to begin) as you go!
+
+    \end{enumerate}
+\end{enumerate}
+
 
 
 
