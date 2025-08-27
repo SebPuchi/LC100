@@ -1,4 +1,67 @@
 class Solution:
+    def getAtlantic (self, node, heights):
+        n = len(heights)
+        m = len(heights[0])
+        i = node[0]
+        j = node[1]
+
+        neighbors = []
+        if i-1 >= 0 and heights[i-1][j] >= heights[i][j]:
+            neighbors.append([i-1, j])
+
+        if i+1 < n and heights[i+1][j] >= heights[i][j]:
+            neighbors.append([i+1, j])
+
+        if j - 1 >= 0 and heights[i][j-1] >= heights[i][j]:
+            neighbors.append([i, j-1])
+
+        if j+1 < m and heights[i][j+1] >= heights[i][j]:
+            neighbors.append([i, j+1])
+        return neighbors
+    
+    def pacificAtlantic(self, heights: List[List[int]]) -> List[List[int]]:
+        valid = []
+        reach_pacific = []
+        reach_atlantic = []
+
+        for i in range(len(heights)):
+            for j in range(len(heights[0])):
+                if (i == 0 and 0 <= j < len(heights[0])) or (j == 0 and 0 <=i < len(heights)):
+                    current = [i,j]
+                    if current not in reach_pacific:
+                        stack = []
+                        stack.append(current)
+                        while len(stack) != 0:
+                            node = stack.pop()
+                            reach_pacific.append(node)
+                            neighbors = self.getAtlantic(node, heights)
+                            for neighbor in neighbors:
+                                if neighbor not in reach_pacific:
+                                    stack.append(neighbor)
+                if (j == len(heights[0])-1 and 0 <= i < len(heights)) or (i == len(heights)-1 and 0 <= j < len(heights[0])):
+                    current = [i,j]
+                    if current not in reach_atlantic:
+                        stack = []
+                        stack.append(current)
+                        while len(stack) != 0:
+                            node = stack.pop()
+                            reach_atlantic.append(node)
+                            neighbors = self.getAtlantic(node, heights)
+                            for neighbor in neighbors:
+                                if neighbor not in reach_atlantic:
+                                    stack.append(neighbor)
+                    
+        output = []
+        print(reach_pacific)
+        print(reach_atlantic)
+        for i in range(len(reach_atlantic)):
+            if reach_atlantic[i] in reach_pacific and reach_atlantic[i] not in output:
+                output.append(reach_atlantic[i])
+        return(output)
+ 
+
+
+class Solution:
     def createOceanGrid(self, heights):
         oceanGrid = []
         for i in range(len(heights) +2):
