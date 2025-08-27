@@ -1213,7 +1213,28 @@ A common subsequence of two strings is a subsequence that exists in both strings
 
 
 \section{Backtracking}
-\subsection{Subsets ** Need to come back and study this question}
+\subsection{Subsets}
+\begin{enumerate}
+  \item[] \textbf{Question:} Given an array nums of unique integers, return all possible subsets of nums.
+
+The solution set must not contain duplicate subsets. You may return the solution in any order.
+
+    \begin{enumerate}
+      \item[-] \textbf{Main idea:} This is a backtracking question, meaning that we need to recursively call the backtracking function in a for loop.
+      \item[-] Begin by setting up a backtracking function definition that takes in a start index, and a path array that will be used to store all ongoing path of variables
+      \item[-] Begin by copying the current path to a result array, after doing this, set up a for loop from the start index, to the length of the input nums array.
+      \item[-] Append the current num at the current index to the path, then call backtracking on the next index
+      \item[-] After this call returns, pop the last value from the path, and let the for loop proceed.
+      \item[-] After all for loops have finished, as well as all recursive calls, return the result array.
+
+    \end{enumerate}
+\end{enumerate}
+
+
+
+
+
+
 
 \section{Greedy}
 \subsection{Jump Game}
