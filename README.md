@@ -101,6 +101,7 @@ Once I feel comfortable with a completed question, I write up solutions notes an
 | [insert_interval](./questions/intervals/medium/insert_interval.py) | intervals | `medium` |
 | [valid_pal_II](./questions/two_pointers/easy/valid_pal_II.py) | two_pointers | `easy` |
 | [validpal](./questions/two_pointers/easy/validpal.py) | two_pointers | `easy` |
+| [squares_of_a_sorted_array](./questions/two_pointers/medium/squares_of_a_sorted_array.py) | two_pointers | `medium` |
 | [container_with_most_water](./questions/two_pointers/medium/container_with_most_water.py) | two_pointers | `medium` |
 | [longest_consecutive_sequence](./questions/two_pointers/medium/longest_consecutive_sequence.py) | two_pointers | `medium` |
 | [two_sum_II](./questions/two_pointers/medium/two_sum_II.py) | two_pointers | `medium` |
