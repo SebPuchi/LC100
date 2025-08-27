@@ -188,6 +188,25 @@ You must write an algorithm that runs in O(n) time.
 \end{enumerate}
 
 
+\subsection{Valid Palindrome II}
+\begin{enumerate}
+  \item[] \textbf{Question:} You are given a string s, return true if the s can be a palindrome after deleting at most one character from it.
+
+A palindrome is a string that reads the same forward and backward.
+
+Note: Alphanumeric characters consist of letters (A-Z, a-z) and numbers (0-9).
+
+
+    \begin{enumerate}
+      \item[-] \textbf{Main idea: } Begin looping through the question as usual. Make sure to make the overall string lowercase and check if each current character is  alphanumeric. Once you hit a letter where the left and right pointers don't match eachother do the following: 
+      \item[-] Create another isPal function, and check if starting at the left+1 OR right-1 values returns a valid pal
+      \item[-] If either of the two cases returns true, then return True, else return False
+
+    \end{enumerate}
+\end{enumerate}
+
+
+
 
 
 \section{Sliding Window}
@@ -354,6 +373,26 @@ Return an array result where result[i] is the number of days after the ith day b
 
     \end{enumerate}
 \end{enumerate}
+
+
+\subsection{Remove Adjacent Duplicates in String}
+\begin{enumerate}
+  \item[] \textbf{Question:} You are given a string s consisting of lowercase English letters. A duplicate removal consists of choosing two adjacent and equal letters and removing them.
+
+We repeatedly make duplicate removals on s until we no longer can.
+
+Return the final string after all such duplicate removals have been made. It can be proven that the answer is unique.
+
+ 
+
+    \begin{enumerate}
+      \item[-] \textbf{Main idea:} Use a stack! Add to the stack so long as the last element in the stack doesn't equal the current element that you want to push in. If it does, pop out the last value
+      \item[-] After done iterating through the string, convert the stack (list) to a string, and return the string
+      \item[-] 
+
+    \end{enumerate}
+\end{enumerate}
+
 
 
 
