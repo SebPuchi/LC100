@@ -206,6 +206,20 @@ Note: Alphanumeric characters consist of letters (A-Z, a-z) and numbers (0-9).
 \end{enumerate}
 
 
+\subsection{Squares of a Sorted Array}
+\begin{enumerate}
+  \item[] \textbf{Question:} You are given an integer array nums sorted in non-decreasing order, return an array of the squares of each number sorted in non-decreasing order.
+
+
+    \begin{enumerate}
+      \item[-] \textbf{Main idea: } Use two pointers, start at beginning and end of the array.
+      \item[-] If the squared value at the left is greater than the right, then add that value to the end of the output array, else end the right value to the end of the output array: repeat until output array is full 
+      \item[-] NOTE: you can index from the end using -1, then continue decrementing that value
+
+    \end{enumerate}
+\end{enumerate}
+
+
 
 
 
