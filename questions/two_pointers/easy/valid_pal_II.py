@@ -1,3 +1,35 @@
+# Better solution:
+class Solution:
+    def isPal(self, s, left, right):
+        while left <= right:
+            if s[left] != s[right]:
+                return False
+            left+=1
+            right-=1
+        return True
+
+    def validPalindrome(self, s: str) -> bool:
+        left = 0
+        right = len(s) - 1
+        skipped = False
+        valid_pal = True
+        while left <= right:
+            if not s[left].isalnum():
+                left +=1
+                continue
+            if not s[right].isalnum():
+                right -=1
+                continue
+
+            if s[left] != s[right]:
+                return self.isPal(s, left+1, right) or self.isPal(s, left, right-1)
+            else:
+                left+=1
+                right-=1
+        return(valid_pal)
+
+
+# First Attempt
 class Solution:
     def validPalindrome(self, s: str) -> bool:
         left = 0
