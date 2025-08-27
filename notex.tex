@@ -566,6 +566,24 @@ Return the sum of the two numbers as a linked list.
 \end{enumerate}
 
 
+\subsection{Find The Duplicate Number}
+\begin{enumerate}
+  \item[] \textbf{Question:} You are given an array of integers nums containing n + 1 integers. Each integer in nums is in the range [1, n] inclusive.
+
+Every integer appears exactly once, except for one integer which appears two or more times. Return the integer that appears more than once.
+
+Can you solve the problem without modifying the array nums and using O(1) extra space?
+
+
+    \begin{enumerate}
+      \item[-] \textbf{Main idea:} This is a cycle detection problem: the idea is that you use the values in the array as indicate into other parts of the array: if you arrive at the same spot using fast and slow pointers, then you've hit an interception!
+      \item[-] Once you've hit an interception, you must create a new pointer and assign it to the initial node.
+      \item[-] Now increment the initial pointer, and one of the pointers at an interception until they intercept once more.
+      \item[-] At this index, this is where the duplicate is!
+
+    \end{enumerate}
+\end{enumerate}
+
 
 
 
