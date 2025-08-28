@@ -500,6 +500,8 @@ Return the minimum integer k such that you can eat all the bananas within h hour
 
 
 
+
+
 \section{Linked Lists}
 
 \subsection{Reverse Linked List}
@@ -1237,18 +1239,14 @@ You may return the combinations in any order and the order of the numbers in eac
 
 
     \begin{enumerate}
-      \item[-] \textbf{Main idea:} This is a backtracking question. The idea is to create a bfs that has two decisions. Begin by setting up the base case:
-      \item[-] Within the BFS 
-      \item[-] 
-      \item[-] 
-      \item[-] 
+      \item[-] \textbf{Main idea:} This is a backtracking question. The idea is to backtrack using two choices, to either continue adding the current value to an ongoing path (and adding that value to a running total), or skipping that value, and adding the next number instead.
+      \item[-] Set up a backtracking function that takes and index in, a path, and a total sum. 
+      \item[-] BASE CASE: If the total is ever over the target amount, or the index is over the length of the input array, return 
+      \item[-] If the total equals the target, then append the current-path to result array.
+      \item[-] Run the backtracking function on the current value (since there is not limitations on repeats):  backtrack(start, current-path, total + nums[start]), then pop last value in the current-path, and add the next value:             backtrack(start +1, current-path, total)
 
     \end{enumerate}
 \end{enumerate}
-
-
-
-
 
 
 
