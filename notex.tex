@@ -1220,15 +1220,32 @@ A common subsequence of two strings is a subsequence that exists in both strings
 The solution set must not contain duplicate subsets. You may return the solution in any order.
 
     \begin{enumerate}
-      \item[-] \textbf{Main idea:} This is a backtracking question, meaning that we need to recursively call the backtracking function in a for loop.
-      \item[-] Begin by setting up a backtracking function definition that takes in a start index, and a path array that will be used to store all ongoing path of variables
-      \item[-] Begin by copying the current path to a result array, after doing this, set up a for loop from the start index, to the length of the input nums array.
-      \item[-] Append the current num at the current index to the path, then call backtracking on the next index
-      \item[-] After this call returns, pop the last value from the path, and let the for loop proceed.
-      \item[-] After all for loops have finished, as well as all recursive calls, return the result array.
+      \item[-] \textbf{Main idea:} This is a backtracking question. Begin be defining a backtracking function that takes in an index, and a current path
+      \item[-] The idea is that you'll either add the value at the current index to the current-path array, the recurse again: backtrack(index+1, current-path), or when that's done executing, pop the last value out, then recurse again using the same call
+      \item[-] BASE CASE, if the index is ever greater than or equal to the length of the input array, then add the current path to the result array, and return
 
     \end{enumerate}
 \end{enumerate}
+
+\subsection{Combination Sum}
+\begin{enumerate}
+  \item[] \textbf{Question:} You are given an array of distinct integers nums and a target integer target. Your task is to return a list of all unique combinations of nums where the chosen numbers sum to target.
+
+The same number may be chosen from nums an unlimited number of times. Two combinations are the same if the frequency of each of the chosen numbers is the same, otherwise they are different.
+
+You may return the combinations in any order and the order of the numbers in each combination can be in any order.
+
+
+    \begin{enumerate}
+      \item[-] \textbf{Main idea:} This is a backtracking question. The idea is to create a bfs that has two decisions. Begin by setting up the base case:
+      \item[-] Within the BFS 
+      \item[-] 
+      \item[-] 
+      \item[-] 
+
+    \end{enumerate}
+\end{enumerate}
+
 
 
 
