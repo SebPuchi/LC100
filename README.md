@@ -95,6 +95,8 @@ Once I feel comfortable with a completed question, I write up solutions notes an
 | [clone_graph](./questions/graphs/medium/clone_graph.py) | graphs | `medium` |
 | [Islands_and_treasures](./questions/graphs/medium/Islands_and_treasures.py) | graphs | `medium` |
 | [number_of_islands](./questions/graphs/medium/number_of_islands.py) | graphs | `medium` |
+| [word_search](./questions/backtracking/medium/word_search.py) | backtracking | `medium` |
+| [combination_sum](./questions/backtracking/medium/combination_sum.py) | backtracking | `medium` |
 | [subsets](./questions/backtracking/medium/subsets.py) | backtracking | `medium` |
 | [task_schedular](./questions/heaps/medium/task_schedular.py) | heaps | `medium` |
 | [kth_largest_element_in_array](./questions/heaps/medium/kth_largest_element_in_array.py) | heaps | `medium` |
