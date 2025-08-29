@@ -1249,6 +1249,38 @@ You may return the combinations in any order and the order of the numbers in eac
 \end{enumerate}
 
 
+\subsection{Word Search}
+\begin{enumerate}
+  \item[] \textbf{Question:} Given n nodes labeled from 0 to n - 1 and a list of undirected edges (each edge is a pair of nodes), write a function to check whether these edges make up a valid tree.
+
+    \begin{enumerate}
+      \item[-] \textbf{Main idea:} This is a backtracking question. The general idea loop through the grid, and find the starting character, once found, we recursively try all neighboring characters. 
+      \item[-] Begin by setting up a set to keep track of the current path of indices (i,j) that represent the word. When we loop through the target word, we will also have an indices to index into that word. Let's call this: index.
+      \item[-] Begin with a nested for loop that will loop: call the backtracing function of every value. 
+      \item[-] To set up the backtracking function, create an internal function that takes indices i, j, as well as the index into the target word: pass i, j, 0 as the start for recursive call.
+      \item[-] Inside the backtracking function, lets consider when to stop the recursive calling, and return True: If the current index into the word equals the length of the target word, this means that we have reached the word successfully and we can return true. 
+      \item[-] Next check to see if i or j are out of bounds (i<0 or i>= n...) If these conditions are True, return False from this path
+      \item[-] Next check to see if the current value in the grid at [i][j] is doesn't equal the index of the word: return False from path if its not: 
+      \item[-] Next check to see if the tuple vale (i,j) is already in the path set: if it is, return False from this path (we cannot reuse letters)
+      \item[-] If all of these are True, then we can assume that the current letter is correct: add (i,j) to the path set.
+      \item[-] Next check if any of the directions are return True:  so call: 
+        res = (dfs(i + 1, j, index + 1) or
+                   dfs(i - 1, j, index + 1) or
+                   dfs(i, j + 1, index + 1) or
+                   dfs(i, j - 1, index + 1))
+      \item[-] Before returning what any of these equal, pop the current (i,j) tuple from the path (use set remove function)
+      \item[-] Finally, return res: Back in the main nested for loop, if the backtrack function every returns true, then return true: if you finish looping through all the variables and nothing is true, return false
+
+
+
+    \end{enumerate}
+\end{enumerate}
+
+
+
+
+
+
 
 
 \section{Greedy}
