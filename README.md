@@ -92,6 +92,7 @@ Once I feel comfortable with a completed question, I write up solutions notes an
 | [valid_pal_II](./questions/two_pointers/easy/valid_pal_II.py) | two_pointers | `easy` |
 | [pacific_atlantic_water_flow](./questions/graphs/medium/pacific_atlantic_water_flow.py) | graphs | `medium` |
 | [max_area_of_island](./questions/graphs/medium/max_area_of_island.py) | graphs | `medium` |
+| [graph_valid_tree](./questions/graphs/medium/graph_valid_tree.py) | graphs | `medium` |
 | [clone_graph](./questions/graphs/medium/clone_graph.py) | graphs | `medium` |
 | [Islands_and_treasures](./questions/graphs/medium/Islands_and_treasures.py) | graphs | `medium` |
 | [number_of_islands](./questions/graphs/medium/number_of_islands.py) | graphs | `medium` |
