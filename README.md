@@ -107,6 +107,7 @@ Once I feel comfortable with a completed question, I write up solutions notes an
 | [last_stone_weight](./questions/heaps/easy/last_stone_weight.py) | heaps | `easy` |
 | [kth_largest](./questions/heaps/easy/kth_largest.py) | heaps | `easy` |
 | [validate_binary_search_tree](./questions/trees/medium/validate_binary_search_tree.py) | trees | `medium` |
+| [kth_smallest_int_in_bst](./questions/trees/medium/kth_smallest_int_in_bst.py) | trees | `medium` |
 | [right_side_view_of_tree](./questions/trees/medium/right_side_view_of_tree.py) | trees | `medium` |
 | [longest_common_ancestor_in_binary_search_tree](./questions/trees/medium/longest_common_ancestor_in_binary_search_tree.py) | trees | `medium` |
 | [binary_tree_level_order_traversal](./questions/trees/medium/binary_tree_level_order_traversal.py) | trees | `medium` |
