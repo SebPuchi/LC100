@@ -1167,6 +1167,30 @@ Return the total number of connected components in that graph.
 \end{enumerate}
 
 
+\subsection{Course Schedule}
+\begin{enumerate}
+  \item[] \textbf{Question:} You are given an array prerequisites where prerequisites[i] = [a, b] indicates that you must take course b first if you want to take course a.
+
+The pair [0, 1], indicates that must take course 1 before taking course 0.
+
+There are a total of numCourses courses you are required to take, labeled from 0 to numCourses - 1.
+
+Return true if it is possible to finish all courses, otherwise return false.
+
+    \begin{enumerate}
+      \item[-] \textbf{Main idea:} You need to keep track of two things, incoming edges for each node, as well as neighbors of each node (what classes can be taken next, after the current node is completed)
+      \item[-] To begin, set up an adjacency list, that keeps track of all classes that can be completed after the current node is done
+      \item[-] Now create an list that keeps track of all incoming edges. Because classes are indexed from 0 to numClasses, you can create an array: incoming-edges = [0]*numClasses
+      \item[-] Make sure to add all incoming edges to each class. Once done, add all classes with no incoming edges to a queue.
+      \item[-] While the queue isn't empty, pop a class from the queue, and check to see what classes can be processed after this class has been completed 
+      \item[-] For each neighbor in this class's adjacency list, subtract one from that neighbors incoming edge list. If the incoming edge is now 0, then add that neighbor to the queue. 
+      \item[-] Each time you pop from the queue, add 1 to a running completed course counter. After the queue is empty, check to see if the completed course amount equals the number of courses
+    \end{enumerate}
+\end{enumerate}
+
+
+
+
 
 \section{Advanced Graphs}
 
