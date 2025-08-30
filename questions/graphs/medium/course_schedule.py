@@ -1,3 +1,40 @@
+#Optimal solution using Kahns algorithm
+class Solution:
+    def canFinish(self, numCourses: int, prerequisites: List[List[int]]) -> bool:
+        ad_list = {}
+        for i in range(numCourses):
+            ad_list[i] = []
+
+        num_edge_tracker = [0] * numCourses
+        for i in range(len(prerequisites)):
+            reliant_class = prerequisites[i][0]
+            inital_class = prerequisites[i][1]
+            ad_list[inital_class].append(reliant_class)
+            num_edge_tracker[reliant_class] +=1
+
+        queue = []
+        for i in range(numCourses):
+            if num_edge_tracker[i] == 0:
+                queue.append(i)
+        
+        completed = 0
+        while len(queue) != 0:
+            current = queue.pop(0)
+            completed +=1
+
+            neighbors = ad_list[current]
+            for i in range(len(neighbors)):
+                num_edge_tracker[neighbors[i]] -=1
+                if num_edge_tracker[neighbors[i]] == 0:
+                    queue.append(neighbors[i])
+
+            
+        return completed == numCourses 
+
+
+
+
+
 import heapq
 class Solution:
     def canFinish(self, numCourses: int, prerequisites: List[List[int]]) -> bool:
