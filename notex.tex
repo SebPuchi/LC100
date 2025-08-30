@@ -498,6 +498,51 @@ Return the minimum integer k such that you can eat all the bananas within h hour
 \end{enumerate}
 
 
+\subsection{Find Min in Rotated Sorted Array}
+\begin{enumerate}
+  \item[] \textbf{Question:} Find Minimum in Rotated Sorted Array
+Solved 
+You are given an array of length n which was originally sorted in ascending order. It has now been rotated between 1 and n times. For example, the array nums = [1,2,3,4,5,6] might become:
+
+\begin{enumerate}
+  \item[-] [3,4,5,6,1,2] if it was rotated 4 times.
+  \item[-] [1,2,3,4,5,6] if it was rotated 6 times.
+\end{enumerate}
+
+    \begin{enumerate}
+      \item[-] \textbf{Main idea:} Begin by assuming that the min is just the first element in the array. Now set up binary search set up as usual. Star with the left and right pointers, left and index 0, and right at the end of the array
+      \item[-] Calculate the mid index as usual: here are the two cases:
+      \item[-] Case A: nums[mid-index] is less than current-smallest. That means we found a new smaller candidate. Since the array is rotated sorted, the actual minimum can only be at mid or to the left of mid (because the drop happens once).
+      \item[-] Case B: Other wise set the left pointer to one greater than the mid index
+
+    \end{enumerate}
+\end{enumerate}
+
+
+\subsection{Search Rotated Sorted Array}
+\begin{enumerate}
+  \item[] \textbf{Question:} You are given an array of length n which was originally sorted in ascending order. It has now been rotated between 1 and n times. For example, the array nums = [1,2,3,4,5,6] might become: 
+\begin{enumerate}
+  \item[-] [3,4,5,6,1,2] if it was rotated 4 times.
+  \item[-] [1,2,3,4,5,6] if it was rotated 6 times.
+\end{enumerate}
+
+Given the rotated sorted array nums and an integer target, return the index of target within nums, or -1 if it is not present.
+
+You may assume all elements in the sorted rotated array nums are unique,
+
+
+    \begin{enumerate}
+      \item[-] \textbf{Main idea:} This question is mainly checking if a value is in the sorted left or sorted right portion of the input array, given that it can be rotated a certain amount.
+      \item[-] Begin setting up binary search as usual: First check if the mid index equals the value you're looking for, if so, return that index 
+      \item[-] Next check to see if the value in the left pointer is less that or equal to the value in the mid index: if it is, the means WE ARE IN THE LEFT SORTED PORTION.
+      \item[-] If we are in the left sorted portion, next check to see if the target value is less than the left value, or greater than the mid value, this would mean we need to update the left pointer to one over the mid index
+      \item[-] If this isn't True, then we can safely assume that the target is in the left sorted portion, so move the right pointer
+      \item[-] If the value of the left pointer is not greater than or equal to the mid point, then this means we are in the right sorted portion 
+      \item[-] We can preform many of the same steps, once we know we are in the right sorted portion: if the target is less than the mid point, or greater than the value at the right pointer, we know we need to decrement the right pointer, as the target is not in this portion of the array. If it is, then we need to update the left pointer, as we can assume that the value is indeed in this section of the array
+
+    \end{enumerate}
+\end{enumerate}
 
 
 
