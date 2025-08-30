@@ -90,6 +90,7 @@ Once I feel comfortable with a completed question, I write up solutions notes an
 | [two_sum_II](./questions/two_pointers/medium/two_sum_II.py) | two_pointers | `medium` |
 | [validpal](./questions/two_pointers/easy/validpal.py) | two_pointers | `easy` |
 | [valid_pal_II](./questions/two_pointers/easy/valid_pal_II.py) | two_pointers | `easy` |
+| [course_schedule](./questions/graphs/medium/course_schedule.py) | graphs | `medium` |
 | [pacific_atlantic_water_flow](./questions/graphs/medium/pacific_atlantic_water_flow.py) | graphs | `medium` |
 | [max_area_of_island](./questions/graphs/medium/max_area_of_island.py) | graphs | `medium` |
 | [graph_valid_tree](./questions/graphs/medium/graph_valid_tree.py) | graphs | `medium` |
