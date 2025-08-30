@@ -1,5 +1,6 @@
 class Solution:
     def countComponents(self, n: int, edges: List[List[int]]) -> int:
+        # ad lst
         ad_list = {}
         # create adjacenty list: 
         for i in range(len(edges)):
