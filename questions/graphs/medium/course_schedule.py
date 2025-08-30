@@ -1,3 +1,4 @@
+import heapq
 class Solution:
     def canFinish(self, numCourses: int, prerequisites: List[List[int]]) -> bool:
         ad_list = {}
@@ -26,4 +27,3 @@ class Solution:
             heapq.heapify(heap)
 
         return True
-        
