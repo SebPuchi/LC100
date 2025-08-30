@@ -640,6 +640,23 @@ Can you solve the problem without modifying the array nums and using O(1) extra 
 \end{enumerate}
 
 
+\subsection{Sort Linked List}
+\begin{enumerate}
+  \item[] \textbf{Question:} Given the head of a linked list, return the list after sorting it in ascending order.
+
+
+    \begin{enumerate}
+      \item[-] \textbf{Main idea:} Note, this is not the optimal solution, as the optimal solution uses constant space, but here is how you solved it first rip off the dome
+      \item[-] First Loop through all the nodes in the linked List, add them in an array. 
+      \item[-] Next Heapify this array:
+      \item[-] Next for each value in the array, create a new node, and heappop / add the value to that node in a new list (you can create a dummy node to start).
+      \item[-] Return the dummy.next of the start node. This is a new list that was sorted in n(log(n)) time and is in ascending order
+
+    \end{enumerate}
+\end{enumerate}
+
+
+
 
 
 \section{Trees}
@@ -1051,6 +1068,34 @@ Find all cells where water can flow from that cell to both the Pacific and Atlan
 \end{enumerate}
 
 
+\subsection{Graph Valid Tree}
+\begin{enumerate}
+  \item[] \textbf{Question:} Given n nodes labeled from 0 to n - 1 and a list of undirected edges (each edge is a pair of nodes), write a function to check whether these edges make up a valid tree.
+
+    \begin{enumerate}
+      \item[-] \textbf{Main idea:} A valid tree has the following components: No more than one connected component, Not Cyclical.
+      \item[-] In order to check these things, we can use DFS approach. Create a connected component counter. Loop through each node, and attempt to call DFS on the node (so long as it isn't already visited). Each time you finish the DFS, and the stack is empty, add 1 to the connected-component counter.
+      \item[-] This question gives you edges, begin by making these edges into a valid adjacency list
+      \item[-] Once you have finished all of the DFS, check the visited array: if the length of the visited array is not equal to n, then there is a cycle (nodes can reach the same node, from two separate nodes). This means that this is not a valid tree
+      \item[-] One edge case is if the node loops to itself, if this is the case, then it will return False as well 
+      \item[-] If the connected components equal 1, and the length of visited equals n, return True
+    \end{enumerate}
+\end{enumerate}
+
+
+\subsection{Number of Connected Components in an Undirected Graph}
+\begin{enumerate}
+  \item[] \textbf{Question:} There is an undirected graph with n nodes. There is also an edges array, where edges[i] = [a, b] means that there is an edge between node a and node b in the graph.
+
+The nodes are numbered from 0 to n - 1.
+
+Return the total number of connected components in that graph.
+
+    \begin{enumerate}
+      \item[-] \textbf{Main idea:} Begin by transforming the input edges into an adjacency list. Next create your stack and visited array: for each n, check first to see if n is tracked in the adjacency list. If it's not, its a separate component, and you can add one to a connected-component counter and continue.
+      \item[-] Make sure to attempt to call DFS on all the n values. After you have looped through all of them, return the connected component counter.
+    \end{enumerate}
+\end{enumerate}
 
 
 
@@ -1270,8 +1315,6 @@ You may return the combinations in any order and the order of the numbers in eac
                    dfs(i, j - 1, index + 1))
       \item[-] Before returning what any of these equal, pop the current (i,j) tuple from the path (use set remove function)
       \item[-] Finally, return res: Back in the main nested for loop, if the backtrack function every returns true, then return true: if you finish looping through all the variables and nothing is true, return false
-
-
 
     \end{enumerate}
 \end{enumerate}
