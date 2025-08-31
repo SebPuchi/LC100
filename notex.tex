@@ -700,6 +700,32 @@ Can you solve the problem without modifying the array nums and using O(1) extra 
     \end{enumerate}
 \end{enumerate}
 
+\subsection{Reorder List}
+\begin{enumerate}
+  \item[] \textbf{Question:} You are given the head of a singly linked-list.
+
+The positions of a linked list of length = 7 for example, can intially be represented as:
+
+[0, 1, 2, 3, 4, 5, 6]
+
+Reorder the nodes of the linked list to be in the following order:
+
+[0, 6, 1, 5, 2, 4, 3]
+
+
+    \begin{enumerate}
+      \item[-] \textbf{Main idea:} Reverse the links of the second half of the linked list, then merge the two lists together
+      \item[-] Start by finding the mid point, this can be done with fast and slow pointers: start the first pointer at the first index, and the second index at the head.next
+      \item[-] Keep looping until the second pointer is None. At this point, the first pointer is at the halfway point, this means that the second linked list will start at first.next: Make sure to also mark END OF THE FIRST HALF AS NULL
+      \item[-] Now that you have the start of the second list, create a temp node, and reverse the linked list as you normally would
+      \item[-] Now that you have the second list reversed, its time to merge them together. Reset the first node to the front of the list, and the second node to the end of the second list
+      \item[-] The while condition is dependant on the SECOND POINTER: as the length of the second list can be shorter than the first, if the length is odd: 
+      \item[-] Merge them together, first get the next values of the first and second pointer, then set the first pointer next to the second, and the second pointer next to the first-next. Then update first to first-next, and second to second-next
+      \item[-] This question is annoying and pretty hard!
+
+    \end{enumerate}
+\end{enumerate}
+
 
 
 
