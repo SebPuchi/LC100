@@ -1189,6 +1189,29 @@ Return true if it is possible to finish all courses, otherwise return false.
 \end{enumerate}
 
 
+\subsection{Rotten Oranges}
+\begin{enumerate}
+  \item[] \textbf{Question:} You are given a 2-D matrix grid. Each cell can have one of three possible values:
+
+    \begin{enumerate}
+      \item[-] 0 representing an empty cell
+      \item[-] 1 representing a fresh fruit
+      \item[-] 2 representing a rotten fruit
+    \end{enumerate}
+    Every minute, if a fresh fruit is horizontally or vertically adjacent to a rotten fruit, then the fresh fruit also becomes rotten.
+
+Return the minimum number of minutes that must elapse until there are zero fresh fruits remaining. If this state is impossible within the grid, return -1.
+
+    \begin{enumerate}
+      \item[-] \textbf{Main idea:} This question implements multi source BFS, meaning that we have multiple sources where the BFS graph traversal occurs. 
+      \item[-] To begin, loop through the grid and count all the fresh oranges, this will help us determine if all fresh are turned rotten at the end of the problem.
+      \item[-] When traversing, make sure to add at the rotten positions to the queue (there are our starting points)
+      \item[-] While the queue isn't empty, begin traversing: at the beginning, POP ALL THE ROTTEN from the queue: create a for loop that pops all rottens, then for that rotten, gather all neighbors that are fresh, and mark the fresh ones as rotten, then add those to the queue
+      \item[-] After the for loop has finished, this marks one unit of time passing, so increment time by 1. 
+      \item[-] As you get the fresh fruit neighbors, count them.
+      \item[-] When the queue is empty, now check if the amount of fresh neighbors traversed is the same as the original counted. If this is the case, then return the time count var, if it isn't, return -1
+    \end{enumerate}
+\end{enumerate}
 
 
 \section{Advanced Graphs}
