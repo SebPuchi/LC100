@@ -1548,6 +1548,23 @@ Return the digits of the given integer after incrementing it by one.
 \end{enumerate}
 
 
+\section{Tries}
+\subsection{Implement Trie Prefix Tree}
+\begin{enumerate}
+  \item[] \textbf{Question:} A prefix tree (also known as a trie) is a tree data structure used to efficiently store and retrieve keys in a set of strings. Some applications of this data structure include auto-complete and spell checker systems.
+
+    \begin{enumerate}
+      \item[-] \textbf{Main idea:} First create a node class that represents a node in the tree: each node will have a hashset that can store children Nodes as values, and the current letter as a key. Each Node class also has member class variable called END, which indicates that this node is the end of particular word.
+      \item[-] For the Trie Prefix class, create a member variable called root, and create a Node for it
+      \item[-] For the insert function, the idea is that we'll loop through each level of the tree, and check if the current letter already exists in the tree as a child Node. Begin looping by setting a current var equal to root node. 
+      \item[-] If at at any point, the letter does not exists as a child, add it to the children list. Once done looping through the word, make sure you set the last Node's end member equal to True
+      \item[-] For the search function, do the same by setting a current equal to the root to start, and begin traversing the tree. If at any point, the current letter in the word doesn't exist in the children set, return False. Check at the end if the last Node's end member var is equal to True, if so, return True
+      \item[-] startsWith is the same as search, but you don't need to check the end member var when completing the loop through
+
+    \end{enumerate}
+\end{enumerate}
+
+
 
 
 
