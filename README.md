@@ -74,6 +74,7 @@ Once I feel comfortable with a completed question, I write up solutions notes an
 | [twosum](./questions/hashmap/easy/twosum.py) | hashmap | `easy` |
 | [single_number](./questions/hashmap/easy/single_number.py) | hashmap | `easy` |
 | [anagram](./questions/hashmap/easy/anagram.py) | hashmap | `easy` |
+| [implement_trie_prefix_tree](./questions/tries/medium/implement_trie_prefix_tree.py) | tries | `medium` |
 | [unique_paths](./questions/two_dimensional_dp/medium/unique_paths.py) | two_dimensional_dp | `medium` |
 | [longest_common_subsequence](./questions/two_dimensional_dp/medium/longest_common_subsequence.py) | two_dimensional_dp | `medium` |
 | [binary_search_interative](./questions/binary_search/easy/binary_search_interative.py) | binary_search | `easy` |
