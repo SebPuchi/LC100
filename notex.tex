@@ -1357,6 +1357,31 @@ Return the maximum amount of money you can rob without alerting the police.
 \end{enumerate}
 
 
+\subsection{Longest Palindromic Substring}
+\begin{enumerate}
+  \item[] \textbf{Question:} Given a string s, return the longest substring of s that is a palindrome.
+
+A palindrome is a string that reads the same forward and backward.
+
+If there are multiple palindromic substrings that have the same length, return any one of them.
+
+
+    \begin{enumerate}
+      \item[-] \textbf{Main idea:} The trick to this question is to check palindromes from the center character, having a left pointer expand leftwards from the center, and a right pointer expanding rightwards form the pointer
+      \item[-] The idea is that you'll check each potential palindrome starting at each character: to do this, have a for loop set up that loop through each character, for each character, create a left and right that starts at this current character. While these two characters are the same, spread the pointers away from the center.
+      \item[-] While doing this, check to see if the distances between the left and right pointers is every greater than an ongoing max variable (if it is, update the max, and keep track of the left and right position)
+      \item[-] NOTE: EDGE CASE: There is a huge edge case to this question: for each middle character, also create a for loop that checks with the pointers as the following
+
+      \item[-] Set up left = mid and right  = mid +1 THIS IS CRITICAL: as this works on characters that are EVEN in LENGTH 
+      \item[-] So for each mid character, you are actually running two while loop cases, with left, right starting at the middle, and for the second: left starting at the middle and right starting at mid +1 (make sure to check if left or right are ever out of bounds!)
+    \end{enumerate}
+\end{enumerate}
+
+
+
+
+
+
 
 \section{Two-Dimensional Dynamic Programming}
 \subsection{Unique Paths}
