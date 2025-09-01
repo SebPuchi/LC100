@@ -963,8 +963,23 @@ A binary search tree satisfies the following constraints:
 \end{enumerate}
 
 
+\subsection{Construct Tree from Preorder / Inorder Arrays}
+\begin{enumerate}
+  \item[] \textbf{Question:} You are given two integer arrays preorder and inorder. preorder is the preorder traversal of a binary tree. inorder is the inorder traversal of the same tree. Both arrays are of the same size and consist of unique values.
+
+Rebuild the binary tree from the preorder and inorder traversals and return its root.
+
+    \begin{enumerate}
+      \item[-] \textbf{Main idea:} You must solve this recursively: base case is if the preorder or inorder arrays are length 0: if they are, return None
+      \item[-] If they are not, then create a node called Root: Root will always be the first value in preorder array
+      \item[-] Next find the index of root in the preorder array: Call this index Mid:
+      \item[-] Root.left will equal : self.buildTree(preorder[1: mid + 1], inorder[:mid]) // Skip the first value for pre-order (as it is now a node: and go to the mid index inclusive): for inorder: go up until the mid index
+      \item[-] Root.right will equal : self.buildTree(preorder[mid + 1:], inorder[mid +1:]) // everything after the mid index, for both the preorder and inorder array
+      \item[-] You do not like this question
 
 
+    \end{enumerate}
+\end{enumerate}
 
 
 
