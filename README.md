@@ -117,6 +117,7 @@ Once I feel comfortable with a completed question, I write up solutions notes an
 | [longest_common_ancestor_in_binary_search_tree](./questions/trees/medium/longest_common_ancestor_in_binary_search_tree.py) | trees | `medium` |
 | [binary_tree_level_order_traversal](./questions/trees/medium/binary_tree_level_order_traversal.py) | trees | `medium` |
 | [count_good_nodes_in_tree](./questions/trees/medium/count_good_nodes_in_tree.py) | trees | `medium` |
+| [construct_binary_tree_from_preorder_and_inorder_traversal](./questions/trees/medium/construct_binary_tree_from_preorder_and_inorder_traversal.py) | trees | `medium` |
 | [same_tree](./questions/trees/easy/same_tree.py) | trees | `easy` |
 | [diameter_of_binary_tree](./questions/trees/easy/diameter_of_binary_tree.py) | trees | `easy` |
 | [invert_tree](./questions/trees/easy/invert_tree.py) | trees | `easy` |
