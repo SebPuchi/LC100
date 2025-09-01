@@ -545,6 +545,25 @@ You may assume all elements in the sorted rotated array nums are unique,
 \end{enumerate}
 
 
+\subsection{Search 2D Matrix II}
+\begin{enumerate}
+  \item[] \textbf{Question:} Write an efficient algorithm that searches for a value target in an m x n integer matrix matrix. This matrix has the following properties:
+
+  \begin{enumerate}
+    \item[-] Integers in each row are sorted in ascending from left to right.
+    \item[-] Integers in each column are sorted in ascending from top to bottom.
+  \end{enumerate}
+
+    \begin{enumerate}
+      \item[-] \textbf{Main idea:} This question is not quite as fast and Search 2D Matrix 1: One solution is just to set up a binary search function, and implement binary search on every row: This would produce and m(log(n)) solution, which is pretty fast
+      \item[-] Another solution is to start at the bottom left corner of the array, and check if that value is greater than or less than the target: if its less than, increment the j value, if its greater than decrement the i value
+      \item[-] If i or j is ever outside of the bounds of the matrix, then return false: if decrementing i or incrementing j ever leads to the target value, return True
+
+    \end{enumerate}
+\end{enumerate}
+
+
+
 
 
 \section{Linked Lists}
@@ -1378,7 +1397,18 @@ If there are multiple palindromic substrings that have the same length, return a
 \end{enumerate}
 
 
+\subsection{Palindromic Substrings}
+\begin{enumerate}
+  \item[] \textbf{Question:} Given a string s, return the number of substrings within s that are palindromes.
 
+A palindrome is a string that reads the same forward and backward.
+
+    \begin{enumerate}
+      \item[-] \textbf{Main idea:} This question is very similar to the Longest Pal substrings question: The idea is to check palindromes from the center character, and work your way outward with left and right pointers
+      \item[-] In this case, every time you increment the pointers and find a palindrome, add one to a count variable. 
+      \item[-] NOTE: the edgecase still persists with even characters: make sure to run the inner while loop twice, starting the right index at one more then the left / mid index
+    \end{enumerate}
+\end{enumerate}
 
 
 
