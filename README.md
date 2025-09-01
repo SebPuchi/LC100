@@ -41,6 +41,7 @@ Once I feel comfortable with a completed question, I write up solutions notes an
 ## Completed Questions
 | Question | Category | Difficulty |
 |:-----------------------------|:---------|:------------|
+| [palindromic_substrings](./questions/one_dimensional_dp/medium/palindromic_substrings.py) | one_dimensional_dp | `medium` |
 | [house_robber](./questions/one_dimensional_dp/medium/house_robber.py) | one_dimensional_dp | `medium` |
 | [house_robber_II](./questions/one_dimensional_dp/medium/house_robber_II.py) | one_dimensional_dp | `medium` |
 | [longest_palindromic_substring](./questions/one_dimensional_dp/medium/longest_palindromic_substring.py) | one_dimensional_dp | `medium` |
@@ -83,6 +84,7 @@ Once I feel comfortable with a completed question, I write up solutions notes an
 | [find_min_in_rotated_sorted_array](./questions/binary_search/meduim/find_min_in_rotated_sorted_array.py) | binary_search | `meduim` |
 | [koko_eats_bananas](./questions/binary_search/meduim/koko_eats_bananas.py) | binary_search | `meduim` |
 | [search_rotated_sorted_array](./questions/binary_search/meduim/search_rotated_sorted_array.py) | binary_search | `meduim` |
+| [search_2D_matrix_II](./questions/binary_search/meduim/search_2D_matrix_II.py) | binary_search | `meduim` |
 | [search_2D_matrix](./questions/binary_search/meduim/search_2D_matrix.py) | binary_search | `meduim` |
 | [insert_interval](./questions/intervals/medium/insert_interval.py) | intervals | `medium` |
 | [longest_consecutive_sequence](./questions/two_pointers/medium/longest_consecutive_sequence.py) | two_pointers | `medium` |
