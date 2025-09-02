@@ -1,3 +1,31 @@
+# Better solition for checking if Binary Search Tree
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+
+class Solution:
+    def recurse(self, current, arr):
+        if current == None:
+            return (None, True) 
+        self.recurse(current.left, arr)
+        arr.append(current.val)
+        self.recurse(current.right, arr)
+
+    def isValidBST(self, root: Optional[TreeNode]) -> bool:
+        output = []
+        self.recurse(root, output)
+        index = 0
+        for i in range(1, len(output)):
+            if output[i] <= output[index]:
+                return False
+            index+=1
+        return True
+
+
+
 # Definition for a binary tree node.
 # class TreeNode:
 #     def __init__(self, val=0, left=None, right=None):
