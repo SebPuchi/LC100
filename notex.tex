@@ -932,12 +932,10 @@ The lowest common ancestor between two nodes p and q is the lowest node in a tre
 
 
     \begin{enumerate}
-      \item[-] \textbf{Main idea:} This question is kinda tricky! The main idea is to find and return upwards through the tree nodes p and q when you find them. While doing this, check the ancestor condition
-      \item[-] There are three different ancestor conditions: if the left and right nodes are p and q, then the current node is the LCA
-      \item[-] If the current Node is p and the left or right is q, then LCQ is the p node
-      \item[-] If the current Node is q and the left or right is p, then LCQ is the q node
-      \item[-] Once you have found the LCA node, store it as a global variable, then begin returning None upwards
-      \item[-] At the end, return the global LCA Node
+      \item[-] \textbf{Main idea:} Leverage the fact that it's a binary tree: The main idea is that at any given time, if p and q are split on the left and right sides of the tree, then the current is the lowest common ancestor
+      \item[-] If at any point, the current is the left or right node, then it has to be the lowest common ancestor, this is a given. If the nodes split, we also return the current node
+      \item[-] If the values of p and q are BOTH greater than the current value, then recurse to the right sub node, and recursively call the function again
+      \item[-] If the values of p and q are BOTH less than the current value, then recurse to the left sub node, and recursively call the function again
 
     \end{enumerate}
 \end{enumerate}
