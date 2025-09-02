@@ -1,3 +1,32 @@
+# Better Solution:
+
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+
+class Solution:
+    def recurse(self, current, p, q):
+        print(current.val)
+        if current.val == p.val or current.val == q.val:
+            return current
+        elif current.val > p.val and current.val > q.val:
+            return self.recurse(current.left, p, q)
+        elif current.val < p.val and current.val < q.val:
+            return self.recurse(current.right, p, q)
+        else:
+            return current
+        
+
+    def lowestCommonAncestor(self, root: TreeNode, p: TreeNode, q: TreeNode) -> TreeNode:
+        return(self.recurse(root, p, q));
+
+
+
+
+
 # Definition for a binary tree node.
 # class TreeNode:
 #     def __init__(self, val=0, left=None, right=None):
