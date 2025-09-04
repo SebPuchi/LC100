@@ -88,6 +88,7 @@ Once I feel comfortable with a completed question, I write up solutions notes an
 | [search_2D_matrix_II](./questions/binary_search/meduim/search_2D_matrix_II.py) | binary_search | `meduim` |
 | [search_2D_matrix](./questions/binary_search/meduim/search_2D_matrix.py) | binary_search | `meduim` |
 | [insert_interval](./questions/intervals/medium/insert_interval.py) | intervals | `medium` |
+| [meeting_rooms](./questions/intervals/easy/meeting_rooms.py) | intervals | `easy` |
 | [longest_consecutive_sequence](./questions/two_pointers/medium/longest_consecutive_sequence.py) | two_pointers | `medium` |
 | [3Sum](./questions/two_pointers/medium/3Sum.py) | two_pointers | `medium` |
 | [squares_of_a_sorted_array](./questions/two_pointers/medium/squares_of_a_sorted_array.py) | two_pointers | `medium` |
