@@ -1596,6 +1596,27 @@ Return true if it's possible to rearrange the cards in this way, otherwise, retu
     \end{enumerate}
 \end{enumerate}
 
+
+\subsection{Maximum SubArray}
+\begin{enumerate}
+  \item[] \textbf{Question:} Given an array of integers nums, find the subarray with the largest sum and return the sum.
+
+A subarray is a contiguous non-empty sequence of elements within an array.
+
+    \begin{enumerate}
+      \item[-] \textbf{Main idea:} Begin with two values. A max-value that indicates the maximum subarray, and a current sum
+      \item[-] Begin looping through the array: While looping, first make a check to see if the current sum is negative: 
+      \item[-] Whenever there is a negative sum (NEGATIVE PREFIX), reset the current sum back to 0. After this, set the max-value to the max of the current sum or whatever the max value is.
+      \item[-] Return the max value
+
+    \end{enumerate}
+\end{enumerate}
+
+
+
+
+
+
 \section{Math {\&} Geometry}
 \subsection{Plus One}
 \begin{enumerate}
