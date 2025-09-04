@@ -8,4 +8,4 @@ class Solution:
                 current_sum = 0
             current_sum +=nums[i]
             max_sub = max(current_sum, max_sub) 
-        return(max_sub
+        return(max_sub)
