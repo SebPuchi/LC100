@@ -1423,6 +1423,31 @@ A palindrome is a string that reads the same forward and backward.
     \end{enumerate}
 \end{enumerate}
 
+\subsection{Decode Ways}
+\begin{enumerate}
+  \item[] \textbf{Question:} A string consisting of uppercase english characters can be encoded to a number using the following mapping:
+  
+    \begin{enumerate}
+      \item'A' $\to$ "1"
+      \item'B' $\to$ "2"
+      \item ...
+      \item'Z' $\to$ "26"
+    \end{enumerate}
+To decode a message, digits must be grouped and then mapped back into letters using the reverse of the mapping above. There may be multiple ways to decode a message
+
+    \begin{enumerate}
+      \item[-] \textbf{Main idea:} Do Bottom Up DP from the END Of the string: Set it up such that the index in the memo are the keys, and the values are the amount of ways to count at any given point.
+      \item[-] Begin by initializing the memo with \{len(s) : 1\} This case is saying that given an empty string there's one way to decode it
+      \item[-] Next we will set up a loop that loops from len(s) -1, all the way to 0 (-1, -1, -1). 
+      \item[-] Upon each loop here are the checks that you'll make
+      \item[-] if s[i] == "0" then then memo[i] will equal 0, as you cannot decode 0 in this case (if this case is true, continue looping to the next index)
+      \item[-] if s[i] != "0" then then memo[i] will equal whatever memo[i+1] is
+      \item[-] Additionally, check to see if so if the value at s[i] and s[i+1] equals a valid two digit number (10-26): if this is the case, ALSO ADD memo[i+2] to memo[i]
+      \item[-] After looping is complete, return memo[0] (the total sum of all the different ways)
+    \end{enumerate}
+\end{enumerate}
+
+
 
 
 
