@@ -1677,6 +1677,28 @@ Return the digits of the given integer after incrementing it by one.
 
 
 \section{Intervals}
+
+\subsection{Insert Intervals}
+\begin{enumerate}
+  \item[] \textbf{Question:} You are given an array of non-overlapping intervals intervals where intervals[i] = [start-i, end-i] represents the start and the end time of the ith interval. intervals is initially sorted in ascending order by start-i.
+
+You are given another interval newInterval = [start, end].
+
+Insert newInterval into intervals such that intervals is still sorted in ascending order by start-i and also intervals still does not have any overlapping intervals. You may merge the overlapping intervals if needed.
+
+    \begin{enumerate}
+      \item[-] \textbf{Main idea:} This question involves merging intervals, and tracking when it's safe to append either the newly inserted interval, or and interval from the array
+      \item[-] Begin by looping through all the intervals
+      \item[-] If the new interval's end is less than the current intervals start: then it is safe to append the New Interval to the output array: and we can then add all intervals from i onwards to the output array, and RETURN
+      \item[-] The second test (elif) is if the current intervals, end is less than the new intervals start. This means that it is safe to append the Current Interval
+      \item[-] If neither of these cases are true, then we are OVERLAPPING: and we need set out newInterval to the MIN of the new interval's start, and the current interval's start (for the start point), and the MAX of the newInterval's end and the current interval's end for the end point: 
+      \item[-] If we loop through the whole array, and haven't returned yet, then append the new Interval (because it hasn't been appended yet), then return the output array
+
+    \end{enumerate}
+
+\end{enumerate}
+
+
 \subsection{Meeting Rooms}
 \begin{enumerate}
   \item[] \textbf{Question:} Given an array of meeting time intervals where intervals[i] = [starti, endi], determine if a person could attend all meetings.
