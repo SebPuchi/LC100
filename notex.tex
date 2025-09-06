@@ -1639,9 +1639,6 @@ A subarray is a contiguous non-empty sequence of elements within an array.
 
 
 
-
-
-
 \section{Math {\&} Geometry}
 \subsection{Plus One}
 \begin{enumerate}
@@ -1677,6 +1674,20 @@ Return the digits of the given integer after incrementing it by one.
 
     \end{enumerate}
 \end{enumerate}
+
+
+\section{Intervals}
+\subsection{Meeting Rooms}
+\begin{enumerate}
+  \item[] \textbf{Question:} Given an array of meeting time intervals where intervals[i] = [starti, endi], determine if a person could attend all meetings.
+
+    \begin{enumerate}
+      \item[-] \textbf{Main idea:} Sort the interval arrays by the starting time
+      \item[-] Loop through all intervals (starting at the second): and check of the current start time is any time before the previous end time: If it is, return false, if it isn't, return True
+
+    \end{enumerate}
+\end{enumerate}
+
 
 
 
