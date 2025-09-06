@@ -1725,6 +1725,20 @@ Insert newInterval into intervals such that intervals is still sorted in ascendi
     \end{enumerate}
 \end{enumerate}
 
+\subsection{Merge Intervals}
+\begin{enumerate}
+  \item[] \textbf{Question:} Given an array of intervals where intervals[i] = [starti, endi], merge all overlapping intervals, and return an array of the non-overlapping intervals that cover all the intervals in the input.
+
+    \begin{enumerate}
+      \item[-] \textbf{Main idea:} Start by sorting the intervals, then adding the first to an output array 
+      \item[-] Loop through the rest of the intervals starting from index 1: check to see if the last element of the output array overlaps with the current element (can use -1 as index)
+      \item[-] If it does, then update the last element to the min(last-start, current-start) and the max(last-end, current-end)
+      \item[-] After done looping, return the array
+
+    \end{enumerate}
+\end{enumerate}
+
+
 
 
 
