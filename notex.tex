@@ -1688,6 +1688,21 @@ Return the digits of the given integer after incrementing it by one.
     \end{enumerate}
 \end{enumerate}
 
+\subsection{Meeting Rooms II}
+\begin{enumerate}
+  \item[] \textbf{Question:} Given an array of meeting time intervals intervals where intervals[i] = [start-i, end-i], return the minimum number of conference rooms required.
+
+    \begin{enumerate}
+      \item[-] \textbf{Main idea:} Add all start times to a start array and all end times to an end array: Sort both arrays
+      \item[-] Initialize two pointers, one at the beginning of the start array, and one at the beginning of the end array
+      \item[-] Begin looping through each array: If the value at the current index of the start array is less than the value at the current index of the end array, this indicates that there is overlap of meetings: Increment the conference room count AND increment the start array pointer
+      \item[-] If the end value is less than OR EQUAL TO the start value, this means that the meeting starts after, so we can decrement the conference room count, and increment the end pointer
+      \item[-] Continue looping so long as start and end pointers are in bounds of their arrays. 
+      \item[-] While looping, keep track of the overall max value that the conference room val gets to.
+
+    \end{enumerate}
+\end{enumerate}
+
 
 
 
