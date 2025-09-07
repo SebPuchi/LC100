@@ -1739,6 +1739,23 @@ Insert newInterval into intervals such that intervals is still sorted in ascendi
 \end{enumerate}
 
 
+\subsection{Non-overlapping Intervals}
+\begin{enumerate}
+  \item[] \textbf{Question:} Given an array of intervals intervals where intervals[i] = [start-i, end-i], return the minimum number of intervals you need to remove to make the rest of the intervals non-overlapping.
+
+Note: Intervals are non-overlapping even if they have a common point. For example, [1, 3] and [2, 4] are overlapping, but [1, 2] and [2, 3] are non-overlapping.
+
+    \begin{enumerate}
+      \item[-] \textbf{Main idea:} Begin by sorting the intervals. After sorting create an output array, and put the first interval into that array
+      \item[-] Begin looping through the rest of the intervals, starting at index 1
+      \item[-] If there is overlap between the current interval, and the last interval in the array: replace the last interval in the array with whatever interval END EARLIER: GREEDY CHOICE
+      \item[-] At the end, compare the output array with the original array: the difference in length is the answer!
+
+    \end{enumerate}
+\end{enumerate}
+
+
+
 
 
 
