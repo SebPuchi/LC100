@@ -1640,6 +1640,8 @@ A subarray is a contiguous non-empty sequence of elements within an array.
 
 
 \section{Math {\&} Geometry}
+
+
 \subsection{Plus One}
 \begin{enumerate}
   \item[] \textbf{Question:} You are given an integer array digits, where each digits[i] is the ith digit of a large integer. It is ordered from most significant to least significant digit, and it will not contain any leading zero.
@@ -1657,6 +1659,27 @@ Return the digits of the given integer after incrementing it by one.
 
     \end{enumerate}
 \end{enumerate}
+
+
+\subsection{Rotate Image}
+\begin{enumerate}
+  \item[] \textbf{Question:} Given a square n x n matrix of integers matrix, rotate it by 90 degrees clockwise.
+
+You must rotate the matrix in-place. Do not allocate another 2D matrix and do the rotation.
+
+    \begin{enumerate}
+      \item[-] \textbf{Main idea:} This question can broken into two pieces: First Transpose, then reverse along the middle y axis
+      \item[-] Begin with the transpose: You want to swap along the diagonal of the matrix: to do this, do nested for loop, with i looping through all values in length n: For j, we can leverage the fact that it's a square matrix: Start j at i+1. This will always start the j at the index of the diagonal in that particular row.
+      \item[-] At each value in the matrix[i][j], swap with matrix[j][i].
+      \item[-] Next, We need to reverse the array. To do this, set up a for loop that loops over all rows, but only up to column n//2. 
+      \item[-] At each point, swap matrix[i][j] and matrix[i][n- j - 1]: this will swap at the corresponding column on the over side of the matrix
+
+    \end{enumerate}
+\end{enumerate}
+
+
+
+
 
 
 \section{Tries}
@@ -1753,7 +1776,6 @@ Note: Intervals are non-overlapping even if they have a common point. For exampl
 
     \end{enumerate}
 \end{enumerate}
-
 
 
 
