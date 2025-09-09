@@ -46,6 +46,7 @@ Once I feel comfortable with a completed question, I write up solutions notes an
 | [house_robber](./questions/one_dimensional_dp/medium/house_robber.py) | one_dimensional_dp | `medium` |
 | [house_robber_II](./questions/one_dimensional_dp/medium/house_robber_II.py) | one_dimensional_dp | `medium` |
 | [longest_palindromic_substring](./questions/one_dimensional_dp/medium/longest_palindromic_substring.py) | one_dimensional_dp | `medium` |
+| [coin_change](./questions/one_dimensional_dp/medium/coin_change.py) | one_dimensional_dp | `medium` |
 | [min_cost_climbing_stairs](./questions/one_dimensional_dp/easy/min_cost_climbing_stairs.py) | one_dimensional_dp | `easy` |
 | [climbing_stairs](./questions/one_dimensional_dp/easy/climbing_stairs.py) | one_dimensional_dp | `easy` |
 | [daily_temperatures](./questions/stack/medium/daily_temperatures.py) | stack | `medium` |
@@ -129,5 +130,7 @@ Once I feel comfortable with a completed question, I write up solutions notes an
 | [max_depth_binary_tree](./questions/trees/easy/max_depth_binary_tree.py) | trees | `easy` |
 | [balanced_binary_tree](./questions/trees/easy/balanced_binary_tree.py) | trees | `easy` |
 | [sub_tree_of_tree](./questions/trees/easy/sub_tree_of_tree.py) | trees | `easy` |
+| [rotate_image](./questions/math_geometry/medium/rotate_image.py) | math_geometry | `medium` |
+| [spiral_matrix](./questions/math_geometry/medium/spiral_matrix.py) | math_geometry | `medium` |
 | [plus_one](./questions/math_geometry/easy/plus_one.py) | math_geometry | `easy` |
 | [network_delay_time](./questions/advanced_graphs/medium/network_delay_time.py) | advanced_graphs | `medium` |
