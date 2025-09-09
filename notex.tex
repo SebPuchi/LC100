@@ -1448,6 +1448,34 @@ To decode a message, digits must be grouped and then mapped back into letters us
 \end{enumerate}
 
 
+\subsection{Coin Change}
+\begin{enumerate}
+  \item[] \textbf{Question:} You are given an integer array coins representing coins of different denominations and an integer amount representing a total amount of money.
+
+Return the fewest number of coins that you need to make up that amount. If that amount of money cannot be made up by any combination of the coins, return -1.
+
+You may assume that you have an infinite number of each kind of coin.
+  
+    \begin{enumerate}
+      \item[-] \textbf{Main idea:} COOL BUT TOUGH. We will use bottom up DP, begin by initializing a memo with each number from 0 to the target number (amount). This means you loop through 0 to amount+1
+      \item[-] Init all values in the memo to positve infinity, except for key 0, init that to 0.
+      \item[-] The idea here is that we want to find the minimum amount of coins of each value leading up to our target value amount.
+      \item[-] To do this, we will start a loop that will loop from 1 to amount (amount+1). At each amount, we will check all coin values in each array by subtracting the current amount (i) by the coin. 
+      \item[-] If this amount is greater than or equal to zero, we need to update out memo. 
+      \item[-] Our memo will be updated to the min between what's already in our memo : memo[i], as well as 1 + (i - coin[i]).
+      \item[-] Another way to formulate this is with: memo[i] = min(memo[i], memo[remainder] + 1). 
+      \item[-] We're basically saying that the new memo equals whatever amount of coins it takes to create the remainder plus one for the current coin we're deducting. We also check to see if that is smaller than whatever is currently stored as the min.
+      \item[-] At the end of all the DP, we will check to see if memo[amount] == infinity: if it does, return -1, if it doesn't return memo[amount]
+
+
+    \end{enumerate}
+\end{enumerate}
+
+
+
+
+
+
 
 
 
