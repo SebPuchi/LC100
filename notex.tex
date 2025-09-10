@@ -1706,6 +1706,39 @@ You must rotate the matrix in-place. Do not allocate another 2D matrix and do th
 \end{enumerate}
 
 
+\subsection{Spiral Matrix}
+\begin{enumerate}
+  \item[] \textbf{Question:} Given an m x n matrix of integers matrix, return a list of all elements within the matrix in spiral order.
+
+    \begin{enumerate}
+      \item[-] \textbf{Main idea:} You solve this question exactly how you think, simply by moving right, then down then left then up. After doing one pass, you will do another pass of the same order: When looping, mark nodes as visited with a \# character
+      \item[-] Begin by setting up a cell counter. The outer while loop will continue to loop so long as all cells have not been visited yet: You can calculate the total amount of cells by multiplying (m*n). 
+      \item[-] Move right: Set up a while loop to move right: the condition is if the j pointer is within bounds, and the current character is not a \#. As you loop through, add element to the output array, mark nodes as visited and increment the cell counter
+      \item[-] After you're done looping right, adjust the pointers back to inbounds to begin looping down. Use the same technique to loop downwards and in all other directions. 
+      \item[-] Continue until all cells have been reached, after all cells have been reached, return.
+
+    \end{enumerate}
+\end{enumerate}
+
+\subsection{Set Matrix Zeros}
+\begin{enumerate}
+  \item[] \textbf{Question:} Given an m x n matrix of integers matrix, if an element is 0, set its entire row and column to 0's.
+
+You must update the matrix in-place.
+
+Follow up: Could you solve it using O(1) space?
+
+    \begin{enumerate}
+      \item[-] \textbf{Main idea:} Use the first row and column as ways to indicate if that row or column needs to be set two zeros
+      \item[-] Loop through the array to begin: If you ever detect a zero in the first row or column, then set a special flag variable to indicate that the row will need to be zeroed out. If you detect a zero that's not in the first row or column, then set the value in the first row or column to a zero to indicate that this row / column will need to be zeroed out later.
+      \item[-] After you have done all the marking, loop through the array again, this time skipping the first row and column: if the current value at i,j has a zero in the first row, mark this value as zero
+      \item[-] Now that you have looped through all the values not in the first row or column, now check to see if the flags for the first row or column are True. This means that you must zero out this row or column. One edge case is if the value at matrix[0][0] == 0: this means that both the row and column must be zeroed out!
+
+    \end{enumerate}
+\end{enumerate}
+
+
+
 
 
 
