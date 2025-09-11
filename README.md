@@ -105,6 +105,7 @@ Once I feel comfortable with a completed question, I write up solutions notes an
 | [max_area_of_island](./questions/graphs/medium/max_area_of_island.py) | graphs | `medium` |
 | [graph_valid_tree](./questions/graphs/medium/graph_valid_tree.py) | graphs | `medium` |
 | [clone_graph](./questions/graphs/medium/clone_graph.py) | graphs | `medium` |
+| [surrounded_regions](./questions/graphs/medium/surrounded_regions.py) | graphs | `medium` |
 | [graph_count_connected_components](./questions/graphs/medium/graph_count_connected_components.py) | graphs | `medium` |
 | [rotten_oranges](./questions/graphs/medium/rotten_oranges.py) | graphs | `medium` |
 | [Islands_and_treasures](./questions/graphs/medium/Islands_and_treasures.py) | graphs | `medium` |
