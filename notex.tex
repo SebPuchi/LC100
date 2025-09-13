@@ -1292,8 +1292,6 @@ Change all surrounded regions of 'O's to 'X's and do so in-place by modifying th
 
 
 
-
-
 \section{Advanced Graphs}
 
 \subsection{Network Delay Time}
@@ -1855,6 +1853,29 @@ Note: Intervals are non-overlapping even if they have a common point. For exampl
 
     \end{enumerate}
 \end{enumerate}
+
+
+\subsection{Merge Two 2D Arrays by Summing Values}
+\begin{enumerate}
+  \item[] \textbf{Question:} You are given two 2D integer arrays nums1 and nums2.
+
+\begin{enumerate}
+  \item[-] nums1[i] = [idi, vali] indicate that the number with the id idi has a value equal to vali.
+  \item[-] nums2[i] = [idi, vali] indicate that the number with the id idi has a value equal to vali.
+Each array contains unique ids and is sorted in ascending order by id.
+\end{enumerate}
+
+Merge the two arrays into one array that is sorted in ascending order by id, respecting the following conditions:
+
+    \begin{enumerate}
+      \item[-] \textbf{Main idea:} Create pointer values into both arrays: while in both arrays: check to see if the id at each array matches a counter id (that starts at 1)
+      \item[-] If the id of each does, then add it to an ongoing sum: after both arrays have been checked, if the sum doesn't equal 0, add it to the output array. 
+      \item[-] Once done looping through both arrays: check to see if the index at either array hasn't reached the end. This indicates that one array was longer then the other: so append the rest of the array to the output (depending on whichever is longer)
+      \item[-] Return the output array
+
+    \end{enumerate}
+\end{enumerate}
+
 
 
 
