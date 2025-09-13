@@ -1272,6 +1272,28 @@ Return the minimum number of minutes that must elapse until there are zero fresh
 \end{enumerate}
 
 
+\subsection{Surrounded Regions}
+\begin{enumerate}
+  \item[] \textbf{Question:} You are given a 2-D matrix board containing 'X' and 'O' characters.
+
+If a continous, four-directionally connected group of 'O's is surrounded by 'X's, it is considered to be surrounded.
+
+Change all surrounded regions of 'O's to 'X's and do so in-place by modifying the input board.
+
+    \begin{enumerate}
+      \item[-] \textbf{Main idea:} Consider the following: Start with the edges that are O's. These have to be a part of a connected region, because they only have three edges and therefore cannot be changed to X's. 
+      \item[-] First loop through the border of the matrix and collect all the i,j pairs where the is an O. 
+      \item[-] Next, for each one of these pairs, before a DFS using this node as the starting node. Mark this node with a special character like \#. Preform the DFS looking for neighbor nodes that are O's.
+      \item[-] As you traverse all the neighbors, mark them also with \#. Now that you have marked all the values that are part of the connect component, we'll loop through the grid again and change any O's to X's, because these are not apart of any connected component. 
+      \item[-] Finally, change the \# back to O's then return the grid
+    \end{enumerate}
+\end{enumerate}
+
+
+
+
+
+
 \section{Advanced Graphs}
 
 \subsection{Network Delay Time}
@@ -1736,10 +1758,6 @@ Follow up: Could you solve it using O(1) space?
 
     \end{enumerate}
 \end{enumerate}
-
-
-
-
 
 
 
