@@ -772,12 +772,11 @@ Reorder the nodes of the linked list to be in the following order:
 Return the sorted linked list that is the result of merging all of the individual linked lists.
 
     \begin{enumerate}
-      \item[-] \textbf{Main idea:} 
-      \item[-] 
-      \item[-] 
-      \item[-] 
-      \item[-] 
-      \item[-] 
+      \item[-] \textbf{Main idea:} This question is best solved using a HEAP
+      \item[-] Begin by pushing all node vales and original nodes onto the heap
+      \item[-] While the heap exists, pop the node, and add it to a new dummy node list
+      \item[-] If the current node's next value exists, add node.next back into the heap
+      \item[-] Continue until the final list is built out and the heap is empty
 
     \end{enumerate}
 \end{enumerate}
