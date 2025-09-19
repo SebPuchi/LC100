@@ -127,16 +127,12 @@ Return true if the Sudoku board is valid, otherwise return false
     \end{enumerate}
 
     \begin{enumerate}
-      \item[-] \textbf{Main Idea: } 
-      \item[-] 
-      \item[-] 
+      \item[-] \textbf{Main Idea: } Start by type casting to a string, so that you can access by index
+      \item[-] Do the operation, take the sum of each digit squared: After doing so, make sure that you add this number to a set to keep track of it
+      \item[-] Repeat the process, check if the summation number ever equals 1. I it does, then return True
+      \item[-] If the summation number is ever in a set, then there is a cycle, and you must return False
     \end{enumerate}
 \end{enumerate}
-
-
-
-
-
 
 
 
@@ -769,6 +765,26 @@ Reorder the nodes of the linked list to be in the following order:
 \end{enumerate}
 
 
+\subsection{Merge K Sorted Lists}
+\begin{enumerate}
+  \item[] \textbf{Question:} You are given an array of k linked lists lists, where each list is sorted in ascending order.
+
+Return the sorted linked list that is the result of merging all of the individual linked lists.
+
+    \begin{enumerate}
+      \item[-] \textbf{Main idea:} 
+      \item[-] 
+      \item[-] 
+      \item[-] 
+      \item[-] 
+      \item[-] 
+
+    \end{enumerate}
+\end{enumerate}
+
+
+
+
 
 
 
@@ -999,6 +1015,24 @@ Rebuild the binary tree from the preorder and inorder traversals and return its 
       \item[-] You do not like this question
 
 
+    \end{enumerate}
+\end{enumerate}
+
+
+\subsection{Binary Tree Maximum Path Sum}
+\begin{enumerate}
+  \item[] \textbf{Question:} Given the root of a non-empty binary tree, return the maximum path sum of any non-empty path.
+
+A path in a binary tree is a sequence of nodes where each pair of adjacent nodes has an edge connecting them. A node can not appear in the sequence more than once. The path does not necessarily need to include the root.
+
+The path sum of a path is the sum of the node's values in the path.
+
+
+    \begin{enumerate}
+      \item[-] \textbf{Main idea:} Use a POST ORDER traversal, with a attribute variable to keep track of the current max path.
+      \item[-] Base case, return 0 upwards to parent. Set up left and right return values from the recursive calls on the left and right.
+      \item[-] The max path will be the max of: LEFT PATH, RIGHT PATH, LEFT + RIGHT + CURRENT, or just CURRENT.
+    \item[-] Returning upward, we can only return the max path of the left or right or current, CANNOT return left + right + current upwards as the solution to the sub-problem.
     \end{enumerate}
 \end{enumerate}
 
