@@ -67,6 +67,7 @@ Once I feel comfortable with a completed question, I write up solutions notes an
 | [reverse_list](./questions/linked_list/easy/reverse_list.py) | linked_list | `easy` |
 | [linked_list_cycle_detection](./questions/linked_list/easy/linked_list_cycle_detection.py) | linked_list | `easy` |
 | [merge_linked_lists](./questions/linked_list/easy/merge_linked_lists.py) | linked_list | `easy` |
+| [merge_k_sorted_linked_lists](./questions/linked_list/hard/merge_k_sorted_linked_lists.py) | linked_list | `hard` |
 | [longest_repeating_character_replacement](./questions/sliding_window/medium/longest_repeating_character_replacement.py) | sliding_window | `medium` |
 | [longest_substring_without_repeating_characters](./questions/sliding_window/medium/longest_substring_without_repeating_characters.py) | sliding_window | `medium` |
 | [permutation_in_string](./questions/sliding_window/medium/permutation_in_string.py) | sliding_window | `medium` |
@@ -77,6 +78,7 @@ Once I feel comfortable with a completed question, I write up solutions notes an
 | [group_anagrams](./questions/hashmap/medium/group_anagrams.py) | hashmap | `medium` |
 | [twosum](./questions/hashmap/easy/twosum.py) | hashmap | `easy` |
 | [single_number](./questions/hashmap/easy/single_number.py) | hashmap | `easy` |
+| [happy_number](./questions/hashmap/easy/happy_number.py) | hashmap | `easy` |
 | [anagram](./questions/hashmap/easy/anagram.py) | hashmap | `easy` |
 | [implement_trie_prefix_tree](./questions/tries/medium/implement_trie_prefix_tree.py) | tries | `medium` |
 | [unique_paths](./questions/two_dimensional_dp/medium/unique_paths.py) | two_dimensional_dp | `medium` |
@@ -93,6 +95,7 @@ Once I feel comfortable with a completed question, I write up solutions notes an
 | [merge_intervals](./questions/intervals/medium/merge_intervals.py) | intervals | `medium` |
 | [non_overlapping_intervals](./questions/intervals/medium/non_overlapping_intervals.py) | intervals | `medium` |
 | [meeting_rooms](./questions/intervals/easy/meeting_rooms.py) | intervals | `easy` |
+| [merge_two_2d_arrays_by_summing_values](./questions/intervals/easy/merge_two_2d_arrays_by_summing_values.py) | intervals | `easy` |
 | [longest_consecutive_sequence](./questions/two_pointers/medium/longest_consecutive_sequence.py) | two_pointers | `medium` |
 | [3Sum](./questions/two_pointers/medium/3Sum.py) | two_pointers | `medium` |
 | [squares_of_a_sorted_array](./questions/two_pointers/medium/squares_of_a_sorted_array.py) | two_pointers | `medium` |
@@ -131,6 +134,7 @@ Once I feel comfortable with a completed question, I write up solutions notes an
 | [max_depth_binary_tree](./questions/trees/easy/max_depth_binary_tree.py) | trees | `easy` |
 | [balanced_binary_tree](./questions/trees/easy/balanced_binary_tree.py) | trees | `easy` |
 | [sub_tree_of_tree](./questions/trees/easy/sub_tree_of_tree.py) | trees | `easy` |
+| [binary_tree_maximum_path_sum](./questions/trees/hard/binary_tree_maximum_path_sum.py) | trees | `hard` |
 | [set_matrix_zeros](./questions/math_geometry/medium/set_matrix_zeros.py) | math_geometry | `medium` |
 | [rotate_image](./questions/math_geometry/medium/rotate_image.py) | math_geometry | `medium` |
 | [spiral_matrix](./questions/math_geometry/medium/spiral_matrix.py) | math_geometry | `medium` |
