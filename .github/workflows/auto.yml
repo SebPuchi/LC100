@@ -1,0 +1,33 @@
+name: Update Progress
+on:
+  push:
+    paths:
+      - 'questions/**'
+
+jobs:
+  update-heatmap:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with: 
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Create graph
+        run: python3 update_status.py
+      - name: Commit and push changes
+        run: |
+          git add ./README.md
+          git commit -m "UpdateREADME" || echo "No changes to commit"
+          git push
+
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
