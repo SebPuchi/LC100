@@ -4,7 +4,6 @@
 #         self.val = val
 #         self.next = next
 
-# test new script
 import math
 class Solution:    
     def findValid (self, lists):
