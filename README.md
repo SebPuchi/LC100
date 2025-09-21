@@ -136,6 +136,7 @@ Once I feel comfortable with a completed question, I write up solutions notes an
 | [balanced_binary_tree](./questions/trees/easy/balanced_binary_tree.py) | trees | `easy` |
 | [sub_tree_of_tree](./questions/trees/easy/sub_tree_of_tree.py) | trees | `easy` |
 | [binary_tree_maximum_path_sum](./questions/trees/hard/binary_tree_maximum_path_sum.py) | trees | `hard` |
+| [serialize_and_deserialize_binary_tree](./questions/trees/hard/serialize_and_deserialize_binary_tree.py) | trees | `hard` |
 | [set_matrix_zeros](./questions/math_geometry/medium/set_matrix_zeros.py) | math_geometry | `medium` |
 | [rotate_image](./questions/math_geometry/medium/rotate_image.py) | math_geometry | `medium` |
 | [spiral_matrix](./questions/math_geometry/medium/spiral_matrix.py) | math_geometry | `medium` |
