@@ -80,6 +80,7 @@ Once I feel comfortable with a completed question, I write up solutions notes an
 | [single_number](./questions/hashmap/easy/single_number.py) | hashmap | `easy` |
 | [happy_number](./questions/hashmap/easy/happy_number.py) | hashmap | `easy` |
 | [anagram](./questions/hashmap/easy/anagram.py) | hashmap | `easy` |
+| [minimum_window_substring](./questions/hashmap/hard/minimum_window_substring.py) | hashmap | `hard` |
 | [implement_trie_prefix_tree](./questions/tries/medium/implement_trie_prefix_tree.py) | tries | `medium` |
 | [unique_paths](./questions/two_dimensional_dp/medium/unique_paths.py) | two_dimensional_dp | `medium` |
 | [longest_common_subsequence](./questions/two_dimensional_dp/medium/longest_common_subsequence.py) | two_dimensional_dp | `medium` |
