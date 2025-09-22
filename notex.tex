@@ -1033,6 +1033,25 @@ The path sum of a path is the sum of the node's values in the path.
 \end{enumerate}
 
 
+\subsection{Serialize and Deserialize Binary Tree}
+\begin{enumerate}
+  \item[] \textbf{Question:} Implement an algorithm to serialize and deserialize a binary tree.
+
+Serialization is the process of converting an in-memory structure into a sequence of bits so that it can be stored or sent across a network to be reconstructed later in another computer environment.
+
+You just need to ensure that a binary tree can be serialized to a string and this string can be deserialized to the original tree structure. There is no additional restriction on how your serialization/deserialization algorithm should work.
+
+Note: The input/output format in the examples is the same as how NeetCode serializes a binary tree. You do not necessarily need to follow this format.
+
+    \begin{enumerate}
+      \item[-] \textbf{Main idea:} Begin with the serialize function: Preform a DFS and add each element to an array: join the array with "," and return the string. Make sure to add "None" when you hit the end of a string
+      \item[-] For deserialize, begin by setting up a dfs function that you will use to traverse the string. Also create a global index variable to keep track of the positioning in the string. 
+      \item[-] Call the DFS function: begin by checking the base case: if current == "None", increment the index and return None. If it doesn't, create a Tree node withe current value at the index, and increment the index.
+      \item[-] set the left node: node.left = dfs()
+      \item[-] set the right node: node.right = dfs()
+      \item[-] return the current node (upward up the call stack)
+    \end{enumerate}
+\end{enumerate}
 
 
 \section{Heap and Priority Queue}
@@ -1341,6 +1360,32 @@ Change all surrounded regions of 'O's to 'X's and do so in-place by modifying th
       \item[-] Finally, change the \# back to O's then return the grid
     \end{enumerate}
 \end{enumerate}
+
+
+\subsection{Alien Dictionary}
+\begin{enumerate}
+  \item[] \textbf{Question:} There is a foreign language which uses the latin alphabet, but the order among letters is not "a", "b", "c" ... "z" as in English.
+
+You receive a list of non-empty strings words from the dictionary, where the words are sorted lexicographically based on the rules of this new language.
+
+Derive the order of letters in this language. If the order is invalid, return an empty string. If there are multiple valid order of letters, return any of them.
+
+A string a is lexicographically smaller than a string b if either of the following is true: 
+
+
+    \begin{enumerate}
+      \item[-] \textbf{Main idea:} Begin by creating an adjacency list for every letter: set up an empty set for each letter. Also set dictionary for in-degrees
+      \item[-] Loop through pairs of words: for each pair: calculate the min length between both words. After you have the length, do a check to see if they have the same prefix, but the first word is longer: in this case, return ""
+      \item[-] Now loop through both words up until the length of min word. The first differing letter needs to be tracked: put it in the set at w1's current letter: THIS MEANS THAT W2[J] MUST COME AFTER W1[J]
+      \item[-] Also make sure to update the indegree at the w2[j] index
+      \item[-] Now that you have built the graph, we can preform kahn's algorithm to toposort the DAG
+      \item[-] Begin by setting up a queue, and pushing all values that have indegree == 0
+      \item[-] While the length of the queue != 0, pop current and visit all currents neighbors: decrement neighbors indegree by 1, if the indegree == 0, then add to queue.
+      \item[-] As you pop current, add current to a result array that you will turn into a string: 
+      \item[-] Before you return, make sure that the length of the string is the length of the adjacency dictionary
+    \end{enumerate}
+\end{enumerate}
+
 
 
 
