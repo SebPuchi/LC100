@@ -246,9 +246,14 @@ You may assume that the correct output is always unique.
 
 
     \begin{enumerate}
-      \item[-] \textbf{Main idea: } 
-      \item[-] 
-      \item[-] NOTE: you can index from the end using -1, then continue decrementing that value
+      \item[-] \textbf{Main idea: } This problem involves both a sliding window and use of hashmaps. Begin by creating a hashmap of the tartet word and a "need" and "have" variable.
+      \item[-] The need variable will be the length of the keys of the target hashmap. The idea is that you need that many letters (with corresponding frequencies) in the second hashmap. 
+      \item[-] Begin by looping through the string, with left and right pointers that start at the beginning of the string. 
+      \item[-] For each character, begin by checking if that character is in the hashmap of target: if it is, then we need to do some updating: 
+      \item[-] Update the s hashmap at this char with the new frequency. Next check to see if the frequencies at this character is the SAME in both hashmaps. If it iss, incrementing have by 1
+      \item[-] Next: create While LOOP that Check if HAVE == NEED: While this is true, we need to check to see if the distance between the left and right pointers is less than the current min (which can start at positive infinty): If it is, store the new min, as well as the current left and right pointers
+      \item[-] Next check to see if the current character at the left index is in the s-hash: if it is, then we need to decrement its frequency. If have the frequency at that char in s hashmap is less than the frequency at that char in the target hashmap, then we decrement the have by 1. Update the left+=1 on each iteration
+      \item[-] On the outer iteration, increment right+=1
 
     \end{enumerate}
 \end{enumerate}
