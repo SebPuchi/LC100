@@ -123,6 +123,7 @@ Once I feel comfortable with a completed question, I write up solutions notes an
 | [k_closest_points_to_orgin](./questions/heaps/medium/k_closest_points_to_orgin.py) | heaps | `medium` |
 | [last_stone_weight](./questions/heaps/easy/last_stone_weight.py) | heaps | `easy` |
 | [kth_largest](./questions/heaps/easy/kth_largest.py) | heaps | `easy` |
+| [find_median_from_data_stream](./questions/heaps/hard/find_median_from_data_stream.py) | heaps | `hard` |
 | [validate_binary_search_tree](./questions/trees/medium/validate_binary_search_tree.py) | trees | `medium` |
 | [kth_smallest_int_in_bst](./questions/trees/medium/kth_smallest_int_in_bst.py) | trees | `medium` |
 | [right_side_view_of_tree](./questions/trees/medium/right_side_view_of_tree.py) | trees | `medium` |
