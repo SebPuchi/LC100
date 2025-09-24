@@ -1205,9 +1205,6 @@ Return the minimum number of CPU cycles required to complete all tasks.
 \end{enumerate}
 
 
-
-
-
 \section{Graphs}
 
 \subsection{Number of Islands}
@@ -1901,6 +1898,7 @@ Follow up: Could you solve it using O(1) space?
 
 
 \section{Tries}
+
 \subsection{Implement Trie Prefix Tree}
 \begin{enumerate}
   \item[] \textbf{Question:} A prefix tree (also known as a trie) is a tree data structure used to efficiently store and retrieve keys in a set of strings. Some applications of this data structure include auto-complete and spell checker systems.
@@ -1915,6 +1913,30 @@ Follow up: Could you solve it using O(1) space?
 
     \end{enumerate}
 \end{enumerate}
+
+\subsection{Word Search II}
+\begin{enumerate}
+  \item[] \textbf{Question:} Given a 2-D grid of characters board and a list of strings words, return all words that are present in the grid.
+
+For a word to be present it must be possible to form the word with a path in the board with horizontally or vertically neighboring cells. The same cell may not be used more than once in a word.
+
+    \begin{enumerate}
+      \item[-] \textbf{Main idea:} This question is cool: Need to preform the recursive backtracking to find each word: but to begin, create a TRIE of the all the input words
+      \item[-] Create a trie node struct, then create a RootNode and add each letter to each level of the trie.
+      \item[-] Now set up your backtracking function: It will take in parameters i, j, the current node in the trie, and the path of letters that is being built so far.
+      \item[-] Within the backtracking function, do normal checks: first check if i, j are in bounds, check if the current node is in the trie: if these conditions are not met, return. 
+      \item[-] Get the current letter at the board index, as well as the next node: Add the current letter to the ongoing path
+      \item[-] If the next node has end property true, then you can copy the path to an output array that stores valid solutions.
+      \item[-] As you traverse, mark the current node with a #, then unmark that node after you have done all the recursive callings
+      \item[-] Call the backtracking function in a for loop: if the current letter is in the roots children dict, then call the backtracking function
+      \item[-] Now that you have the solution array of all the letters, join all the letters, and store them in a set so that there's no duplicates! Return this as a list
+
+    \end{enumerate}
+\end{enumerate}
+
+
+
+
 
 
 \section{Intervals}
