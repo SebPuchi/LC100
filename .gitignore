@@ -4,7 +4,7 @@
 *.fls
 *.fdb_latexmk
 *.aux
-*.synctex
+*.synctex(busy)
 .DS_Store
 venv/
 
