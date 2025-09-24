@@ -1187,6 +1187,26 @@ Return the minimum number of CPU cycles required to complete all tasks.
 \end{enumerate}
 
 
+\subsection{Find Median From Data Stream}
+\begin{enumerate}
+  \item[] \textbf{Question:} The median is the middle value in a sorted list of integers. For lists of even length, there is no middle value, so the median is the mean of the two middle values.
+
+    \begin{enumerate}
+      \item[-] \textbf{Main idea:} You need two heaps, one for the lower half of the inputted numbers and one for the upper half
+      \item[-] Generally speaking, when you want to find the median or mean you need to first consider of the upper and lower halves are equal or not
+      \item[-] If the halves are equal, then you can pop the MAX of the min heap and the MIN of the max heap. Add these numbers together and divide by 2.
+      \item[-] If they are in odd length, pop the max or min from the longer heap
+      \item[-] The difficulty of this problem is adding numbers to both heaps and ensuring that they are even in length:
+      \item[-] TWO properties must be checked: First, make sure that the lengths of both heaps differ no more than 1
+      \item[-] Next, make sure that the Max of the min section is always smaller than the Min of the max section
+      \item[-] Both of these must be checked every time you add something to the heaps. If the rule is violated, pop from one and add to another 
+      \item[-] By default, always start by adding to the smaller of the two arrays.
+    \end{enumerate}
+\end{enumerate}
+
+
+
+
 
 \section{Graphs}
 
