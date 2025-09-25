@@ -65,6 +65,7 @@ Once I feel comfortable with a completed question, I write up solutions notes an
 | [coin_change](./questions/one_dimensional_dp/medium/coin_change.py) | one_dimensional_dp | `medium` |
 | [climbing_stairs](./questions/one_dimensional_dp/easy/climbing_stairs.py) | one_dimensional_dp | `easy` |
 | [min_cost_climbing_stairs](./questions/one_dimensional_dp/easy/min_cost_climbing_stairs.py) | one_dimensional_dp | `easy` |
+| [reverse_bits](./questions/bit_manipulation/easy/reverse_bits.py) | bit_manipulation | `easy` |
 | [Number_of_1_bits](./questions/bit_manipulation/easy/Number_of_1_bits.py) | bit_manipulation | `easy` |
 | [spiral_matrix](./questions/math_geometry/medium/spiral_matrix.py) | math_geometry | `medium` |
 | [rotate_image](./questions/math_geometry/medium/rotate_image.py) | math_geometry | `medium` |
