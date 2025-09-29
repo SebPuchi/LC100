@@ -2052,9 +2052,33 @@ You may assume n is a non-negative integer which fits within 32-bits.
     \end{enumerate}
 \end{enumerate}
 
+\subsection{Reverse Bits}
+\begin{enumerate}
+  \item[] \textbf{Question:} Given a 32-bit unsigned integer n, reverse the bits of the binary representation of n and return the result.
+
+    \begin{enumerate}
+      \item[-] \textbf{Main idea:} In a for loop (to 32): shift the bits over i times to get the MSB
+      \item[-] Add this bit shifted (31 - i) times to an output variable
+      \item[-] Return the output var
+
+    \end{enumerate}
+\end{enumerate}
 
 
+\subsection{Counting Bits}
+\begin{enumerate}
+  \item[] \textbf{Question:} Given an integer n, count the number of 1's in the binary representation of every number in the range [0, n].
 
+Return an array output where output[i] is the number of 1's in the binary representation of i.
+
+    \begin{enumerate}
+      \item[-] \textbf{Main idea:} This is a DP question in disguise: The main idea is that the repeated work happens in base two intervals. The amount of numbers is the amount that occurs from the remainder between i and the most recent base two number that you've encountered
+      \item[-] More specifically the sub problem is: memo[i] =  1 + memo[i - prefix], where prefix is the last, greatest base 2 number you've encountered in your loop
+      \item[-] Start the prefix number at 1: If the i value (when looping through to n+1) ever is prefix * 2 (next base two number), then set prefix equal to this number
+      \item[-] Init memo with [0] * (n+1). Return memo as the answer
+
+    \end{enumerate}
+\end{enumerate}
 
 
 \end{document}
