@@ -2080,6 +2080,26 @@ Return an array output where output[i] is the number of 1's in the binary repres
     \end{enumerate}
 \end{enumerate}
 
+\subsection{Missing Number}
+\begin{enumerate}
+  \item[] \textbf{Question:} Given an array nums containing n integers in the range [0, n] without any duplicates, return the single number in the range that is missing from nums.
+
+Follow-up: Could you implement a solution using only O(1) extra space complexity and O(n) runtime complexity?
+
+    \begin{enumerate}
+      \item[-] \textbf{Main idea:} Create an ongoing sum that tracks the sum of range 0 to n+1 and sum of all elements in nums array
+      \item[-] The difference in these sums is the missing number that would equate the two
+      \item[-] To do this, we can create one ongoing sum variable and add index i and subtract nums[i]: total-sum += (i - nums[i])
+      \item[-] Return the total sum
+
+    \end{enumerate}
+\end{enumerate}
+
+
+
+
+
+
 
 \end{document}
 
