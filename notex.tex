@@ -2096,6 +2096,21 @@ Follow-up: Could you implement a solution using only O(1) extra space complexity
 \end{enumerate}
 
 
+\subsection{Sum of Two Integers}
+\begin{enumerate}
+  \item[] \textbf{Question:} Given two integers a and b, return the sum of the two integers without using the + and - operators.
+
+    \begin{enumerate}
+      \item[-] \textbf{Main idea:} This question involves the use of the 'xor' and 'and' gates: When adding two of the numbers, if the bits in a particular spot are both the same (1 or 0), then x or will produce a 0. If they are different, then they would produce a 1.
+      \item[-] We can leverage xor to do the adding part, and the and gate to do the carrying of bits
+      \item[-] If a and b are two numbers that need to be added together, let the carry value represent the 'b' input
+      \item[-] First xor a and b. This will equal 'a'. Next let the carry be a \& b <<1 (shifted one to the left)
+      \item[-] Let b then equal the carry bit, repeat until b is equal to 0.
+
+    \end{enumerate}
+\end{enumerate}
+
+
 
 
 \end{document}
