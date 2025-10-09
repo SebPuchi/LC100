@@ -61,6 +61,7 @@ Once I feel comfortable with a completed question, I write up solutions notes an
 | [house_robber](./questions/one_dimensional_dp/medium/house_robber.py) | one_dimensional_dp | `medium` |
 | [longest_palindromic_substring](./questions/one_dimensional_dp/medium/longest_palindromic_substring.py) | one_dimensional_dp | `medium` |
 | [decode_ways](./questions/one_dimensional_dp/medium/decode_ways.py) | one_dimensional_dp | `medium` |
+| [word_break](./questions/one_dimensional_dp/medium/word_break.py) | one_dimensional_dp | `medium` |
 | [palindromic_substrings](./questions/one_dimensional_dp/medium/palindromic_substrings.py) | one_dimensional_dp | `medium` |
 | [maximum_product_subarray](./questions/one_dimensional_dp/medium/maximum_product_subarray.py) | one_dimensional_dp | `medium` |
 | [coin_change](./questions/one_dimensional_dp/medium/coin_change.py) | one_dimensional_dp | `medium` |
