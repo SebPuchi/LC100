@@ -1629,8 +1629,25 @@ You may assume that you have an infinite number of each kind of coin.
     \end{enumerate}
 \end{enumerate}
 
+\subsection{Maximum Product Subarray}
+\begin{enumerate}
+  \item[] \textbf{Question:} Given an integer array nums, find a subarray that has the largest product within the array and return it.
+
+A subarray is a contiguous non-empty sequence of elements within an array.
+
+You can assume the output will fit into a 32-bit integer.
+
+  
+    \begin{enumerate}
+      \item[-] \textbf{Main idea:} This is a Dynamic programming question where you need to keep the last previous MIN AND MAX
+      \item[-] Set up two product variable product-min and product-max: start both of these values at 1 (as anything multiplied by 1 is itself)
+      \item[-] Next, loop through all inputs of the nums array and recalculate the product min and product max.
+      \item[-] min-prod = min(nums[i] * min-prod, nums[i] * max-prod, nums[i]). 
+      \item[-] After calculating BOTH sub problems, check to see which of the two products is larger: set a resulting variable to that number!
 
 
+    \end{enumerate}
+\end{enumerate}
 
 
 
