@@ -1656,15 +1656,13 @@ You can assume the output will fit into a 32-bit integer.
 
 You are allowed to reuse words in the dictionary an unlimited number of times. You may assume all dictionary words are unique. 
     \begin{enumerate}
-      \item[-] \textbf{Main idea:} 
-      \item[-] 
+      \item[-] \textbf{Main idea:} This is a dp question that involves starting at the end of the of the string, and checking if the dictionary words can create a word at any index i in the string
+      \item[-] To solve this question, begin by populating the memo array with True at index [length of s].
+      \item[-] The idea is that for every i working backwards in the input string, check if any word 
 
 
     \end{enumerate}
 \end{enumerate}
-
-
-
 
 
 
