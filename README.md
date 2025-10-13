@@ -59,6 +59,7 @@ Once I feel comfortable with a completed question, I write up solutions notes an
 | [network_delay_time](./questions/advanced_graphs/medium/network_delay_time.py) | advanced_graphs | `medium` |
 | [house_robber_II](./questions/one_dimensional_dp/medium/house_robber_II.py) | one_dimensional_dp | `medium` |
 | [house_robber](./questions/one_dimensional_dp/medium/house_robber.py) | one_dimensional_dp | `medium` |
+| [longest_increasing_subsequence](./questions/one_dimensional_dp/medium/longest_increasing_subsequence.py) | one_dimensional_dp | `medium` |
 | [longest_palindromic_substring](./questions/one_dimensional_dp/medium/longest_palindromic_substring.py) | one_dimensional_dp | `medium` |
 | [decode_ways](./questions/one_dimensional_dp/medium/decode_ways.py) | one_dimensional_dp | `medium` |
 | [word_break](./questions/one_dimensional_dp/medium/word_break.py) | one_dimensional_dp | `medium` |
