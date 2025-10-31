@@ -259,6 +259,20 @@ You may assume that the correct output is always unique.
 \end{enumerate}
 
 
+\subsection{Contiguous Array}
+\begin{enumerate}
+  \item[] \textbf{Question:} Given a binary array nums, return the maximum length of a contiguous subarray with an equal number of 0 and 1.
+
+    \begin{enumerate}
+      \item[-] \textbf{Main idea: } This question uses the prefix sum idea: at any given index calculate the current difference sum between the number of zeros and ones.
+      \item[-] Set up a running sum variable: Loop through the array. Whenever there is a 0 subtract 1 from the running sum, whenever there is a 1, add to the running sum. 
+      \item[-] Next check to see if the running sum exists in a frequency dictionary: if it does, we know we need to "cut off", up to that point in the array!
+      \item[-] We can set the longest to be max(longest, i - dict[current-sum]). 
+      \item[-] Edge case, if the current sum is 0, check to see if the index (len of subarray) is greater than the longest!
+
+    \end{enumerate}
+\end{enumerate}
+
 
 
 
